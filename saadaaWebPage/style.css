@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header .top-menu {
+    padding: 12px 0;
+    background-color: rgb(249 247 242);
+    font-family: sans-serif;
+}
+
+.header .top-menu p {
+    text-align: center;
+    font-size: 11px;
+}
+
+.header nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 40px;
+}
+
+.navbar .logo {
+    width: 145px;
+}
+
+.navbar .logo img {
+    width: 100%;
+}
+
+.navbar .search-icon,
+.navbar .shop-icon {
+    display: flex;
+    gap: 40px;
+    font-size:25px;
+    color:#616161
+}
+
+.navbar i.fa-whatsapp{
+    color:green;
+}
