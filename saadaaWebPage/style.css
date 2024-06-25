@@ -2,12 +2,22 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1;
 }
 
 .header .top-nav {
     padding: 12px 0;
     background-color: rgb(249 247 242);
-    font-family: sans-serif;
 }
 
 .header .top-nav p {
@@ -20,24 +30,116 @@
     justify-content: space-between;
     align-items: center;
     padding: 24px 40px;
+    background-color: #fff;
+    margin-top: 0.03rem;
 }
 
-.navbar .logo {
-    width: 145px;
-}
 
 .navbar .logo img {
-    width: 100%;
+    width: 125px;
 }
 
 .navbar .menu-search,
 .navbar .social-cart {
     display: flex;
     gap: 40px;
-    font-size:25px;
-    color:#616161
+    font-size: 25px;
+    color: #616161;
 }
 
-.navbar i.fa-whatsapp{
-    color:green;
+.navbar i.fa-whatsapp {
+    color: green;
+}
+
+.navbar .cart a {
+    color: #616161;
+}
+
+.navbar .cart {
+    position: relative;
+}
+
+.navbar .cart .count {
+    background-color: orange;
+    padding: 2px 5px;
+    border-radius: 50%;
+    color: antiquewhite;
+    font-size: 17px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+}
+
+
+/* End Navbar and Header Section */
+
+.hero-section .img-box {
+    position: relative;
+}
+
+.hero-section .img-box img {
+    width: 100%;
+}
+
+.hero-section .img-box .img-content {
+    position: absolute;
+    text-align: center;
+    line-height: 3rem;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 30px;
+}
+
+.hero-section .img-content p {
+    letter-spacing: 5px;
+}
+
+.hero-section .img-box a {
+    color: white;
+    font-weight: 500;
+    border: thin solid #fff;
+    padding: 10px 20px;
+    font-size: 20px;
+    position: relative;
+}
+
+.hero-section .img-box a::before {
+    content: ".";
+    font-size:1px;
+    /* color:transparent; */
+    position: absolute;
+    left: 0;
+    width: 1px;
+    background-color: #fff;
+    transition: width 2s;
+    z-index: -1;
+}
+
+.hero-section .img-box a:hover::before {
+    width:100%;
+    transition: width 2s;
+}
+
+.hero-section .img-box a:hover {
+    color: black;
+}
+
+
+
+/* Reviews Button fixed position */
+
+.review-btn {
+    position: fixed;
+    top: 50%;
+    right: -50px;
+    transform: rotate(90deg);
+}
+
+.review-btn a {
+    color: black;
+    padding: 15px 25px;
+    border-radius: 0 0 13px 13px;
+    background-color: rgb(228, 228, 228);
 }
