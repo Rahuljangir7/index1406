@@ -4,13 +4,13 @@
     box-sizing: border-box;
 }
 
-.header .top-menu {
+.header .top-nav {
     padding: 12px 0;
     background-color: rgb(249 247 242);
     font-family: sans-serif;
 }
 
-.header .top-menu p {
+.header .top-nav p {
     text-align: center;
     font-size: 11px;
 }
@@ -30,8 +30,8 @@
     width: 100%;
 }
 
-.navbar .search-icon,
-.navbar .shop-icon {
+.navbar .menu-search,
+.navbar .social-cart {
     display: flex;
     gap: 40px;
     font-size:25px;
