@@ -2,7 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: "Montserrat", sans-serif;
 }
 
 a {
@@ -71,61 +71,97 @@ header {
 }
 
 
-/* End Navbar and Header Section */
+/* End Navbar and Header Section End*/
 
+
+/* Start Hero Section */
 .hero-section .img-box {
     position: relative;
 }
 
 .hero-section .img-box img {
     width: 100%;
+    display: block;
 }
 
 .hero-section .img-box .img-content {
     position: absolute;
-    text-align: center;
-    line-height: 3rem;
     color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    padding: 30px;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.267);
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.hero-section .img-content h1 {
+    font-size: 30px;
+    font-style: italic;
+    font-weight: 500;
 }
 
 .hero-section .img-content p {
-    letter-spacing: 5px;
+    letter-spacing: 7px;
+    word-spacing: 7px;
 }
 
-.hero-section .img-box a {
-    color: white;
-    font-weight: 500;
-    border: thin solid #fff;
-    padding: 10px 20px;
+
+/* background-color transition left to right and left from right */
+a.view-more-btn {
     font-size: 20px;
+    color: white;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    font-weight: 500;
     position: relative;
+    overflow: hidden;
+    background-color: transparent;
+    z-index: 1;
+    transition: color 0.4s;
 }
 
-.hero-section .img-box a::before {
-    content: ".";
-    font-size:1px;
-    /* color:transparent; */
+.view-more-btn:hover{
+    color:black;
+}
+
+.view-more-btn::before {
+    content: "";
+    background-color: transparent;
+    height: 100%;
+    width: 0;
     position: absolute;
+    top: 0;
     left: 0;
-    width: 1px;
-    background-color: #fff;
-    transition: width 2s;
     z-index: -1;
+    transition:width 0.7s;
 }
 
-.hero-section .img-box a:hover::before {
-    width:100%;
-    transition: width 2s;
+.view-more-btn:hover::before {
+    width: 100%;
+    background-color: #fff;
 }
 
-.hero-section .img-box a:hover {
-    color: black;
+
+.view-more-btn::after {
+    content: "";
+    background-color: #fff;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: -1;
+    transition:width 0.7s;
 }
 
+.view-more-btn:hover::after {
+    width: 100%;
+    background-color: transparent;
+}
 
 
 /* Reviews Button fixed position */
