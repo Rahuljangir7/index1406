@@ -12,7 +12,7 @@ a {
 header {
     position: sticky;
     top: 0;
-    z-index: 1;
+    z-index: 999;
 }
 
 .header .top-nav {
@@ -109,9 +109,11 @@ header {
     word-spacing: 7px;
 }
 
+/* End Hero Section  */
+
 
 /* background-color transition left to right and left from right */
-a.view-more-btn {
+a.view-more-btn, .view-all a {
     font-size: 20px;
     color: white;
     border: 2px solid #fff;
@@ -124,11 +126,11 @@ a.view-more-btn {
     transition: color 0.4s;
 }
 
-.view-more-btn:hover{
-    color:black;
+.view-more-btn:hover, .view-all a:hover {
+    color: black;
 }
 
-.view-more-btn::before {
+.view-more-btn::before,.view-all a::before {
     content: "";
     background-color: transparent;
     height: 100%;
@@ -137,7 +139,7 @@ a.view-more-btn {
     top: 0;
     left: 0;
     z-index: -1;
-    transition:width 0.7s;
+    transition: width 0.5s;
 }
 
 .view-more-btn:hover::before {
@@ -146,7 +148,7 @@ a.view-more-btn {
 }
 
 
-.view-more-btn::after {
+.view-more-btn::after,.view-all a::after{
     content: "";
     background-color: #fff;
     height: 100%;
@@ -155,13 +157,15 @@ a.view-more-btn {
     top: 0;
     right: 0;
     z-index: -1;
-    transition:width 0.7s;
+    transition: width 0.7s;
 }
 
 .view-more-btn:hover::after {
     width: 100%;
     background-color: transparent;
 }
+
+/* and view more button hero section */
 
 
 /* Reviews Button fixed position */
@@ -179,3 +183,126 @@ a.view-more-btn {
     border-radius: 0 0 13px 13px;
     background-color: rgb(228, 228, 228);
 }
+
+/* End Reviews Button fixed  */
+
+.section-style {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-top: 90px;
+    align-items: center;
+    position:relative;  
+}
+
+.section-style .product-container {
+    display: flex;
+    width:100%;
+    justify-content: space-evenly;
+    gap: 35px;
+}
+
+/* h2 all section-style css rule apply */
+.section-style h2 {
+    color: #2b2b2b;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+/* a tag all imges-content css rule apply */
+.section-style .images-content a {
+    color: #1a1a1a;
+    font-size: 12px;
+}
+
+.section-style .product-container .cart {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.section-style .cart .purticular-img {
+    width: 400px;
+    height: auto;
+}
+
+.cart .purticular-img img {
+    width: 100%;
+    display: block;
+}
+
+.section-style .product-container .images-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+/* All section price p tag css rule */
+p.price-clr {
+    color: red;
+    font-size: 18px;
+    cursor: grabbing;
+}
+
+
+/* delete-price span tag show price more then all tag use css rule  */
+span.delete-price {
+    text-decoration: line-through;
+    color: #2b2b2b;
+}
+
+
+/* all view all button css property same  */
+
+.view-all a{
+    border:1px solid black;
+}
+
+.view-all a::before{
+    width:100%;
+    background-color: black;
+}
+
+.view-all a:hover::before{
+    width: 0;
+    background-color: transparent;
+}
+
+.view-all a::after{
+    width:100%;
+    background-color: transparent;
+}
+
+.view-all a:hover::after{
+    width: 0;
+    background-color: black;
+}
+
+/* Use Down Arrow button  */
+
+.down-arrow-btn {
+    position: absolute;
+    top:-25px;
+    left:50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    padding:18px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.301);
+
+}
+
+.down-arrow-btn i {
+    color: #616161;
+    font-size:20px;
+    transition: transform 0.4s, color 0.9s;
+}
+
+.down-arrow-btn:hover i{
+    transform: translateY(10px);
+    color:transparent;
+}
+
