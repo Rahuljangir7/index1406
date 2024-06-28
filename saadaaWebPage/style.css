@@ -264,9 +264,9 @@ a.view-more-btn,
 }
 
 /* section-paragraph  */
-.section-style .section-para{
-    font-size:18px;
-    color:#2b2b2b;
+.section-style .section-para {
+    font-size: 18px;
+    color: #2b2b2b;
     font-weight: 500;
     width: 90%;
     text-align: center;
@@ -322,7 +322,7 @@ span.delete-price {
 
 /* all view all button css property same  */
 
-.view-all{
+.view-all {
     margin-bottom: 30px;
 }
 
@@ -330,7 +330,7 @@ span.delete-price {
     border: 1px solid black;
 }
 
-.view-all a::before {
+.view-all a::before{
     width: 100%;
     background-color: black;
 }
@@ -352,7 +352,7 @@ span.delete-price {
 
 
 /* section banner background-image */
-.banner .bg-img{
+.banner .bg-img {
     margin-top: 80px;
     min-height: 100vh;
     background: url("./Assets/Artboard_3_2.webp");
@@ -366,7 +366,122 @@ span.delete-price {
 
 
 /* regular price css rule */
-p.real-price{
-    color:#2b2b2b;
+p.real-price {
+    color: #2b2b2b;
 }
 
+
+/* Footer section Start */
+footer {
+    padding: 50px 0;
+}
+
+.footer-box {
+    display: grid;
+    grid-row-gap: 50px;
+    padding: 5px 40px;
+}
+
+.footer-box .footer-info {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.footer-info .footer-container {
+    max-width: 24rem;
+    display: grid;
+    gap: 20px;
+}
+
+.footer-info .form-section {
+    max-width: 19rem;
+}
+
+
+.footer-info .footer-container p {
+    color: #2c2c2c;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 2rem;
+}
+
+.footer-info .footer-nav-links ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-info .footer-nav-links ul li a {
+    color: #616161;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.footer-info .footer-nav-links ul li a:hover {
+    color: #1a1a1a;
+}
+
+/* form section  */
+
+
+.footer-info .form form {
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.footer-info form .inputbox input {
+    width: 100%;
+    font-size: 19px;
+    padding: 15px;
+    outline: none;
+    border: 1px solid #acacac;
+}
+
+.footer-info form .inputbox input:focus {
+    border: 1px solid black;
+}
+
+form .subscribe-btn input {
+    width: 50%;
+    font-size: 20px;
+    padding: 15px 5px;
+    font-family: sans-serif;
+    position: relative;
+    background-color: black;
+    color: #fff;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+/* Subscribe button transition background */
+input[type="submit"]:hover {
+    background-color: transparent;
+    color: #000;
+}
+
+
+
+
+
+/* footer instagrame css propety */
+.footer-box .link-icon i {
+    color: #616161;
+    font-size: 20px;
+}
+
+
+
+/* Copyright content container css rule  */
+
+.footer-box h5,
+.copyright-content a {
+    font-size: 13px;
+    color: #2b2b2b;
+    font-weight: 500;
+}
