@@ -3,11 +3,24 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
-}
-
-a {
     text-decoration: none;
 }
+
+body {
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    scrollbar-width: thin;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    background-color: rgba(0, 0, 0, 0.467);
+}
+
 
 header {
     position: sticky;
@@ -32,6 +45,7 @@ header {
     padding: 24px 40px;
     background-color: #fff;
     margin-top: 0.03rem;
+    box-shadow: 0 1px 1px rgba(49, 49, 49, 0.367);
 }
 
 
@@ -75,6 +89,10 @@ header {
 
 
 /* Start Hero Section */
+.hero-section {
+    position: relative;
+}
+
 .hero-section .img-box {
     position: relative;
 }
@@ -109,11 +127,41 @@ header {
     word-spacing: 7px;
 }
 
+
+/* Use Down Arrow button  */
+
+.down-arrow-btn a {
+    position: absolute;
+    bottom: -30px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-50%);
+    padding: 18px;
+    border-radius: 50%;
+    background-color: white;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.301);
+
+}
+
+.down-arrow-btn i {
+    color: #616161;
+    font-size: 20px;
+    transition: transform 0.4s, color 0.9s;
+}
+
+.down-arrow-btn:hover i {
+    transform: translateY(10px);
+    color: transparent;
+}
+
+
+/* End down carpet mark */
 /* End Hero Section  */
 
 
 /* background-color transition left to right and left from right */
-a.view-more-btn, .view-all a {
+a.view-more-btn,
+.view-all a {
     font-size: 20px;
     color: white;
     border: 2px solid #fff;
@@ -126,11 +174,13 @@ a.view-more-btn, .view-all a {
     transition: color 0.4s;
 }
 
-.view-more-btn:hover, .view-all a:hover {
+.view-more-btn:hover,
+.view-all a:hover {
     color: black;
 }
 
-.view-more-btn::before,.view-all a::before {
+.view-more-btn::before,
+.view-all a::before {
     content: "";
     background-color: transparent;
     height: 100%;
@@ -148,7 +198,8 @@ a.view-more-btn, .view-all a {
 }
 
 
-.view-more-btn::after,.view-all a::after{
+.view-more-btn::after,
+.view-all a::after {
     content: "";
     background-color: #fff;
     height: 100%;
@@ -175,6 +226,7 @@ a.view-more-btn, .view-all a {
     top: 50%;
     right: -50px;
     transform: rotate(90deg);
+    z-index: 999;
 }
 
 .review-btn a {
@@ -182,6 +234,7 @@ a.view-more-btn, .view-all a {
     padding: 15px 25px;
     border-radius: 0 0 13px 13px;
     background-color: rgb(228, 228, 228);
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.301);
 }
 
 /* End Reviews Button fixed  */
@@ -189,30 +242,41 @@ a.view-more-btn, .view-all a {
 .section-style {
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 40px;
     padding-top: 90px;
     align-items: center;
-    position:relative;  
+    position: relative;
 }
 
 .section-style .product-container {
-    display: flex;
-    width:100%;
-    justify-content: space-evenly;
-    gap: 35px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 50px;
+    justify-items: center;
 }
+
 
 /* h2 all section-style css rule apply */
 .section-style h2 {
     color: #2b2b2b;
     font-weight: 500;
-    font-size: 25px;
+    font-size: 30px;
+}
+
+/* section-paragraph  */
+.section-style .section-para{
+    font-size:18px;
+    color:#2b2b2b;
+    font-weight: 500;
+    width: 90%;
+    text-align: center;
 }
 
 /* a tag all imges-content css rule apply */
-.section-style .images-content a {
-    color: #1a1a1a;
-    font-size: 12px;
+.section-style .images-content h3 {
+    color: #494949;
+    font-size: 13px;
+    font-weight: 600;
 }
 
 .section-style .product-container .cart {
@@ -220,14 +284,17 @@ a.view-more-btn, .view-all a {
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    padding: 30px 0;
+    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.33); */
 }
 
-.section-style .cart .purticular-img {
+
+.section-style .cart .pro-img {
     width: 400px;
     height: auto;
 }
 
-.cart .purticular-img img {
+.cart .pro-img img {
     width: 100%;
     display: block;
 }
@@ -246,7 +313,6 @@ p.price-clr {
     cursor: grabbing;
 }
 
-
 /* delete-price span tag show price more then all tag use css rule  */
 span.delete-price {
     text-decoration: line-through;
@@ -256,53 +322,51 @@ span.delete-price {
 
 /* all view all button css property same  */
 
-.view-all a{
-    border:1px solid black;
+.view-all{
+    margin-bottom: 30px;
 }
 
-.view-all a::before{
-    width:100%;
+.view-all a {
+    border: 1px solid black;
+}
+
+.view-all a::before {
+    width: 100%;
     background-color: black;
 }
 
-.view-all a:hover::before{
+.view-all a:hover::before {
     width: 0;
     background-color: transparent;
 }
 
-.view-all a::after{
-    width:100%;
+.view-all a::after {
+    width: 100%;
     background-color: transparent;
 }
 
-.view-all a:hover::after{
+.view-all a:hover::after {
     width: 0;
     background-color: black;
 }
 
-/* Use Down Arrow button  */
 
-.down-arrow-btn {
-    position: absolute;
-    top:-25px;
-    left:50%;
-    z-index: 1;
-    transform: translateX(-50%);
-    padding:18px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.301);
-
+/* section banner background-image */
+.banner .bg-img{
+    margin-top: 80px;
+    min-height: 100vh;
+    background: url("./Assets/Artboard_3_2.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
-.down-arrow-btn i {
-    color: #616161;
-    font-size:20px;
-    transition: transform 0.4s, color 0.9s;
-}
 
-.down-arrow-btn:hover i{
-    transform: translateY(10px);
-    color:transparent;
+/* banner Section end  */
+
+
+/* regular price css rule */
+p.real-price{
+    color:#2b2b2b;
 }
 
