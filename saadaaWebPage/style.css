@@ -250,8 +250,11 @@ a.view-more-btn,
 
 .section-style .product-container {
     display: grid;
+    border: solid;;
     grid-template-columns: repeat(4, 1fr);
     gap: 50px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     justify-items: center;
 }
 
