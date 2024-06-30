@@ -1,0 +1,306 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: uppercase;
+    font-family: "Montserrat", sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-image: url("gamebgimage.png");
+    background-position: center;
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-color: rgb(0, 0, 0, 0.2);
+    background-blend-mode: color;
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* Use Media Query Background Image in Body  */
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+nav .nav-links ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav .nav-links ul a,
+.sign-button a {
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: 800;
+    color: #fff;
+    border: thick solid transparent;
+    padding: 5px 10px;
+}
+
+nav .sign-button a {
+    border: none;
+    color: black;
+    background-color: #fff;
+    padding: 10px 20px;
+}
+
+
+.nav-links .fa-bars {
+    display: none;
+    font-size: 30px;
+}
+
+/* nav Media Query  */
+@media (max-width:1200px) {
+
+    body {
+        background-size: auto 100%;
+    }
+
+    nav {
+        padding: 20px 10px; /* Adjusted padding for smaller screens */
+        background-color: rgba(0, 0, 0, 0.2);
+    }
+
+    nav .nav-links ul.show {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 15px 12px;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        background-color: rgba(0, 255, 255, 0.095);
+        border-radius: 0 10px 10px 0;
+        z-index: 1;
+    }
+
+    nav .nav-links ul{
+        display: none;
+    }
+
+    .nav-links .fa-bars {
+        display: block;
+        padding-left: 20px;
+    }
+
+    .nav-links .fa-bars:active {
+        color: black;
+    }
+
+    nav .sign-button a {
+        font-size: 17px;
+    }
+
+    nav .nav-links ul li a {
+        font-size: 17px;
+        display: block;
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+
+}
+
+/* right top container drop -down -lists */
+.drop-down-lists {
+    width: 300px;
+    position: absolute;
+    top: 30%;
+    right: 25px;
+}
+
+.drop-down-lists .font-icon i {
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    background-color: #fff;
+}
+
+
+.drop-down-lists .font-icon i:hover {
+    background-color: rgba(255, 255, 255, 0.9);
+}
+
+.drop-down-lists #list-items {
+    display: none;
+}
+
+.drop-down-lists ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    list-style-type: none;
+}
+
+.drop-down-lists ul a {
+    display: flex;
+    justify-content: center;
+    color: #000;
+    font-size: 25px;
+    font-weight: 800;
+    padding: 5px 0;
+}
+
+.drop-down-lists ul a:hover {
+    background-color: #fff;
+}
+
+
+/*  bottom left container  */
+div.container-startup-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 20px;
+    border-radius: 1rem;
+    padding: 3rem;
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #fff;
+    position: absolute;
+    left: 30px;
+    bottom: 40px;
+    /* blur background-color */
+    backdrop-filter: blur(50px);
+    -webkit-backdrop-filter: blur(50px);
+}
+
+@media (max-width:1200px) {
+div.container-startup-btn{
+    left:180px;
+    bottom:40%;
+    transform: translateY(50%);
+}
+
+}
+
+.container-startup-btn h1 a {
+    color: white;
+}
+
+.container-startup-btn a {
+    border-radius: 20px;
+    text-align: center;
+}
+
+.container-startup-btn .login-btn {
+    font-size: 20px;
+    color: #000;
+    font-weight: 800;
+    padding: 20px;
+    background-color: azure;
+    margin: 20px 0;
+}
+
+
+.container-startup-btn .game-btn {
+    font-size: 35px;
+    color: #000;
+    font-weight: 800;
+    padding: 20px;
+    background-color: yellow;
+}
+
+
+
+
+.help-btn {
+    font-size: 40px;
+    font-weight: 700;
+    color: white;
+    background-color: rgb(220, 36, 69);
+    padding: 5px 40px;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+}
+
+.help-btn:hover {
+    background-color: rgb(190, 10, 43);
+}
+
+
+/* hover all content */
+nav div a:hover {
+    border: thick solid rgba(255, 255, 255, 0.7);
+    outline: 9px solid rgba(255, 255, 255, 0.4);
+    background-color: rgba(255, 255, 255, 0.2);
+    transition: outline 2s;
+}
+
+
+.container-startup-btn .game-btn:hover,
+.container-startup-btn .login-btn:hover {
+    outline: 10px solid rgba(255, 255, 255, 0.4);
+    outline-offset: 10px;
+}
+
+
+@media (max-width:960px) {
+
+    div.container-startup-btn {
+        gap: 10px;
+        padding: 15px;
+        bottom: 15%;
+        left: 50%;
+        transform: translate(-50%);
+        background-color: rgba(0, 0, 0, 0.4);
+        backdrop-filter: blur(0px);
+        -webkit-backdrop-filter: blur(0px);
+        border-radius: 8px;
+    }
+
+    h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container-startup-btn .login-btn {
+        font-size: 16px;
+        margin: 0;
+        border-radius: 8px;
+    }
+
+    .container-startup-btn .game-btn {
+        font-size: 25px;
+        border-radius: 8px;
+    }
+
+    .drop-down-lists {
+        width: 150px;
+        top: 13%;
+        right: 50%;
+        transform: translateX(50%);
+    }
+
+    .drop-down-lists ul li a {
+        font-size: 15px;
+    }
+
+    .help-btn {
+        font-size: 20px;
+        right: 50%;
+        transform: translate(50%);
+        border-radius: 4px;
+    }
+
+}
