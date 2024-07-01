@@ -289,9 +289,17 @@ a.view-more-btn,
 }
 
 
+
 .section-style .cart .pro-img {
     width: 400px;
     height: auto;
+}
+
+/* using media query on the image */
+@media  screen and (max-width:992px) {
+    .section-style .cart .pro-img {
+        width:200px;
+    }
 }
 
 .cart .pro-img img {
@@ -359,6 +367,15 @@ span.delete-price {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+@media screen and (max-width:992px) {
+    .banner .bg-img {
+        background-size:cover;
+        margin-top:40px;
+        min-height:100vh;
+
+    }
 }
 
 
