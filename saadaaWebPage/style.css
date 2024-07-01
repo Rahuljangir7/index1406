@@ -330,7 +330,7 @@ span.delete-price {
     border: 1px solid black;
 }
 
-.view-all a::before{
+.view-all a::before {
     width: 100%;
     background-color: black;
 }
