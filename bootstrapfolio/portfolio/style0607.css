@@ -1,0 +1,27 @@
+*{
+    box-sizing: border-box;
+}
+
+.hero-section{
+    background-image: url("./images/herobg.jpg");
+    background-size: cover;
+    background-position: top center;
+    height: 100vh;
+}
+
+
+.hero-section ul li a{
+    color:white;
+    text-decoration: none;
+}
+
+
+
+.hero-section div .hero-content{
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+    text-shadow: 4px 4px 15px black;
+}
+
+
+
