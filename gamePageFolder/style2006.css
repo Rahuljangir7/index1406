@@ -74,7 +74,8 @@ nav .sign-button a {
     }
 
     nav {
-        padding: 20px 10px; /* Adjusted padding for smaller screens */
+        padding: 20px 10px;
+        /* Adjusted padding for smaller screens */
         background-color: rgba(0, 0, 0, 0.2);
     }
 
@@ -91,7 +92,7 @@ nav .sign-button a {
         z-index: 1;
     }
 
-    nav .nav-links ul{
+    nav .nav-links ul {
         display: none;
     }
 
@@ -184,11 +185,11 @@ div.container-startup-btn {
 }
 
 @media (max-width:1200px) {
-div.container-startup-btn{
-    left:180px;
-    bottom:40%;
-    transform: translateY(50%);
-}
+    div.container-startup-btn {
+        left: 180px;
+        bottom: 40%;
+        transform: translateY(50%);
+    }
 
 }
 
@@ -257,6 +258,20 @@ nav div a:hover {
 
 @media (max-width:960px) {
 
+    nav div ul  a:hover {
+        border: thick solid rgba(255, 255, 255, 0);
+        outline: 1px solid rgb(0, 0, 0);
+        background-color: rgba(0, 0, 0, 0.594);
+        transition: none;
+    }
+
+    nav div.sign-button a:hover{
+        border: 1px solid transparent;
+        outline: 2px solid rgb(255, 255, 255);
+        background-color: rgba(255, 255, 255, 0.812);
+        transition: none;
+    }
+
     div.container-startup-btn {
         gap: 10px;
         padding: 15px;
@@ -303,4 +318,9 @@ nav div a:hover {
         border-radius: 4px;
     }
 
+    .container-startup-btn .game-btn:hover,
+    .container-startup-btn .login-btn:hover {
+        outline: 3px solid rgba(255, 255, 255, 0.4);
+        outline-offset: 1px;
+    }
 }
