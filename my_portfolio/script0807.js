@@ -21,14 +21,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const h1 = document.getElementsByTagName('h1');
     // console.log(h1[0]);
     toggle.addEventListener('click', () => {
-        document.body.style.backgroundColor = 'white';
-        p.style.color = 'black';
-        aboutMe.style.color = 'black';
-        h1[0].style.color = "black";
-        toggle.classList.remove('fa-toggle-on');
-        toggle.classList.add('fa-toggle-off');
-        // console.log(toggle.classList);
 
+        if (toggle.classList[1] == 'fa-toggle-on' || toggle.classList[3] == 'fa-toggle-on') {
+
+            document.body.style.backgroundColor = 'white';
+            p.style.color = 'black';
+            aboutMe.style.color = 'black';
+            h1[0].style.color = "black";
+            toggle.classList.remove('fa-toggle-on');
+            toggle.classList.add('fa-toggle-off');
+        } else {
+            document.body.style.backgroundColor = 'black';
+            p.style.color = 'white';
+            aboutMe.style.color = 'white';
+            h1[0].style.color = "white";
+            toggle.classList.remove('fa-toggle-off');
+            toggle.classList.add('fa-toggle-on');
+            console.log(toggle.classList)
+        }
     });
 
 });

@@ -149,6 +149,10 @@ h1 {
     p.photo-links {
         text-align: center;
     }
+
+    nav .my-name {
+        display:none;
+    }
 }
 
 @media (max-width:481px) {
