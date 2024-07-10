@@ -1,0 +1,121 @@
+/* Google font import */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-color: rgba(0, 0, 0, 0.134);
+}
+
+nav,
+section,
+#carouselExampleCaptions,
+.image-container, footer {
+    background-color: #fff;
+}
+
+
+.navbar-brand img {
+    width: 50px;
+}
+
+.navbar .nav-links ul li a {
+    color: black !important;
+    font-weight: 600;
+}
+
+/* hero container  */
+.hero-section .hero-text h1 {
+    font-size: 5rem !important;
+    font-weight: 700;
+    color: #388da4;
+}
+
+.hero-section .hero-text p {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: gray;
+}
+
+.hero-section img {
+    width: 65%;
+}
+
+/* use media query in header section only */
+
+@media (max-width:1400px) and (min-width:1200px) {
+    .hero-section .hero-text p {
+        font-size: 20px;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 3rem !important;
+    }
+
+    .hero-section .hero-text button.btn {
+        font-size: 1rem !important;
+    }
+
+}
+
+@media (max-width:1200px) and (min-width:768px) {
+    .hero-section .hero-text p {
+        font-size: 15px;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 2.4rem !important;
+    }
+
+    .hero-section .hero-text button.btn {
+        font-size: 0.7rem !important;
+    }
+}
+
+@media (max-width:766px) {
+    .hero-section .hero-text p {
+        font-size: 20px;
+    }
+
+    .hero-section .hero-text h1 {
+        font-size: 3rem !important;
+    }
+
+    .hero-section .hero-text button.btn {
+        font-size: 1rem !important;
+    }
+}
+
+
+@media (min-width:1200px) {
+    /* curousel container image set  */
+    #carouselExampleCaptions .carousel-inner img {
+       height: 90vh;
+   }
+    
+}
+
+
+
+/* image container */
+
+.image-container .row>div {
+    margin-bottom: 20px !important;
+}
+
+.image-container .row .card {
+    height: 100%;
+    margin: auto;
+}
+
+.image-container .row .card .card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+}
+
+/* footer section */
+ 

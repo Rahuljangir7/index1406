@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bootstrap page</title>
+    <!-- bootstrap 5 css link -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- custom css link -->
+    <link rel="stylesheet" href="./style.css">
+
+    <!-- font awesome icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <!-- nav Start -->
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img src="./image/kindpng_196374.png" alt="img logo" class="img-fluid">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse nav-links navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav gap-3 fs-5">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" tabindex="-1" aria-disabled="true">Service</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- nav End -->
+
+    <!-- Hero section Start -->
+    <section class="hero-section mt-5 mb-5">
+        <div class="container-fluid pt-5">
+            <div class="row ">
+                <div class="col-lg-6 col-md-6 col-12 align-content-center">
+                    <div class="hero-text ps-5">
+                        <h1>Sale 20% Off On Everything</h1>
+                        <p>Explicabo esse amet tempara quibusdam laudantium, laborum eaque mangnam fugiat hic? Esse
+                            dicta aliquid error repudiandae earum suscipit fugiat molestias, veniam, vel architecto
+                            veritatis delectus repellat modi impedit sequi.</p>
+                        <button type="button" class="btn btn-secondary fs-3 mb-1">Shop Now</button>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6 col-12 text-center">
+                    <img src="./image/kindpng_196374.png" alt="image hero section " class="img-fluid pb-5">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Hero section End -->
+
+    <!-- Carousel Section image  -->
+    <!-- <div class="carousel-section container-fluid bg-dark"> -->
+    <div id="carouselExampleCaptions" class="carousel slide mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators mb-2 mb-lg-5 pb-lg-3 pb-md-0 p-0">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="./image/sliderimg.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block mb-5 pb-5">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./image/sliderimg2.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block mb-5 pb-5">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="./image/sliderimg3.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block mb-5 pb-5">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev pe-5" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon bg-dark rounded-circle " aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next ps-5" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon bg-dark rounded-circle" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <!-- </div> -->
+
+    <!-- Section image start -->
+    <div class="container-fluid image-container mb-5">
+        <div class="row pt-5 pb-4">
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/41RfpBG-pOL._SX300_SY300_QL70_FMwebp_.webp" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+                        <p class="card-text">Pirum Polycarbonate Compatible For Samsung Galaxy S24 Ultra Case With
+                            Stand, Heavy-Duty Military Grade Shockproof Phone Cover With Adjustable Ring Kickstand -
+                            Black</p>
+                        <a href="https://www.amazon.in/dp/B0CSBQ9Q8D/ref=sspa_dk_detail_5?pd_rd_i=B0CSBQ9Q8D&pd_rd_w=HhhIH&content-id=amzn1.sym.9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_p=9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_r=K1EZH7XWW5FAF6KRPY05&pd_rd_wg=2RPLf&pd_rd_r=4a40b1ea-bcf9-490e-8331-86244cef5b13&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/7124l8aJL2L._SX679_.jpg" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">Galaxy S24 Ultra</h5>
+                        <p class="card-text">Spigen Ultra Hybrid Back Cover Case Compatible with Galaxy S24 Ultra (TPU +
+                            Poly Carbonate | Crystal Clear)</p>
+                        <a href="https://www.amazon.in/Spigen-Hybrid-Compatible-Carbonate-Crystal/dp/B0CM4VNCJY/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_8/258-9866361-8863239?pd_rd_w=lOb6I&content-id=amzn1.sym.785b16db-ca40-46a3-ae75-2b38bb48d1aa&pf_rd_p=785b16db-ca40-46a3-ae75-2b38bb48d1aa&pf_rd_r=P63SHZZZ7M5GQN89X1HG&pd_rd_wg=wSxnO&pd_rd_r=75f7f8e7-8afb-44c1-b27a-004de2f1575b&pd_rd_i=B0CM4VNCJY&th=1"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/71Prw49QAwL._SX679_.jpg" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">S24 Ultra</h5>
+                        <p class="card-text">ESR for Samsung Galaxy S24 Ultra Case, Kickstand S24 Ultra Cover with 3
+                            Stand Modes, Military-Grade Drop Protection, Shockproof Slim Phone Case with Patented
+                            Kickstand, Boost Series, Clear</p>
+                        <a href="https://www.amazon.in/dp/B0CM9FS49Q/ref=sspa_dk_detail_5?pd_rd_i=B0CM9FS49Q&pd_rd_w=IdF5q&content-id=amzn1.sym.413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_p=413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_r=RT2MHPCPM2WTNQ0AR2SZ&pd_rd_wg=U84hH&pd_rd_r=54dc977d-1832-43ed-9526-a547f3f6b079&s=electronics&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/71Sm5Y2vHqL._SX679_.jpg" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung Galaxy S23 Ultra</h5>
+                        <p class="card-text">MOSHKING Thermoplastic Polyurethane Back Cover Compatible To Samsung Galaxy
+                            S23 Ultra 5G With Sliding Camera Shield Cover&360° Protection Ring Stand Backcase For Mobile
+                            Phone Case For Samsung Galaxy S23 Ultra 5G(Blue)</p>
+                        <a href="https://www.amazon.in/dp/B0C3WDZN77/ref=sspa_dk_detail_2?psc=1&pd_rd_i=B0C3WDZN77&pd_rd_w=IdF5q&content-id=amzn1.sym.413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_p=413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_r=RT2MHPCPM2WTNQ0AR2SZ&pd_rd_wg=U84hH&pd_rd_r=54dc977d-1832-43ed-9526-a547f3f6b079&s=electronics&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/41RfpBG-pOL._SX300_SY300_QL70_FMwebp_.webp" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung Galaxy S24 Ultra</h5>
+                        <p class="card-text">Pirum Polycarbonate Compatible For Samsung Galaxy S24 Ultra Case With
+                            Stand, Heavy-Duty Military Grade Shockproof Phone Cover With Adjustable Ring Kickstand -
+                            Black</p>
+                        <a href="https://www.amazon.in/dp/B0CSBQ9Q8D/ref=sspa_dk_detail_5?pd_rd_i=B0CSBQ9Q8D&pd_rd_w=HhhIH&content-id=amzn1.sym.9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_p=9f1cb690-f0b7-44de-b6ff-1bad1e37d3f0&pf_rd_r=K1EZH7XWW5FAF6KRPY05&pd_rd_wg=2RPLf&pd_rd_r=4a40b1ea-bcf9-490e-8331-86244cef5b13&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWxfdGhlbWF0aWM&th=1"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/7124l8aJL2L._SX679_.jpg" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">Galaxy S24 Ultra</h5>
+                        <p class="card-text">Spigen Ultra Hybrid Back Cover Case Compatible with Galaxy S24 Ultra (TPU +
+                            Poly Carbonate | Crystal Clear)</p>
+                        <a href="https://www.amazon.in/Spigen-Hybrid-Compatible-Carbonate-Crystal/dp/B0CM4VNCJY/ref=pd_rhf_gw_s_pd_crcd_d_sccl_1_8/258-9866361-8863239?pd_rd_w=lOb6I&content-id=amzn1.sym.785b16db-ca40-46a3-ae75-2b38bb48d1aa&pf_rd_p=785b16db-ca40-46a3-ae75-2b38bb48d1aa&pf_rd_r=P63SHZZZ7M5GQN89X1HG&pd_rd_wg=wSxnO&pd_rd_r=75f7f8e7-8afb-44c1-b27a-004de2f1575b&pd_rd_i=B0CM4VNCJY&th=1"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/71Prw49QAwL._SX679_.jpg" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">S24 Ultra</h5>
+                        <p class="card-text">ESR for Samsung Galaxy S24 Ultra Case, Kickstand S24 Ultra Cover with 3
+                            Stand Modes, Military-Grade Drop Protection, Shockproof Slim Phone Case with Patented
+                            Kickstand, Boost Series, Clear</p>
+                        <a href="https://www.amazon.in/dp/B0CM9FS49Q/ref=sspa_dk_detail_5?pd_rd_i=B0CM9FS49Q&pd_rd_w=IdF5q&content-id=amzn1.sym.413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_p=413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_r=RT2MHPCPM2WTNQ0AR2SZ&pd_rd_wg=U84hH&pd_rd_r=54dc977d-1832-43ed-9526-a547f3f6b079&s=electronics&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw&th=1"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-3 col-lg-4 col-md-6 col-12">
+                <div class="card" style="width: 18rem;">
+                    <img src="./image/71Sm5Y2vHqL._SX679_.jpg" class="card-img-top" alt="image card">
+                    <div class="card-body">
+                        <h5 class="card-title">Samsung Galaxy S23 Ultra</h5>
+                        <p class="card-text">MOSHKING Thermoplastic Polyurethane Back Cover Compatible To Samsung Galaxy
+                            S23 Ultra 5G With Sliding Camera Shield Cover&360° Protection Ring Stand Backcase For Mobile
+                            Phone Case For Samsung Galaxy S23 Ultra 5G(Blue)</p>
+                        <a href="https://www.amazon.in/dp/B0C3WDZN77/ref=sspa_dk_detail_2?psc=1&pd_rd_i=B0C3WDZN77&pd_rd_w=IdF5q&content-id=amzn1.sym.413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_p=413ef885-ae1b-472f-afa4-d683cda6ad0d&pf_rd_r=RT2MHPCPM2WTNQ0AR2SZ&pd_rd_wg=U84hH&pd_rd_r=54dc977d-1832-43ed-9526-a547f3f6b079&s=electronics&sp_csd=d2lkZ2V0TmFtZT1zcF9kZXRhaWw"
+                            class="btn btn-primary">Buy Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section End -->
+
+    <!-- footer -->
+    <footer class="container-fluid pt-5">
+        <div class="contain bg-info">
+            <div class="footer-about rowbg-danger ">
+                <div class="col-5 row">
+                    <div class="col-6">
+                        <div class="popular-feature">
+                            <h6>Popular Features</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">All Products and Features</a></li>
+                                <li><a href="#">Free Meeting Scheduler App</a></li>
+                                <li><a href="#">HubSpot AI Tools</a></li>
+                                <li><a href="#">Email Tracking Software</a></li>
+                                <li><a href="#">AI Content Writer</a></li>
+                                <li><a href="#">AI Website Generator</a></li>
+                                <li><a href="#">Email Marketing Software</a></li>
+                                <li><a href="#">Lead Management</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="popular-feature">
+                            <h6>Productivity Name</h6>
+                            <ul class="list-unstyled">
+                                <li><a href="#">Software</a></li>
+                                <li><a href="#">AI Email Writer</a></li>
+                                <li><a href="#">Free Website Builder</a></li>
+                                <li><a href="#">Sales Email Templates</a></li>
+                                <li><a href="#">Free Online Form Builder</a></li>
+                                <li><a href="#">Free Chatbot Builder</a></li>
+                                <li><a href="#">Free Live Chat Software</a></li>
+                                <li><a href="#">Marketin Analytics</a></li>
+                                <li><a href="#">Free Landing Page Builder</a></li>
+                                <li><a href="#">Free Web Hosting</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-7 row">
+                    <div class="col-4">
+                        <h6>Free Tools</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">See All Free Business Tools</a></li>
+                            <li><a href="#">Clip Creator</a></li>
+                            <li><a href="#">Website Grader</a></li>
+                            <li><a href="#">Make My Persona</a></li>
+                            <li><a href="#">Email Signature Generator</a></li>
+                            <li><a href="#">Brand Kit Generator</a></li>
+                            <li><a href="#">Blog Ideas Generator</a></li>
+                            <li><a href="#">Invoice Template Generator</a></li>
+                            <li><a href="#">Marketin Plan Generator</a></li>
+                            <li><a href="#">Free Business Templates</a></li>
+                            <li><a href="#">Guide Creator</a></li>
+                            <li><a href="#">Software Comparions Library</a></li>
+                            <li><a href="#">Template Marketplace</a></li>
+                            <li><a href="#">Campaign Assistant</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h6>Company</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Management Team</a></li>
+                            <li><a href="#">Board of Directors</a></li>
+                            <li><a href="#">Investor Relations</a></li>
+                            <li><a href="#">Blog</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-4">
+                        <h6>Customers</h6>
+                        <ul class="list-unstyled">
+                            <li><a href="#">Customer Support</a></li>
+                            <li><a href="#">Join a Local User Group</a></li>
+                        </ul>
+
+                        <div class="partners-container">
+                            <h6>Partners</h6>
+                            <ul class="list-unstyled partners-list">
+                                <li><a href="#">All Partner Programs</a></li>
+                                <li><a href="#">Solutions Partner Program</a></li>
+                                <li><a href="#">App Partner Program</a></li>
+                                <li><a href="#">HubSpot for Startups</a></li>
+                                <li><a href="#">Affiliate Program</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links justify-content-center">
+                <ul class="list-unstyled">
+                    <li><a href="#" title="facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href="#" title="instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href="#" title="youtube"><i class="fa-brands fa-youtube"></i></a></li>
+                    <li><a href="#" title="x-twitter"><i class="fa-brands fa-x-twitter"></i></a></li>
+                    <li><a href="#" title="linkedin"><i class="fa-brands fa-linkedin"></i></a></li>
+                    <li><a href="#" title="discord"></a><i class="fa-brands fa-discord"></i></li>
+                    <li><a href="#" title="tiktok"><i class="fa-brands fa-tiktok"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- bootstrap 5 js cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>
