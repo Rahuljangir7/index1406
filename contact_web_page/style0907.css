@@ -2,13 +2,71 @@
 
 * {
     font-family: "Poppins", sans-serif;
+    text-decoration: none !important;
+}
+
+a,
+p {
+    color: rgba(255, 255, 255, 0.701);
+    font-size: 14px !important;
 }
 
 .bg-hero {
     background-image: url("./images/bg_1.jpg");
     background-size: cover;
-    height: 100vh;
+    height: 100vh !important;
     background-position: top center;
     background-repeat: no-repeat;
-    overflow: hidden;
+    background-color: rgba(0, 0, 0, 0.604);
+    background-blend-mode: color;
 }
+
+section .contact-links>div {
+    display: flex;
+    gap: 20px;
+}
+
+h2,
+i {
+    color: rgba(255, 255, 255, 0.878);
+    font-weight: 500;
+}
+
+h4 {
+    color: rgba(255, 255, 255, 0.361);
+    font-weight: 400;
+    font-size: 20px;
+}
+
+section .contact-links>div i {
+    font-size: 25px;
+}
+
+/* form section  */
+
+form input,
+form textarea {
+    background-color: transparent;
+    border: 1px solid rgba(178, 178, 178, 0.378);
+    border-radius: 2px;
+    padding-left: 20px;
+    outline: none;
+    height: 60px;
+}
+
+form textarea {
+    height: 145px !important;
+}
+
+::placeholder {
+    color: black;
+    font-weight: 300;
+}
+
+form button.btn {
+    background-color: #1089ff;
+    max-width: max-content;
+    font-weight: 300;
+    font-size: 14px;
+}
+
