@@ -70,3 +70,8 @@ form button.btn {
     font-size: 14px;
 }
 
+@media (max-width:500px){
+    form textarea{
+        height: 60px !important;
+    }
+}
