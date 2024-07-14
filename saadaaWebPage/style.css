@@ -233,7 +233,7 @@ a.view-more-btn,
     color: black;
     padding: 15px 25px;
     border-radius: 0 0 13px 13px;
-    background-color: rgb(228, 228, 228);
+    background-color: rgb(244, 244, 244);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.301);
 }
 
@@ -296,9 +296,9 @@ a.view-more-btn,
 }
 
 /* using media query on the image */
-@media  screen and (max-width:992px) {
+@media screen and (max-width:992px) {
     .section-style .cart .pro-img {
-        width:200px;
+        width: 200px;
     }
 }
 
@@ -360,6 +360,7 @@ span.delete-price {
 
 
 /* section banner background-image */
+
 .banner .bg-img {
     margin-top: 80px;
     min-height: 100vh;
@@ -370,11 +371,14 @@ span.delete-price {
 }
 
 @media screen and (max-width:992px) {
+    .banner{
+        height: 50vh;
+        width: 100%;
+    }
     .banner .bg-img {
-        background-size:cover;
-        margin-top:40px;
-        min-height:100vh;
-
+        background-size: cover;
+        margin-top: 40px;
+        min-height: 100%;
     }
 }
 
@@ -406,6 +410,7 @@ footer {
     align-items: flex-start;
 }
 
+
 .footer-info .footer-container {
     max-width: 24rem;
     display: grid;
@@ -416,6 +421,12 @@ footer {
     max-width: 19rem;
 }
 
+@media (max-width:992px) {
+    
+    .footer-box .footer-info {
+        flex-wrap: wrap;
+    }
+}
 
 .footer-info .footer-container p {
     color: #2c2c2c;
