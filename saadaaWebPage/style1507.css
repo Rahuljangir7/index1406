@@ -1,0 +1,70 @@
+/* mobile width 600px to minimum  px */
+@media screen and (max-width:500px) {
+
+    .header .top-nav p {
+        font-size: 7px;
+        font-weight: 800;
+    }
+
+    .navbar .social-cart {
+        gap: 0;
+
+    }
+
+    i.fa-whatsapp,
+    i.fa-magnifying-glass {
+        display: none;
+    }
+
+    /* hero section  */
+    .hero-section .img-box .img-content{
+        gap:15px;
+    }
+
+    .hero-section .img-content h1,.section-style h2 {
+        font-size: 20px;
+    }
+
+    .hero-section .img-content p {
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        font-size: 13px;
+    }
+
+    .down-arrow-btn a{
+        padding: 12px; 
+        bottom:-25px;
+    }
+
+    a.view-more-btn,
+    .view-all a{
+        font-size: 13px;
+        font-weight: 700;
+        border-radius: 6px;
+        padding:5px 10px;
+    }
+
+    /* section  */
+    .section-style{
+        gap:10px;
+    }
+
+    .section-style .section-para{
+        font-size: 13px;
+    }
+
+    .section-style .product-container .cart{
+        padding: 15px;
+        gap:10px;
+    }
+
+    /* review butoon  */
+    .review-btn{
+       right: -35px;
+    }
+
+    .review-btn a{
+        font-size: 10px;
+    }
+
+}

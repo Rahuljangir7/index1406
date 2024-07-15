@@ -4,14 +4,9 @@
     box-sizing: border-box;
     font-family: "Montserrat", sans-serif;
     text-decoration: none;
+    list-style-type: none;
 }
 
-body {
-    overflow-x: hidden;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
 
 body::-webkit-scrollbar {
     scrollbar-width: thin;
@@ -26,7 +21,6 @@ body::-webkit-scrollbar-thumb {
 
 
 header {
-    width: 100%;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -35,7 +29,6 @@ header {
 .header .top-nav {
     padding: 12px 0;
     background-color: rgb(249 247 242);
-    width: 100%;
     text-align: center;
 }
 
@@ -52,7 +45,6 @@ header {
     background-color: #fff;
     margin-top: 0.03rem;
     box-shadow: 0 1px 1px rgba(49, 49, 49, 0.367);
-    width: 100%;
 }
 
 
@@ -89,12 +81,6 @@ header {
     position: absolute;
     top: -10px;
     right: -10px;
-}
-
-@media (max-width:500px){
-    body{
-        display:none;
-    }
 }
 
 
@@ -246,7 +232,7 @@ a.view-more-btn,
     color: black;
     padding: 15px 25px;
     border-radius: 0 0 13px 13px;
-    background-color: rgb(244, 244, 244);
+    background-color: rgb(255, 255, 255);
     box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.301);
 }
 
@@ -298,7 +284,6 @@ a.view-more-btn,
     align-items: center;
     gap: 20px;
     padding: 30px 0;
-    /* box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.33); */
 }
 
 
@@ -401,7 +386,7 @@ footer {
     display: flex;
     gap: 30px;
     justify-content: space-between;
-    align-items: flex-start;
+    flex-wrap: wrap;
 }
 
 
@@ -415,13 +400,6 @@ footer {
     max-width: 19rem;
 }
 
-@media (max-width:992px) {
-
-    .footer-box .footer-info {
-        flex-wrap: wrap;
-    }
-}
-
 .footer-info .footer-container p {
     color: #2c2c2c;
     font-size: 18px;
@@ -430,7 +408,6 @@ footer {
 }
 
 .footer-info .footer-nav-links ul {
-    list-style-type: none;
     display: flex;
     flex-direction: column;
     gap: 20px;
