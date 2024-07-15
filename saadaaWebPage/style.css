@@ -19,7 +19,6 @@ body::-webkit-scrollbar-thumb {
     background-color: rgba(0, 0, 0, 0.467);
 }
 
-
 header {
     position: sticky;
     top: 0;
@@ -46,7 +45,6 @@ header {
     margin-top: 0.03rem;
     box-shadow: 0 1px 1px rgba(49, 49, 49, 0.367);
 }
-
 
 .navbar .logo img {
     width: 125px;
@@ -83,9 +81,7 @@ header {
     right: -10px;
 }
 
-
 /* End Navbar and Header Section End*/
-
 
 /* Start Hero Section */
 .hero-section {
@@ -112,16 +108,17 @@ header {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 30px;
+    gap: 50px;
 }
 
 .hero-section .img-content h1 {
-    font-size: 30px;
+    font-size: 70px;
     font-style: italic;
     font-weight: 500;
 }
 
 .hero-section .img-content p {
+    font-size: 40px;
     letter-spacing: 7px;
     word-spacing: 7px;
 }
@@ -329,7 +326,7 @@ span.delete-price {
 /* all view all button css property same  */
 
 .view-all {
-    margin-bottom: 30px;
+    margin-bottom: 70px;
 }
 
 .view-all a {
@@ -457,24 +454,17 @@ form .subscribe-btn input {
     overflow: hidden;
 }
 
-
 /* Subscribe button transition background */
 input[type="submit"]:hover {
     background-color: transparent;
     color: #000;
 }
 
-
-
-
-
 /* footer instagrame css propety */
 .footer-box .link-icon i {
     color: #616161;
     font-size: 20px;
 }
-
-
 
 /* Copyright content container css rule  */
 
