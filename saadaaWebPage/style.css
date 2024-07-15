@@ -8,6 +8,9 @@
 
 body {
     overflow-x: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body::-webkit-scrollbar {
@@ -23,6 +26,7 @@ body::-webkit-scrollbar-thumb {
 
 
 header {
+    width: 100%;
     position: sticky;
     top: 0;
     z-index: 999;
@@ -31,10 +35,12 @@ header {
 .header .top-nav {
     padding: 12px 0;
     background-color: rgb(249 247 242);
+    width: 100%;
+    text-align: center;
 }
 
 .header .top-nav p {
-    text-align: center;
+    margin: 0;
     font-size: 11px;
 }
 
@@ -46,6 +52,7 @@ header {
     background-color: #fff;
     margin-top: 0.03rem;
     box-shadow: 0 1px 1px rgba(49, 49, 49, 0.367);
+    width: 100%;
 }
 
 
@@ -82,6 +89,12 @@ header {
     position: absolute;
     top: -10px;
     right: -10px;
+}
+
+@media (max-width:500px){
+    body{
+        display:none;
+    }
 }
 
 
@@ -249,10 +262,10 @@ a.view-more-btn,
 }
 
 .section-style .product-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 50px;
-    justify-items: center;
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 
@@ -361,30 +374,11 @@ span.delete-price {
 
 /* section banner background-image */
 
-.banner .bg-img {
-    margin-top: 80px;
-    min-height: 100vh;
-    background: url("./Assets/Artboard_3_2.webp");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
+.bg-img img {
+    width: 100%;
 }
-
-@media screen and (max-width:992px) {
-    .banner{
-        height: 50vh;
-        width: 100%;
-    }
-    .banner .bg-img {
-        background-size: cover;
-        margin-top: 40px;
-        min-height: 100%;
-    }
-}
-
 
 /* banner Section end  */
-
 
 /* regular price css rule */
 p.real-price {
@@ -422,7 +416,7 @@ footer {
 }
 
 @media (max-width:992px) {
-    
+
     .footer-box .footer-info {
         flex-wrap: wrap;
     }
