@@ -1,3 +1,27 @@
+/* laptop size media query */
+/* using media query on the image */
+@media screen and (max-width:992px) {
+    .section-style .cart .pro-img {
+        width: 200px;
+    }
+
+    .hero-section .img-content h1,
+    .section-style h2 {
+        font-size: 35px;
+    }
+
+    .hero-section .img-content p {
+        letter-spacing: 4px;
+        word-spacing: 4px;
+        font-size: 28px;
+    }
+    
+    .hero-section .img-box .img-content {
+        gap: 25px;
+    }
+
+}
+
 /* mobile width 600px to minimum  px */
 @media screen and (max-width:500px) {
 
@@ -17,11 +41,12 @@
     }
 
     /* hero section  */
-    .hero-section .img-box .img-content{
-        gap:15px;
+    .hero-section .img-box .img-content {
+        gap: 15px;
     }
 
-    .hero-section .img-content h1,.section-style h2 {
+    .hero-section .img-content h1,
+    .section-style h2 {
         font-size: 20px;
     }
 
@@ -31,44 +56,44 @@
         font-size: 13px;
     }
 
-    .down-arrow-btn a{
-        padding: 12px; 
-        bottom:-25px;
+    .down-arrow-btn a {
+        padding: 12px;
+        bottom: -25px;
     }
 
     a.view-more-btn,
-    .view-all a{
+    .view-all a {
         font-size: 13px;
         font-weight: 700;
         border-radius: 6px;
-        padding:5px 10px;
+        padding: 5px 10px;
     }
 
-    .view-all{
+    .view-all {
         margin-bottom: 35px;
     }
 
     /* section  */
-    .section-style{
-        gap:10px;
-        padding-top:35px;
+    .section-style {
+        gap: 10px;
+        padding-top: 35px;
     }
 
-    .section-style .section-para{
+    .section-style .section-para {
         font-size: 13px;
     }
 
-    .section-style .product-container .cart{
+    .section-style .product-container .cart {
         padding: 15px;
-        gap:10px;
+        gap: 10px;
     }
 
     /* review butoon  */
-    .review-btn{
-       right: -35px;
+    .review-btn {
+        right: -35px;
     }
 
-    .review-btn a{
+    .review-btn a {
         font-size: 10px;
     }
 

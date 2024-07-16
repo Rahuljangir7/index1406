@@ -290,12 +290,6 @@ a.view-more-btn,
     height: auto;
 }
 
-/* using media query on the image */
-@media screen and (max-width:992px) {
-    .section-style .cart .pro-img {
-        width: 200px;
-    }
-}
 
 .cart .pro-img img {
     width: 100%;
