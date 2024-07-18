@@ -1,0 +1,599 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('./responsive0807.css');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+/*  Use Root Property and Var declared in css */
+
+:root {
+  --color-black: #a8a8a8;
+  --font-size: 0.8rem;
+  --color-blue: #1fb643;
+  --bg-color: #323232;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* H2 TAGS  */
+.container-box1 .msg-info h2,
+.container-box3 .img-info h2 {
+  font-weight: 900;
+  padding: 30px;
+}
+
+.img-info-link h2,
+.container-box5 .link-info h2,
+.container-box6 .nav-links .container-box .box h5,
+.container-box7 .team-logo h2,
+.container-box8 .msg h2 {
+  font-weight: 900;
+}
+
+/* two call button all web page */
+.call-btn {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  background-color: var(--color-blue);
+  padding: 5px 15px;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+}
+
+.call-btn:hover {
+  background-color: green;
+}
+
+.img-box-size {
+  background-image: url("images/surgery.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  width: 100%;
+  padding-bottom: 1px;
+}
+
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px 40px;
+  background-color: rgba(0, 0, 0, 0.201);
+}
+
+nav .logo {
+  width: 150px;
+  text-align: center;
+}
+
+nav .logo a {
+  color: white;
+  position: relative;
+  background-image: linear-gradient(to bottom right, rgb(255, 0, 0), rgb(0, 217, 255), rgb(255, 0, 212));
+  background-size: 30%;
+  background-clip: text;
+  transition: background-position 5s;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+nav .logo h1 {
+  font-size: 20px;
+}
+
+nav .logo h1 a:hover {
+  background-position: right bottom;
+  color: transparent;
+
+}
+
+nav .nav-links ul {
+  display: flex;
+  list-style-type: none;
+  gap: 30px;
+  font-size: large;
+  font-weight: bold;
+}
+
+nav .nav-links ul li a {
+  color: rgba(255, 255, 255, 0.8);
+  padding: 3px 5px;
+}
+
+nav .nav-links ul li a:hover {
+  border-bottom: 2px solid var(--color-blue);
+  color: #fff;
+}
+
+
+header {
+  margin: 15pc 0;
+}
+
+header .header {
+  background-color: rgba(0, 0, 0, 0.6);
+  text-align: center;
+  padding: 20px 0 60px;
+  color: white;
+  font-size: 40px;
+}
+
+
+/* Section tag start  */
+/* container box 1  */
+
+.container-box1 {
+  padding: 20px 0;
+}
+
+.container-box1 .msg-info {
+  text-align: center;
+  padding-bottom: 35px;
+}
+
+
+/* BORDER LINE  */
+.border-bt {
+  border-bottom: 2px solid var(--color-blue);
+  padding-bottom: 10px;
+}
+
+.container-box1 .msg-info p,
+.container-box1 .img-links div p {
+  text-align: center;
+  font-size: var(--font-size);
+  font-weight: bold;
+  color: var(--light-black);
+  padding: 0 30px;
+}
+
+.container-box1 .img-links {
+  display: flex;
+}
+
+.container-box1 .img-links div {
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+.container-box1 .img-links div i {
+  color: #fff;
+  background-color: var(--color-blue);
+  padding: 15px 15px;
+  margin-bottom: 10px;
+  font-size: 30px;
+  border-radius: 50%;
+}
+
+.container-box1 .img-links h5 {
+  font-weight: 900;
+}
+
+/* P TAGS GROPUNING  */
+.container-box1 .img-links div p,
+.container-box3 .img-info p {
+  margin: auto;
+  width: 70%;
+}
+
+
+/* container box 2 */
+
+.container-box2 {
+  background-color: var(--bg-color);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 40px 0;
+}
+
+.container-box2 .heading {
+  text-align: center;
+  line-height: 2rem;
+}
+
+.container-box2 .link-iocns ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  gap: 60px;
+  text-align: center;
+}
+
+
+.container-box2 .link-iocns ul li i {
+  font-size: 4rem;
+  text-shadow: 2px 2px 2px black;
+  padding-bottom: 10px;
+}
+
+/* container box 3  */
+
+
+.container-box3 {
+  text-align: center;
+  padding: 40px 0 0;
+}
+
+
+.container-box3 .img-info {
+  text-align: center;
+}
+
+
+.container-box3 .img-nav-links ul {
+  margin: 40px auto;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  list-style-type: none;
+}
+
+.container-box3 .img-nav-links ul a {
+  font-weight: 900;
+  color: black;
+  position: relative;
+}
+
+.container-box3 .img-nav-links ul a:hover {
+  color: #323232;
+}
+
+
+/* hover border-bottom */
+.container-box3 .img-nav-links ul a::after {
+  position: absolute;
+  content: '';
+  background-color: var(--color-blue);
+  width: 0;
+  height: 3px;
+  bottom: -10px;
+  left: 50%;
+  transition: width 1s, left 1s;
+}
+
+.container-box3 .img-nav-links ul a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+/* Gallery section in images css rule  */
+/* container 4  */
+
+.container-box4-img {
+  width: 100%;
+}
+
+.container-box4-img img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  display: block;
+  /* because behave in block element and not space bottom  */
+}
+
+
+/* images info links css rule  */
+
+.img-info-link {
+  text-align: center;
+  line-height: 3rem;
+  padding: 30px;
+}
+
+
+/*  How many hospital and his calleague css rule */
+/* Container 5 */
+
+.container-box5 {
+  background-color: var(--bg-color);
+  color: white;
+  padding: 40px 0;
+}
+
+.container-box5 .link-info {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.container-box5 .hospital-data ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.container-box5 .hospital-data ul li {
+  border: 1px solid var(--color-blue);
+  text-align: center;
+  padding: 5px 30px;
+  list-style-type: none;
+  border-radius: 2px;
+  ;
+}
+
+.container-box5 .hospital-data ul li:hover {
+  background-color: var(--color-blue);
+}
+
+.container-box5 li span:nth-child(1) {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+
+/*  container box 6 */
+.container-box6 {
+  padding: 30px 0;
+}
+
+.container-box6 .links-info {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.container-box6 .links-info h2 {
+  margin: 15px 0 25px;
+  font-weight: 900;
+}
+
+/* GROUPING SELECTOR P TAG FONT-WEIGHT 600 */
+.container-box6 .links-info p {
+  font-weight: 600;
+}
+
+.container-box6 .nav-links .container-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 0 80px;
+}
+
+.container-box6 .nav-links .container-box .box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 40%
+}
+
+.container-box6 .box div p {
+  font-weight: 500;
+  font-size: 13px;
+}
+
+.container-box6 .box i {
+  color: #fff;
+  background-color: var(--color-blue);
+  border-radius: 50%;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.container-box6 .box i.fa-handshake {
+  padding: 10px 2px
+}
+
+
+.container-box6 .box div h5 {
+  margin-bottom: 5px;
+}
+
+
+
+
+/* container box 7 */
+.container-box7 {
+  padding-top: 30px;
+  background-color: #f1f1f1;
+}
+
+.container-box7 .team-logo {
+  text-align: center;
+}
+
+.container-box7 .team-logo p {
+  margin: 20px;
+  font-weight: 600;
+}
+
+.container-box7 .doctor-img {
+  margin: auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  padding-bottom: 30px;
+}
+
+.container-box7 .doctor-img div {
+  line-height: 1.2rem;
+}
+
+.container-box7 .doctor-img div h6 {
+  font-size: 15px;
+}
+
+.container-box7 .doctor-img div span {
+  font-size: 15px;
+}
+
+.container-box7 .doctor-img div i.fa-solid {
+  font-size: 5pc;
+  padding: 15px 10px 5px;
+  color: #aeb4b7;
+  background-color: #e4e6e7;
+  margin-bottom: 15px;
+}
+
+/* doctor information */
+.container-box7 .doctor-info {
+  background-color: var(--bg-color);
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+.container-box7 .doctor-info span {
+  border-top: 2px solid var(--color-blue);
+  margin: 20px 0;
+  padding: 10px 10% 2px;
+  display: inline-block;
+}
+
+.container-box7 .doctor-info .dots input[type="radio"] {
+  accent-color: var(--color-blue);
+  border-color: none;
+}
+
+
+/* Footer setion start */
+/* container box 8 */
+.container-box8 {
+  padding: 30px 0;
+}
+
+.container-box8 .msg {
+  text-align: center;
+}
+
+.container-box8 .msg h4 {
+  margin-bottom: 20px;
+}
+
+.container-box8 .msg h2 {
+  margin-bottom: 30px;
+}
+
+.container-box8 .msg p {
+  margin-bottom: 50px;
+}
+
+.container-box8 .border-bt {
+  padding-bottom: 16px;
+}
+
+.container-box8 .msg-links {
+  width: 60%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  line-height: 1.2rem;
+  padding: 0 40px;
+}
+
+.container-box8 .msg-links div {
+  text-align: center;
+  cursor: pointer;
+}
+
+.container-box8 .msg-links div:hover {
+  filter: drop-shadow(1px 1px 1px rgb(133, 133, 133));
+}
+
+.container-box8 .msg-links div i {
+  color: var(--color-blue);
+  font-size: 40px;
+}
+
+/* form tag  last footer tag  */
+
+/* background-color: #333; */
+
+.contact-form {
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+  background-color: var(--bg-color);
+}
+
+.contact-form h2 {
+  margin-bottom: 10px;
+}
+
+.contact-form p {
+  margin-bottom: 20px;
+}
+
+form {
+  width: 70%;
+  margin: auto;
+}
+
+.input-group {
+  display: flex;
+  margin: 20px -20px;
+  justify-content: space-between;
+}
+
+.input-group input {
+  flex: 1;
+  margin: 0 20px;
+  padding: 10px;
+  border: 2px solid #606060;
+  background-color: transparent;
+  color: #fff;
+  outline: none;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  border: 2px solid #606060;
+  background-color: transparent;
+  color: #fff;
+  margin-bottom: 20px;
+  resize: none;
+  outline: none;
+}
+
+button {
+  border: none;
+}
+
+button:hover {
+  background-color: var(--color-blue);
+}
+
+.contact-form p {
+  margin: 10px 0;
+}
+
+.social-icons {
+  margin-top: 10px;
+}
+
+.social-icons a {
+  margin: 0 5px;
+  font-size: 25px;
+  color: rgb(229, 229, 229);
+}
+
+input::placeholder {
+  color: transparent;
+}
+
+
+.contact-form p.border-last {
+  width: 80%;
+  border-top: medium solid var(--color-blue);
+  margin: 30px auto 10px;
+  padding-top: 30px;
+}
+
+.social-icons a i:hover {
+  color: var(--color-blue);
+}
