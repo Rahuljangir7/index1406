@@ -10,10 +10,9 @@ function validform() {
             Form[count].style.borderColor = "rgba(178, 178, 178, 0.378)";
              
             if(count === Form.length-2){
-                window.location.href = "./houseSale0207/index.html";
+                window.location.href = "../houseSale0207/index.html";
             }
         }
     }
-    
     return false;
 }
