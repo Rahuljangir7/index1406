@@ -7,6 +7,8 @@
 /* Josefin Sans */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+@import url('./icon.css');
+
 * {
     margin: 0;
     padding: 0;
@@ -23,6 +25,7 @@ body {
     height: 100vh;
 }
 
+/*  navbar start */
 nav {
     background-color: #121618;
     position: sticky;
@@ -42,4 +45,28 @@ a.navbar-brand small{
 
 .navbar-nav li a:hover {
     color: #ffc107 !important;
+}
+
+/* navbar end  */
+
+.hero-section {
+    background-image: url('./images/bg_1.jpg');
+    background-color: rgba(0, 0, 0, 0.425);
+    background-blend-mode: color;
+    height: 50rem;
+}
+
+.hero-section .carousel-inner{
+    position: relative;
+    height: 50rem;
+}
+
+.hero-section .carousel-inner img[class ~="hero-img"]{
+    position:absolute;
+    top:130px !important;
+    left:50%;
+}
+
+.hero-section img[src="./images/bg_3.jpg"]{
+    overflow: hidden;
 }
