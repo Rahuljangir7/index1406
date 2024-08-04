@@ -1,72 +1,150 @@
-/* Montserrat google font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Poppins google font */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/* Josefin Sans */
-@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-@import url('./icon.css');
+/*  Poppins google font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    /* font-family: "Montserrat", sans-serif; */
-    /* font-family: "Poppins", sans-serif; */
-
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
 
-body {
-    background: url("./images/bg_4.jpg") no-repeat;
-    background-position: top center;
-    background-size: cover;
-    height: 100vh;
+body{
+  background-image:url(./images/bg_4.jpg);
+  background-position: top center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
 }
 
-/*  navbar start */
+:root{
+  --warning-color:#ffc107;
+  --brown-color:#5c3d03;
+  --bg-black:rgba(0, 0, 0, 0.274);
+}
+
 nav {
-    background-color: #121618;
-    position: sticky;
-    top: 0;
+  z-index:1;
 }
 
 a.navbar-brand {
-    font-family: "Josefin Sans", Arial, sans-serif;
-    line-height: 16px;
+  line-height: 25px;
 }
 
 a.navbar-brand small{
-    letter-spacing: 4px;
-    font-weight: 400;
-    font-size: 14px;
+ font-size: 18px;
+ letter-spacing: 3px;
+}
+
+.navbar-nav li a{
+  font-size: 22px;
 }
 
 .navbar-nav li a:hover {
-    color: #ffc107 !important;
+  color: var(--warning-color) !important ;
 }
 
-/* navbar end  */
 
-.hero-section {
-    background-image: url('./images/bg_1.jpg');
-    background-color: rgba(0, 0, 0, 0.425);
+.hero-bg-img{
+    background-image: url("./images/bg_1.jpg");
+    width: 100%;
+    height: 100vh;
+    background-color:var(--bg-black);
     background-blend-mode: color;
-    height: 50rem;
 }
 
-.hero-section .carousel-inner{
-    position: relative;
-    height: 50rem;
+.hero-txt{
+    flex-direction: column;
+    align-items: end;
+    top: 50% !important;
+}
+.heor-text  h3{
+  font-family: "Nothing You Could Do", cursive;
+  letter-spacing: 3px ;
+  font-style: italic;
+ }
+
+.hero-img{
+    right: 0;
+    top: 25%;
 }
 
-.hero-section .carousel-inner img[class ~="hero-img"]{
-    position:absolute;
-    top:130px !important;
-    left:50%;
+div.hero-btn a{
+ border-radius: 1px ;
+ font-size: 20px;
+ margin-left: 10px;
 }
 
-.hero-section img[src="./images/bg_3.jpg"]{
-    overflow: hidden;
+div.hero-btn a:nth-child(1):hover{
+  background: transparent !important;
+  color: white;
+  outline: white 1px solid;
 }
+
+
+div.hero-btn a:nth-child(2):hover{
+  border-color: var(--warning-color) !important;
+  background: var(--warning-color);
+}
+
+
+section.services {
+  background-image: url(./images/food.png);
+  background-position: center;
+  background-size: contain;
+  height: 100vh;
+
+}
+
+section.services .dishes h3{
+  font-weight: 300 ;
+  font-size: 25px;
+}
+
+section.services p{
+  color: var(--brown-color) ;
+  font-weight: 200;
+}
+
+/* pizza-img-container */
+.pizza-img-container > div {
+  height: 37vh;
+}
+
+.pizza-img-container > div .card {
+  background-color: var(--bg-black);
+}
+
+.pizza-img-container > div .card .card-body{
+  display: flex;
+  flex-direction: column;
+  gap:5px;
+}
+
+.card .card-body .card-text{
+  letter-spacing: 0.04rem;
+}
+.card .card-btn a{
+  padding:5px 15px !important;
+  font-size: 15px;
+}
+
+
+/* border  */
+.box-deg::before{
+    content: "";
+    background:var(--warning-color);
+    position: absolute;
+    height: 1px;
+    left: -70px;
+    width: 60px;
+}
+.box-deg::after{
+    content: "";
+    background:var(--warning-color);
+    position: absolute;
+    height: 1px;
+    right: -70px;
+    width: 60px;
+}
+
