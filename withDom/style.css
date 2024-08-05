@@ -1,213 +1,216 @@
 * {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    font-family: sans-serif;
-    text-decoration: none;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: sans-serif;
+  text-decoration: none;
 }
 
 .navbar {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 70px;
-    align-items: center;
-    border-bottom: 1px solid  transparent;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 70px;
+  align-items: center;
+  border-bottom: 1px solid transparent;
 }
 
 .navbar .nav-links ul {
-    display: flex;
-    gap: 40px;
+  display: flex;
+  gap: 40px;
 }
 
 .navbar .nav-links ul li {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .navbar .theme-icon i,
 .navbar .logo h1 {
-    font-size: 30px;
-    cursor: pointer;
+  font-size: 30px;
+  cursor: pointer;
 }
 
 /* hero  section*/
 .hero {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    min-height: 91.5vh;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 91.5vh;
 }
 
 .hero-text {
-    padding: 0 0 0 50px;
-    display: flex;
-    justify-content: center;
-    align-items: start;
-    flex-direction: column;
-    gap: 50px;
+  padding: 0 0 0 50px;
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  flex-direction: column;
+  gap: 50px;
 }
 
 .hero-text h1 {
-    font-size: 45px;
-    font-weight: bolder;
+  font-size: 45px;
+  font-weight: bolder;
 }
 
 .hero-text p {
-    font-size: 20px;
+  font-size: 20px;
 }
 
 .hero-text a {
-    color: #131313;
-    width: 150px;
-    border: 2px solid #131313;
-    text-align: center;
-    padding: 15px 30px;
-    font-weight: bold;
-    border-radius: 10px;
+  color: #131313;
+  width: 150px;
+  border: 2px solid #131313;
+  text-align: center;
+  padding: 15px 30px;
+  font-weight: bold;
+  border-radius: 10px;
 }
 
 .hero-img {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .hero-img img {
-    width: 70%;
-    border-radius: 20px;
+  width: 70%;
+  border-radius: 20px;
 }
 
 /* menu btn */
 .menu i,
 .navbar .nav-links ul i {
-    display: none;
+  display: none;
 }
 
 /* media  laptop */
-@media (max-width:1306px) and (min-width:768px) {
-    .hero-text {
-        gap: 25px;
-    }
-    
-    .hero-text h1 {
-        font-size: 2em;
-    }
-    
-    .hero-text p {
-        font-size: 1em;
-    }
-    
-    .hero-text a {
-        width: 70px;
-        font-size: 0.7em;
-        padding: 7px 15px;
-        border-radius: 5px;
-    }
+@media (max-width: 1306px) and (min-width: 768px) {
+  .hero-text {
+    gap: 25px;
+  }
+
+  .hero-text h1 {
+    font-size: 2em;
+  }
+
+  .hero-text p {
+    font-size: 1em;
+  }
+
+  .hero-text a {
+    width: 70px;
+    font-size: 0.7em;
+    padding: 7px 15px;
+    border-radius: 5px;
+  }
 }
 
 /* media tablate or laptop  */
-@media (max-width:768px)  {
-    .navbar .nav-links ul{
-        gap:20px;
-    }
+@media (max-width: 768px) {
+  .navbar .nav-links ul {
+    gap: 20px;
+  }
 
-    .navbar .nav-links ul li {
-        font-size: 1em;
-    }
+  .navbar .nav-links ul li {
+    font-size: 1em;
+  }
 
-    .hero{
-        min-height: 80vh;
-    }
-    .hero-text {
-        gap: 15px;
-    }
+  .hero {
+    min-height: 80vh;
+  }
+  .hero-text {
+    gap: 15px;
+  }
 
-    .hero-text h1 {
-        font-size: 1.5em;
-    }
+  .hero-text h1 {
+    font-size: 1.5em;
+  }
 
-    .hero-text p {
-        font-size: 0.7em;
-    }
+  .hero-text p {
+    font-size: 0.7em;
+  }
 
-    .hero-text a {
-        width: 70px;
-        font-size: 0.5em;
-        padding: 4px 7px;
-        border-radius: 2px;
-    }
+  .hero-text a {
+    width: 70px;
+    font-size: 0.7em;
+    padding: 4px 7px;
+    border-radius: 2px;
+  }
 }
 
 /* media mobile */
 @media (max-width: 598px) {
+  .navbar {
+    padding: 15px 35px;
+  }
+  .navbar .nav-links ul {
+    display: block;
+    position: fixed;
+    right: -200px;
+    min-height: 100vh;
+    background: #131313;
+    text-align: center;
+    top: 0;
+    width: 200px;
+    color: #fff;
+    z-index: 10;
+  }
 
-    .navbar{
-        padding:15px 35px;
-    }
-    .navbar .nav-links ul {
-        display: block;
-        position: fixed;
-        right: -200px;
-        min-height: 100vh;
-        background: #131313;
-        text-align: center;
-        top: 0;
-        width: 200px;
-        color: #fff;
-        z-index: 10;
-    }
-    
-    .navbar .nav-links ul i {
-        display: block;
-        font-size: 25px;
-        padding: 10px;
-        cursor: pointer;
-    }
-    
-    .navbar .nav-links ul i:hover {
-        color: rgba(254, 100, 100, 0.615);
-    }
-    
-    .navbar .nav-links ul li {
-        padding: 10px;
-        margin: 10px 0;
-    }
-    
-    .navbar .nav-links ul li:hover {
-        color: cyan;
-    }
-    .hero-img img{
-        width:100%;
-        border-radius: 5px;
-    }
-    
-    .menu i {
-        display: initial;
-        position: fixed;
-        left: 85%;
-        top: 90%;
-        font-size: 25px;
-        border: 2px solid #131313;
-        padding: 10px;
-        border-radius: 10px;
-        cursor: pointer;
-        background: rgba(0, 238, 255, 0.195);
-    }
-    
-    .hero{
-        grid-template-columns: repeat(1, 1fr);
-    }
-    
-    .hero-text{
-        padding: 0 40px;
-        align-items: center;
-        gap:30px;
-    }
-    .hero-text h1{
-        text-align: center;
-    }
-    .hero-text p{
-        text-align: justify;
-        text-align-last: center;
-        line-height: 1rem;
-        font-weight: bold;
-    }
+  .navbar .nav-links ul i {
+    display: inline;
+    font-size: 25px;
+    padding: 0 5px;
+    cursor: pointer;
+  }
+
+  .navbar .nav-links ul i:hover {
+    color: rgba(254, 100, 100, 0.615);
+  }
+
+  .navbar .nav-links ul li {
+    padding: 10px;
+    margin: 10px 0;
+  }
+
+  .navbar .nav-links ul li:hover {
+    color: cyan;
+  }
+  .hero-img img {
+    width: 100%;
+    border-radius: 5px;
+  }
+
+  .menu i {
+    display: initial;
+    position: fixed;
+    left: 80%;
+    top: 90%;
+    font-size: 25px;
+    border: 2px solid #131313;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: rgba(0, 238, 255, 0.195);
+  }
+
+  .hero {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .hero-text {
+    padding: 0 15px;
+    align-items: center;
+    gap: 20px;
+  }
+  .hero-text h1 {
+    text-align: center;
+  }
+  .hero-text p {
+    text-align: justify;
+    text-align-last: center;
+    line-height: 1rem;
+    font-weight: bold;
+  }
+
+  .hero-img {
+    align-items: flex-start;
+  }
 }

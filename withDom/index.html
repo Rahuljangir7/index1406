@@ -1,64 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dom Web</title>
     <!-- custom css -->
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./style.css" />
     <!-- Fontawsome link -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
-        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
 
-<body>
-
+  <body>
     <section>
-        <header class="header">
-            <nav class="navbar" id="btm-line">
-                <div class="logo">
-                    <h1>Logo</h1>
-                </div>
+      <header class="header">
+        <nav class="navbar" id="btm-line">
+          <div class="logo">
+            <h1>Logo</h1>
+          </div>
 
-                <div class="nav-links">
-                    <ul id="side-bar">
-                        <i class="fa-solid fa-xmark" onclick="menuClose()"></i>
-                        <li>Home</li>
-                        <li>About</li>
-                        <li>Contact</li>
-                        <li>Service</li>
-                        <li>Blog</li>
-                    </ul>
-                </div>
+          <div class="nav-links">
+            <ul id="side-bar">
+              <li><i class="fa-solid fa-xmark" onclick="menuClose()"></i></li>
+              <li>Home</li>
+              <li>About</li>
+              <li>Contact</li>
+              <li>Service</li>
+              <li>Blog</li>
+            </ul>
+          </div>
 
-                <div class="theme-icon">
-                    <i class="fa-solid fa-moon" title="Change theme" onclick="theme()"></i>
-                </div>
-            </nav>
-        </header>
+          <div class="theme-icon">
+            <i
+              class="fa-solid fa-moon"
+              title="Change theme"
+              onclick="theme()"
+            ></i>
+          </div>
+        </nav>
+      </header>
 
-        <main class="hero">
-            <div class="hero-text">
-                <h1>Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt cum ipsum dolore error recusandae!
-                    Possimus aspernatur blanditiis voluptatum nobis ipsum quae ratione, explicabo commodi voluptas
-                    molestias! Cumque sequi quod consectetur.</p>
-                <a href="" id="btn">Explore Now</a>
-            </div>
-            <div class="hero-img">
-                <img src="./images/hero-img.jpg" alt="Hero img">
-            </div>
-        </main>
-
-        <!-- menu btn -->
-        <div class="menu">
-            <i class="fa-solid fa-bars" onclick="menuOpen()"></i>
+      <main class="hero">
+        <div class="hero-text">
+          <h1>Lorem ipsum, dolor sit amet consectetur adipisicing.</h1>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt
+            cum ipsum dolore error recusandae! Possimus aspernatur blanditiis
+            voluptatum nobis ipsum quae ratione, explicabo commodi voluptas
+            molestias! Cumque sequi quod consectetur.
+          </p>
+          <a href="" id="btn">Explore Now</a>
         </div>
+        <div class="hero-img">
+          <img src="./images/hero-img.jpg" alt="Hero img" />
+        </div>
+      </main>
+
+      <!-- menu btn -->
+      <div class="menu">
+        <i class="fa-solid fa-bars" onclick="menuOpen()"></i>
+      </div>
     </section>
 
     <script src="./script.js"></script>
-</body>
-
+  </body>
 </html>
