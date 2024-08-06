@@ -5,11 +5,15 @@
   font-family: sans-serif;
   text-decoration: none;
 }
+a{
+  color: black;
+}
+
 
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 70px;
+  padding: 15px 65px;
   align-items: center;
   border-bottom: 1px solid transparent;
 }
@@ -23,6 +27,10 @@
   font-size: 20px;
 }
 
+.navbar ul li a:hover {
+  color: cyan !important;
+}
+
 .theme-icon{
   display: flex;
   justify-content: center;
@@ -30,10 +38,18 @@
   gap:30px;
 }
 
-.navbar .theme-icon i,
-.navbar .logo h1 {
+.navbar .theme-icon i  {
   font-size: 30px;
   cursor: pointer;
+}
+
+.navbar .logo {
+  width: 120px;
+  cursor: pointer;
+}
+
+.navbar .logo img{
+  width: 100%;
 }
 
 /* hero  section*/
@@ -159,8 +175,8 @@
     text-align: center;
     top: 0;
     width: 200px;
-    color: #fff;
     z-index: 10;
+    transition: 0.8s right linear;
   }
 
   .navbar .nav-links ul i {
@@ -168,9 +184,10 @@
     font-size: 25px;
     padding: 0 5px;
     cursor: pointer;
+    color: #fff;
   }
 
-  .navbar .nav-links ul li:nth-child(1):hover {
+  .navbar .nav-links ul li i:hover {
     color: rgba(254, 100, 100, 0.615);
   }
 
@@ -179,9 +196,10 @@
     margin: 10px 0;
   }
 
-  .navbar .nav-links ul li:hover {
-    color: cyan;
+  .navbar .nav-links ul li a{
+    color: #fff;
   }
+
   .hero-img img {
     width: 100%;
     border-radius: 5px;
