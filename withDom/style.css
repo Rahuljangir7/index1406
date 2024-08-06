@@ -23,6 +23,13 @@
   font-size: 20px;
 }
 
+.theme-icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap:30px;
+}
+
 .navbar .theme-icon i,
 .navbar .logo h1 {
   font-size: 30px;
@@ -76,7 +83,8 @@
 }
 
 /* menu btn */
-.menu i,
+
+.menu,
 .navbar .nav-links ul i {
   display: none;
 }
@@ -132,7 +140,7 @@
     width: 70px;
     font-size: 0.7em;
     padding: 4px 7px;
-    border-radius: 2px;
+    border-radius: 5px;
   }
 }
 
@@ -140,6 +148,7 @@
 @media (max-width: 598px) {
   .navbar {
     padding: 15px 35px;
+
   }
   .navbar .nav-links ul {
     display: block;
@@ -161,7 +170,7 @@
     cursor: pointer;
   }
 
-  .navbar .nav-links ul i:hover {
+  .navbar .nav-links ul li:nth-child(1):hover {
     color: rgba(254, 100, 100, 0.615);
   }
 
@@ -178,12 +187,13 @@
     border-radius: 5px;
   }
 
-  .menu i {
+  .menu {
     display: initial;
-    position: fixed;
-    left: 80%;
-    top: 90%;
-    font-size: 25px;
+
+  }
+
+  .menu i.fa-bars {
+    font-size: 20px ;
     border: 2px solid #131313;
     padding: 10px;
     border-radius: 10px;
