@@ -5,10 +5,9 @@
   font-family: sans-serif;
   text-decoration: none;
 }
-a{
+a {
   color: black;
 }
-
 
 .navbar {
   display: flex;
@@ -31,14 +30,14 @@ a{
   color: cyan !important;
 }
 
-.theme-icon{
+.theme-icon {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap:30px;
+  gap: 30px;
 }
 
-.navbar .theme-icon i  {
+.navbar .theme-icon i {
   font-size: 30px;
   cursor: pointer;
 }
@@ -48,7 +47,7 @@ a{
   cursor: pointer;
 }
 
-.navbar .logo img{
+.navbar .logo img {
   width: 100%;
 }
 
@@ -164,7 +163,6 @@ a{
 @media (max-width: 598px) {
   .navbar {
     padding: 15px 35px;
-
   }
   .navbar .nav-links ul {
     display: block;
@@ -196,7 +194,7 @@ a{
     margin: 10px 0;
   }
 
-  .navbar .nav-links ul li a{
+  .navbar .nav-links ul li a {
     color: #fff;
   }
 
@@ -207,11 +205,10 @@ a{
 
   .menu {
     display: initial;
-
   }
 
   .menu i.fa-bars {
-    font-size: 20px ;
+    font-size: 20px;
     border: 2px solid #131313;
     padding: 10px;
     border-radius: 10px;

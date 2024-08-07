@@ -1,20 +1,38 @@
 function theme() {
-  let change = document.body.style;
-  let btnCh = document.getElementById("btn").style;
-  let navLine = document.getElementById("btm-line").style;
-  let anchor = document.querySelectorAll("a");
-  if (change.background == "") {
-    change.background = "#000";
-    change.color = "white";
-    btnCh.borderColor = "white";
-    navLine.borderColor = "gray";
-    anchor.forEach((val)=>val.style.color ='white');
+  let bodyStyle = document.body.style;
+  let fontIcon = document.querySelector(".fa-moon, .fa-sun");
+  let btnStyle = document.getElementById("btn").style;
+  let navLineStyle = document.getElementById("btm-line").style;
+  let anchors = document.querySelectorAll("a");
+
+  if (bodyStyle.background === "") {
+    // Switch to dark mode
+    bodyStyle.background = "#000";
+    bodyStyle.color = "white";
+    btnStyle.color = "white";
+    btnStyle.borderColor = "white";
+    if (fontIcon.classList.contains("fa-moon")) {
+      fontIcon.classList.remove("fa-moon");
+      fontIcon.classList.add("fa-sun");
+    }
+    navLineStyle.borderColor = "gray";
+    anchors.forEach((anchor) => {
+      anchor.style.color = "white";
+    });
   } else {
-    change.background = "";
-    change.color = "";
-    btnCh.borderColor = "";
-    navLine.borderColor = "";
-    anchor.forEach((val)=>val.style.color ='');
+    // Switch back to light mode
+    bodyStyle.background = "";
+    bodyStyle.color = "";
+    btnStyle.color = "";
+    btnStyle.borderColor = "";
+    if (fontIcon.classList.contains("fa-sun")) {
+      fontIcon.classList.remove("fa-sun");
+      fontIcon.classList.add("fa-moon");
+    }
+    navLineStyle.borderColor = "";
+    anchors.forEach((anchor) => {
+      anchor.style.color = "";
+    });
   }
 }
 
