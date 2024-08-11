@@ -288,12 +288,18 @@ a.view-more-btn,
 .section-style .cart .pro-img {
     width: 400px;
     height: auto;
+    overflow: hidden;
 }
 
 
 .cart .pro-img img {
     width: 100%;
     display: block;
+    transition: transform 0.2s linear;
+}
+
+.cart .pro-img img:hover{
+    transform: scale(1.2);
 }
 
 .section-style .product-container .images-content {
