@@ -1,21 +1,31 @@
-function searchBar(){
-    const magnifyingGlass = document.querySelector('.fa-magnifying-glass');
-    magnifyingGlass.style.position = 'relative';
+let clickCount = 1;
+let input = document.createElement("input");
 
-    console.log(magnifyingGlass);
-
-    let input = document.createElement('input');
-    input.type = 'text';
-    input.placeholder = 'search';
-    input.style.borderRadius = '4px';
-    input.style.onlick = 'none';
-    input.style.position = 'absolute';
-    input.style.border = '1px solid gray';
-    input.style.right = '0';
+function searchBar() {
+    const magnifyingGlass = document.querySelector(".fa-magnifying-glass");
+    magnifyingGlass.style.position = "relative";
+    magnifyingGlass.style.zIndex = 999;
     
-    console.log(input);
-     // Insert the input field right after the magnifying glass icon
-     magnifyingGlass.insertAdjacentElement('afterend', input);
+    input.type = "text";
+    input.placeholder = "search";
+    input.classList.add("search");
     
-
+    if (clickCount == 1) {
+        setTimeout(() => {
+      input.style.width = "170px";
+      input.style.opacity = "1";
+      input.style.transition = "1s linear";
+    }, 500);
+    
+    input.style.zIndex = "-1";
+    clickCount++;
+  } else {
+    setTimeout(() => {
+      input.style.width = "0";
+      input.style.opacity = "0";
+      input.style.transition = "1s linear";
+    }, 500);
+    clickCount--;
+  }
+  magnifyingGlass.appendChild(input);
 }

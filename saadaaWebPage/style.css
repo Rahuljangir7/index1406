@@ -1,476 +1,477 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    text-decoration: none;
-    list-style-type: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  list-style-type: none;
 }
 
-
 body::-webkit-scrollbar {
-    scrollbar-width: thin;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
+  scrollbar-width: thin;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.301);
 }
 
 body::-webkit-scrollbar-thumb {
-    border-radius: 20px;
-    background-color: rgba(0, 0, 0, 0.467);
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.467);
 }
 
 header {
-    position: sticky;
-    top: 0;
-    z-index: 999;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
 .header .top-nav {
-    padding: 12px 0;
-    background-color: rgb(249 247 242);
-    text-align: center;
+  padding: 12px 0;
+  background-color: rgb(249 247 242);
+  text-align: center;
 }
 
 .header .top-nav p {
-    margin: 0;
-    font-size: 11px;
+  margin: 0;
+  font-size: 11px;
 }
 
 .header nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 24px 40px;
-    background-color: #fff;
-    margin-top: 0.03rem;
-    box-shadow: 0 1px 1px rgba(49, 49, 49, 0.367);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 40px;
+  background-color: #fff;
+  margin-top: 0.03rem;
+  box-shadow: 0 1px 1px rgba(49, 49, 49, 0.367);
 }
 
 .navbar .logo img {
-    width: 125px;
+  width: 125px;
 }
 
 .navbar .menu-search,
 .navbar .social-cart {
-    display: flex;
-    gap: 40px;
-    font-size: 25px;
-    color: #616161;
+  display: flex;
+  gap: 40px;
+  font-size: 25px;
+  color: #616161;
+  cursor: pointer;
 }
 
 .navbar i.fa-whatsapp {
-    color: green;
+  color: green;
 }
 
 .navbar .cart a {
-    color: #616161;
+  color: #616161;
 }
 
 .navbar .cart {
-    position: relative;
+  position: relative;
 }
 
 .navbar .cart .count {
-    background-color: orange;
-    padding: 2px 5px;
-    border-radius: 50%;
-    color: antiquewhite;
-    font-size: 17px;
-    position: absolute;
-    top: -10px;
-    right: -10px;
+  background-color: orange;
+  padding: 2px 5px;
+  border-radius: 50%;
+  color: antiquewhite;
+  font-size: 17px;
+  position: absolute;
+  top: -10px;
+  right: -10px;
 }
 
 /* End Navbar and Header Section End*/
 
 /* Start Hero Section */
 .hero-section {
-    position: relative;
+  position: relative;
 }
 
 .hero-section .img-box {
-    position: relative;
+  position: relative;
 }
 
 .hero-section .img-box img {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
 .hero-section .img-box .img-content {
-    position: absolute;
-    color: white;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0.267);
-    width: 100%;
-    min-height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 50px;
+  position: absolute;
+  color: white;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.267);
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
 }
 
 .hero-section .img-content h1 {
-    font-size: 70px;
-    font-style: italic;
-    font-weight: 500;
+  font-size: 70px;
+  font-style: italic;
+  font-weight: 500;
 }
 
 .hero-section .img-content p {
-    font-size: 40px;
-    letter-spacing: 7px;
-    word-spacing: 7px;
+  font-size: 40px;
+  letter-spacing: 7px;
+  word-spacing: 7px;
 }
-
 
 /* Use Down Arrow button  */
 
 .down-arrow-btn a {
-    position: absolute;
-    bottom: -30px;
-    left: 50%;
-    z-index: 1;
-    transform: translateX(-50%);
-    padding: 18px;
-    border-radius: 50%;
-    background-color: white;
-    box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.301);
-
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  z-index: 1;
+  transform: translateX(-50%);
+  padding: 18px;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.301);
 }
 
 .down-arrow-btn i {
-    color: #616161;
-    font-size: 20px;
-    transition: transform 0.4s, color 0.9s;
+  color: #616161;
+  font-size: 20px;
+  transition: transform 0.4s, color 0.9s;
 }
 
 .down-arrow-btn:hover i {
-    transform: translateY(10px);
-    color: transparent;
+  transform: translateY(10px);
+  color: transparent;
 }
-
 
 /* End down carpet mark */
 /* End Hero Section  */
 
-
 /* background-color transition left to right and left from right */
 a.view-more-btn,
 .view-all a {
-    font-size: 20px;
-    color: white;
-    border: 2px solid #fff;
-    padding: 10px 20px;
-    font-weight: 500;
-    position: relative;
-    overflow: hidden;
-    background-color: transparent;
-    z-index: 1;
-    transition: color 0.4s;
+  font-size: 20px;
+  color: white;
+  border: 2px solid #fff;
+  padding: 10px 20px;
+  font-weight: 500;
+  position: relative;
+  overflow: hidden;
+  background-color: transparent;
+  z-index: 1;
+  transition: color 0.4s;
 }
 
 .view-more-btn:hover,
 .view-all a:hover {
-    color: black;
+  color: black;
 }
 
 .view-more-btn::before,
 .view-all a::before {
-    content: "";
-    background-color: transparent;
-    height: 100%;
-    width: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    transition: width 0.5s;
+  content: "";
+  background-color: transparent;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: width 0.5s;
 }
 
 .view-more-btn:hover::before {
-    width: 100%;
-    background-color: #fff;
+  width: 100%;
+  background-color: #fff;
 }
-
 
 .view-more-btn::after,
 .view-all a::after {
-    content: "";
-    background-color: #fff;
-    height: 100%;
-    width: 0;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: -1;
-    transition: width 0.7s;
+  content: "";
+  background-color: #fff;
+  height: 100%;
+  width: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: -1;
+  transition: width 0.7s;
 }
 
 .view-more-btn:hover::after {
-    width: 100%;
-    background-color: transparent;
+  width: 100%;
+  background-color: transparent;
 }
 
 /* and view more button hero section */
 
-
 /* Reviews Button fixed position */
 
 .review-btn {
-    position: fixed;
-    top: 50%;
-    right: -50px;
-    transform: rotate(90deg);
-    z-index: 999;
+  position: fixed;
+  top: 50%;
+  right: -50px;
+  transform: rotate(90deg);
+  z-index: 999;
 }
 
 .review-btn a {
-    color: black;
-    padding: 15px 25px;
-    border-radius: 0 0 13px 13px;
-    background-color: rgb(255, 255, 255);
-    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.301);
+  color: black;
+  padding: 15px 25px;
+  border-radius: 0 0 13px 13px;
+  background-color: rgb(255, 255, 255);
+  box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.301);
 }
 
 /* End Reviews Button fixed  */
 
 .section-style {
-    display: flex;
-    flex-direction: column;
-    gap: 40px;
-    padding-top: 90px;
-    align-items: center;
-    position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 90px;
+  align-items: center;
+  position: relative;
 }
 
 .section-style .product-container {
-    display: flex;
-    width: 100%;
-    justify-content: space-around;
-    flex-wrap: wrap;
+  display: flex;
+  width: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-
 
 /* h2 all section-style css rule apply */
 .section-style h2 {
-    color: #2b2b2b;
-    font-weight: 500;
-    font-size: 30px;
+  color: #2b2b2b;
+  font-weight: 500;
+  font-size: 30px;
 }
 
 /* section-paragraph  */
 .section-style .section-para {
-    font-size: 18px;
-    color: #2b2b2b;
-    font-weight: 500;
-    width: 90%;
-    text-align: center;
+  font-size: 18px;
+  color: #2b2b2b;
+  font-weight: 500;
+  width: 90%;
+  text-align: center;
 }
 
 /* a tag all imges-content css rule apply */
 .section-style .images-content h3 {
-    color: #494949;
-    font-size: 13px;
-    font-weight: 600;
+  color: #494949;
+  font-size: 13px;
+  font-weight: 600;
 }
 
 .section-style .product-container .cart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    padding: 30px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 0;
 }
-
-
 
 .section-style .cart .pro-img {
-    width: 400px;
-    height: auto;
-    overflow: hidden;
+  width: 400px;
+  height: auto;
+  overflow: hidden;
 }
-
 
 .cart .pro-img img {
-    width: 100%;
-    display: block;
-    transition: transform 0.2s linear;
+  width: 100%;
+  display: block;
+  transition: transform 0.2s linear;
 }
 
-.cart .pro-img img:hover{
-    transform: scale(1.2);
+.cart .pro-img img:hover {
+  transform: scale(1.2);
 }
 
 .section-style .product-container .images-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 /* All section price p tag css rule */
 p.price-clr {
-    color: red;
-    font-size: 18px;
-    cursor: grabbing;
+  color: red;
+  font-size: 18px;
+  cursor: grabbing;
 }
 
 /* delete-price span tag show price more then all tag use css rule  */
 span.delete-price {
-    text-decoration: line-through;
-    color: #2b2b2b;
+  text-decoration: line-through;
+  color: #2b2b2b;
 }
-
 
 /* all view all button css property same  */
 
 .view-all {
-    margin-bottom: 70px;
+  margin-bottom: 70px;
 }
 
 .view-all a {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 .view-all a::before {
-    width: 100%;
-    background-color: black;
+  width: 100%;
+  background-color: black;
 }
 
 .view-all a:hover::before {
-    width: 0;
-    background-color: transparent;
+  width: 0;
+  background-color: transparent;
 }
 
 .view-all a::after {
-    width: 100%;
-    background-color: transparent;
+  width: 100%;
+  background-color: transparent;
 }
 
 .view-all a:hover::after {
-    width: 0;
-    background-color: black;
+  width: 0;
+  background-color: black;
 }
-
 
 /* section banner background-image */
 
 .bg-img img {
-    width: 100%;
+  width: 100%;
 }
 
 /* banner Section end  */
 
 /* regular price css rule */
 p.real-price {
-    color: #2b2b2b;
+  color: #2b2b2b;
 }
-
 
 /* Footer section Start */
 footer {
-    padding: 50px 0;
+  padding: 50px 0;
 }
 
 .footer-box {
-    display: grid;
-    grid-row-gap: 50px;
-    padding: 5px 40px;
+  display: grid;
+  grid-row-gap: 50px;
+  padding: 5px 40px;
 }
 
 .footer-box .footer-info {
-    display: flex;
-    gap: 30px;
-    justify-content: space-between;
-    flex-wrap: wrap;
+  display: flex;
+  gap: 30px;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-
 .footer-info .footer-container {
-    max-width: 24rem;
-    display: grid;
-    gap: 20px;
+  max-width: 24rem;
+  display: grid;
+  gap: 20px;
 }
 
 .footer-info .form-section {
-    max-width: 19rem;
+  max-width: 19rem;
 }
 
 .footer-info .footer-container p {
-    color: #2c2c2c;
-    font-size: 18px;
-    font-weight: 500;
-    line-height: 2rem;
+  color: #2c2c2c;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 2rem;
 }
 
 .footer-info .footer-nav-links ul {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .footer-info .footer-nav-links ul li a {
-    color: #616161;
-    font-size: 18px;
-    font-weight: 500;
+  color: #616161;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .footer-info .footer-nav-links ul li a:hover {
-    color: #1a1a1a;
+  color: #1a1a1a;
 }
 
 /* form section  */
 
-
 .footer-info .form form {
-
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .footer-info form .inputbox input {
-    width: 100%;
-    font-size: 19px;
-    padding: 15px;
-    outline: none;
-    border: 1px solid #acacac;
+  width: 100%;
+  font-size: 19px;
+  padding: 15px;
+  outline: none;
+  border: 1px solid #acacac;
 }
 
 .footer-info form .inputbox input:focus {
-    border: 1px solid black;
+  border: 1px solid black;
 }
 
 form .subscribe-btn input {
-    width: 50%;
-    font-size: 20px;
-    padding: 15px 5px;
-    font-family: sans-serif;
-    position: relative;
-    background-color: black;
-    color: #fff;
-    z-index: 1;
-    overflow: hidden;
+  width: 50%;
+  font-size: 20px;
+  padding: 15px 5px;
+  font-family: sans-serif;
+  position: relative;
+  background-color: black;
+  color: #fff;
+  z-index: 1;
+  overflow: hidden;
 }
 
 /* Subscribe button transition background */
 input[type="submit"]:hover {
-    background-color: transparent;
-    color: #000;
+  background-color: transparent;
+  color: #000;
 }
 
 /* footer instagrame css propety */
 .footer-box .link-icon i {
-    color: #616161;
-    font-size: 20px;
+  color: #616161;
+  font-size: 20px;
 }
 
 /* Copyright content container css rule  */
 
 .footer-box h5,
 .copyright-content a {
-    font-size: 13px;
-    color: #2b2b2b;
-    font-weight: 500;
+  font-size: 13px;
+  color: #2b2b2b;
+  font-weight: 500;
+}
+
+/* search bar input */
+.search {
+  border-radius: 14px;
+  outline: none;
+  position: absolute;
+  border: 1px solid rgba(128, 128, 128, 0.582);
+  left: -5px;
+  top: -5px;
+  background: transparent;
+  height: 33px;
+  width: 0;
+  opacity: 0;
+  padding-left: 34px;
+  font-weight: bold;
+  color: #000;
 }
