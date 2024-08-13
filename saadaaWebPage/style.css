@@ -18,6 +18,11 @@ body::-webkit-scrollbar-thumb {
   background-color: rgba(0, 0, 0, 0.467);
 }
 
+.fa-magnifying-glass{
+ position : relative;
+  z-index : 999;
+}
+
 header {
   position: sticky;
   top: 0;
@@ -471,7 +476,7 @@ input[type="submit"]:hover {
   height: 33px;
   width: 0;
   opacity: 0;
-  padding-left: 34px;
+  padding:0 15px 0 34px;
   font-weight: bold;
   color: #000;
 }
