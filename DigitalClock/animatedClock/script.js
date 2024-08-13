@@ -12,6 +12,7 @@ setInterval(() => {
 
   // 30 degrees per hour + 0.5 degrees per minute to account for the gradual movement of the hour hand
   hour.style.transform = `translate(-50%) rotate(${
-    (hours % 12) * 30 + minutes * 0.5
+    // (hours % 12) * 30 + minutes * 0.5
+   ((hours%12)*30)+ (minutes/2)
   }deg)`;
-}, 1000);
+},1000);
