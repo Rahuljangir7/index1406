@@ -34,3 +34,9 @@ function searchBar() {
     isOpen = false;
   }
 }
+
+const fetchApi = async () => {
+    const baseURL = "https://fackApi. com";
+    const response = await fetch(baseURL);
+    const data = await response.json();
+}
