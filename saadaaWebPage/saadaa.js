@@ -1,4 +1,4 @@
-let input = document.createElement("input");
+dlet input = document.createElement("input");
 let isOpen = false;  // A flag to track the open/close state 
 
 function searchBar() {
@@ -36,7 +36,21 @@ function searchBar() {
 }
 
 const fetchApi = async () => {
-    const baseURL = "https://fackApi. com";
+    const baseURL ="https://fakestoreapi.com/products";
     const response = await fetch(baseURL);
     const data = await response.json();
+    const cart = document.getElementById("product").innerHtml;
+    cart = data.map((value) =>{
+        return `<div class = "cart">
+            <div class = "img">
+            <img src ="${value.image}" alt ="image">
+            </div>
+            <div class ="content">
+            <h2>${value.title}</h2>
+            <p>${value.description}</p>
+            </div>
+            </div>` ;
+    });
+
 }
+fetchApi();
