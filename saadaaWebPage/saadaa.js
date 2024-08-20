@@ -34,3 +34,25 @@ function searchBar() {
     isOpen = false;
   }
 }
+
+let cart = document.getElementById("product");
+const fetchApi = async () => {
+  const baseURL = "https://fakestoreapi.com/products";
+  const response = await fetch(baseURL);
+  const data = await response.json();
+  cart = data.map((value) => {
+    return `<div class = "cart">
+    <div class = "img">
+    <img src ="${value.image}" alt ="image">
+    </div>
+    <div class ="content">
+    <h2>${value.title}</h2>
+    <p>${value.description}</p>
+    </div>
+    </div>`;
+  });
+};
+
+function servicePage(){
+  return fetchApi();
+}
