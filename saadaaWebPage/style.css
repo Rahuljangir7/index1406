@@ -482,12 +482,22 @@ input[type="submit"]:hover {
   color: #000;
 }
 
+<<<<<<< HEAD
 /* .more-service{
   display : none; 
 } */
+=======
+.more-service{
+  display : none; 
+}
+>>>>>>> a4d69f15100b68ee6b3d5d2882150eeca886d8fc
 
 .more-service .product {
   display :flex; 
   gap : 20px;
   flex-wrap : wrap;
 }
+<<<<<<< HEAD
+=======
+  
+>>>>>>> a4d69f15100b68ee6b3d5d2882150eeca886d8fc
