@@ -1,0 +1,13 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+  font-family: sans-serif;
+}
+
+:root{
+  --bg-color: #323232;
+  --color-blue: #1fb643;
+  --color-black: #a8a8a8;
+}
