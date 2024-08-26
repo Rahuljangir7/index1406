@@ -1,6 +1,7 @@
 import './App.css';
 import Navbars from './component/navbar/Navbar';
 import Header from './component/header/Header';
+import {Service} from './component/service/Service'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
      <Navbars/>
      <Header/>
+     <Service/>
     </>
   )
 }
