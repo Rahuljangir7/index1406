@@ -136,43 +136,11 @@ h1 {
   }
 }
 
+
 @media (max-width: 1056px) {
-  .header p {
-    line-height: 1.7rem;
-    word-spacing: 0.5rem;
-    font-size: 20px;
-  }
-}
-
-@media (max-width: 768px) {
   .container {
     flex-direction: column;
     align-items: center;
-  }
-
-  .icon-links ul {
-    justify-content: center;
-  }
-
-  p.photo-links {
-    text-align: center;
-  }
-
-  nav .my-name {
-    display: none;
-  }
-}
-
-@media (max-width: 481px) {
-  .container {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .header p {
-    line-height: 1.7rem;
-    word-spacing: 0.1rem;
-    font-size: 16px;
   }
 
   .img-container img {
