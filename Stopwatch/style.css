@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+  }
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    font-size: 3rem;
+  }
+  h1 {
+    display: flex;
+    gap: 30px;
+  }
+  h1 div {
+    padding: 5px 20px;
+    width: 100px;
+    text-align: center;
+  }
+
+  .contorler button i {
+    font-size: 2rem;
+    padding: 5px;
+    width: 50px;
+  }
+
+  .contorler button:nth-child(2) i {
+    color: #999999;
+  }
+
+  .showtime {
+    border: solid;
+    width: 350px;
+    height: 400px;
+    border-radius: 4px;
+    text-align: center;
+    font-weight: bold;
+    overflow: scroll;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scroll-behavior: smooth;
+  }
+
+  .clearbox button {
+    padding: 5px;
+    font-size: 2rem;
+    border-radius: 5px;
+    border: 3px inset outset red;
+    background-color: #bd5454;
+    font-weight: bold;
+    color: #fff;
+    cursor: pointer;
+  }
