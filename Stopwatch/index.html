@@ -1,14 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Stopwatch</title>
-    <link rel="stylesheet" href="./style.css"  type="text/css"/>
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" type="text/css" />
+
+    <!-- font icon link -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     
+  </head>
+  <body>
+    <h1>
+      <div id="hour">0</div>
+      :
+      <div id="minuts">0</div>
+      :
+      <div id="seconds">0</div>
+      .
+      <div id="miliSeconds">0</div>
+    </h1>
+    <div class="contorler">
+      <button type="button" onclick="stopWatch()">
+        <i class="fa-solid fa-play"></i>
+      </button>
+      <button type="button" onclick="captureTime()">
+        <i class="fa-solid fa-flag"></i>
+      </button>
+      <button type="button" onclick="reset()">
+        <i class="fa-solid fa-arrow-rotate-left"></i>
+      </button>
+    </div>
+
+    <div class="showtime"></div>
+    <div class="clearbox">
+      <button class="clearBtn" type="button" onclick="clearBox()">Clear</button>
+    </div>
+
     <!-- Custom Script  -->
-     <script src="./script.js"></script>
-</body>
+    <script src="./script.js"></script>
+  </body>
 </html>
