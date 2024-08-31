@@ -26,8 +26,28 @@ a {
   font-size: 20px;
 }
 
+.navbar ul li a {
+  position: relative;
+}
+
 .navbar ul li a:hover {
-  color: cyan !important;
+  color: rgb(59, 207, 0) !important;
+}
+
+.navbar ul li a::before{
+  position:absolute;
+  content: " ";
+  background: rgb(0, 4, 255);
+  width: 0%;
+  height: 3px;
+  left: -3px;
+  bottom: -5px;
+  border-radius: 20%;
+  transition: 0.4s width linear;
+}
+
+.navbar ul li a:hover:before{
+  width: 115%;
 }
 
 .theme-icon {
@@ -40,6 +60,13 @@ a {
 .navbar .theme-icon i {
   font-size: 30px;
   cursor: pointer;
+  padding: 3px 5px;
+  transition: 1s border-radius linear;
+}
+
+.theme-icon i:hover{
+  box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.251);
+  border-radius: 7px;
 }
 
 .navbar .logo {
@@ -95,6 +122,12 @@ a {
 .hero-img img {
   width: 70%;
   border-radius: 20px;
+}
+
+.hero-text #btn:hover{
+  color: wheat;
+  background: rgb(0, 4, 255);
+  border-color: rgb(0, 4, 255);
 }
 
 /* menu btn */
