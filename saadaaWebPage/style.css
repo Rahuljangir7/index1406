@@ -487,3 +487,35 @@ input[type="submit"]:hover {
   gap : 20px;
   flex-wrap : wrap;
 }
+
+/* nav links box  */
+
+#nav-links{
+  background: #ffffffe5;
+  position: absolute;
+  z-index: 1;
+  width: 100%;
+  left: 0;
+  top: 13%;
+  display: none;
+}
+#nav-links ul{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap:calc(5px + 1vw);
+  padding: 0 calc(10px + 4vw);
+}
+
+#nav-links ul li a{
+  padding: 8px 20px;
+  display: inline-block;
+  font-weight: bold;
+  color: rgba(24, 23, 37, 0.623);
+  font-size: calc(5px + 1vw);
+}
+
+#nav-links  ul li a:hover{
+  color: black;
+  background: rgba(0, 0, 0, 0.192);
+}

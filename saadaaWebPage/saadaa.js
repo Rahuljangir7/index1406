@@ -56,3 +56,15 @@ const fetchApi = async () => {
 function servicePage(){
   return fetchApi();
 }
+
+const navLinks = document.getElementById("nav-links").style;
+console.log(navLinks.display);
+
+const navbar = ()=>{
+  if(navLinks.display == ''){
+    navLinks.display = "initial";
+  }else{
+    navLinks.display = "";
+  }
+
+}
