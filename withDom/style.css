@@ -64,6 +64,11 @@ a {
   transition: 1s border-radius linear;
 }
 
+.navbar .theme-icon i.fa-sun:hover{
+  box-shadow: 1px 1px 3px 1px rgba(255, 253, 253, 0.551);
+  border-radius: 7px;
+}
+
 .theme-icon i:hover{
   box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.251);
   border-radius: 7px;
@@ -193,7 +198,7 @@ a {
 }
 
 /* media mobile */
-@media (max-width: 598px) {
+@media (max-width: 650px) {
   .navbar {
     padding: 15px 35px;
   }

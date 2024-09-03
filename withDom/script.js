@@ -1,6 +1,7 @@
 function theme() {
   let bodyStyle = document.body.style;
   let fontIcon = document.querySelector(".fa-moon, .fa-sun");
+  console.log(fontIcon);
   let btnStyle = document.getElementById("btn").style;
   let navLineStyle = document.getElementById("btm-line").style;
   let anchors = document.querySelectorAll("a");
