@@ -58,13 +58,24 @@ function servicePage(){
 }
 
 const navLinks = document.getElementById("nav-links").style;
-console.log(navLinks.display);
-
+let bodyWidth = null;
 const navbar = ()=>{
   if(navLinks.display == ''){
     navLinks.display = "initial";
+    bodyWidth = document.body.clientWidth;
   }else{
     navLinks.display = "";
   }
-
 }
+
+window.addEventListener("resize",()=>{
+  if(innerWidth !== bodyWidth && bodyWidth !== null){
+    navLinks.display = "";
+  }
+});
+
+window.addEventListener("scroll",()=>{
+  if(navLinks.display != ''){
+    navLinks.display = "";
+  }
+});

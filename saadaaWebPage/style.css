@@ -42,6 +42,7 @@ header {
 
 .header nav {
   display: flex;
+  position: relative;
   justify-content: space-between;
   align-items: center;
   padding: 24px 40px;
@@ -491,14 +492,16 @@ input[type="submit"]:hover {
 /* nav links box  */
 
 #nav-links{
-  background: #ffffffe5;
+  background: hsla(0, 0%, 100%, 0.559);
   position: absolute;
   z-index: 1;
-  width: 100%;
-  left: 0;
-  top: 13%;
+  width: 100vw;
+  left: -0.7rem;
+  top: 5rem;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.612);
   display: none;
 }
+
 #nav-links ul{
   display: flex;
   justify-content: space-around;
@@ -517,5 +520,5 @@ input[type="submit"]:hover {
 
 #nav-links  ul li a:hover{
   color: black;
-  background: rgba(0, 0, 0, 0.192);
+  background: rgba(255, 255, 255, 0.838);
 }
