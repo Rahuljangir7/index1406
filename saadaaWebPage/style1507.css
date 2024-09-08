@@ -35,6 +35,22 @@
 
     }
 
+    #nav-links{
+        width: max-content;
+    }
+    
+    #nav-links ul{
+        height: 85vh;
+        display: block;
+        gap:25px;
+        background-color: rgba(0, 0, 0, 0.72);
+    }
+
+    #nav-links ul li a{
+        font-size: 20px;
+        color: white;
+    }
+
     i.fa-whatsapp,
     i.fa-magnifying-glass {
         display: none;
