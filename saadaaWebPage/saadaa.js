@@ -35,23 +35,7 @@ function searchBar() {
   }
 }
 
-let cart = document.getElementById("product");
-const fetchApi = async () => {
-  const baseURL = "https://fakestoreapi.com/products";
-  const response = await fetch(baseURL);
-  const data = await response.json();
-  cart = data.map((value) => {
-    return `<div class = "cart">
-    <div class = "img">
-    <img src ="${value.image}" alt ="image">
-    </div>
-    <div class ="content">
-    <h2>${value.title}</h2>
-    <p>${value.description}</p>
-    </div>
-    </div>`;
-  });
-};
+
 
 function servicePage(){
   return fetchApi();
@@ -79,3 +63,15 @@ window.addEventListener("scroll",()=>{
     navLinks.display = "";
   }
 });
+
+// card option container when click the image container
+let cart = document.getElementsByClassName("cart");
+let popup = document.querySelector(".popup");
+
+Array.from(cart).forEach((value)=>{
+  value.addEventListener("click",()=>{
+    popup.innerHTML = value.innerHTML;
+    popup.style.display = "block";
+  });
+  
+})
