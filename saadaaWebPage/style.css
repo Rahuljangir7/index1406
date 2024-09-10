@@ -56,7 +56,7 @@ header {
 }
 
 .navbar .menu-search,
-.navbar .social-cart {
+.navbar .social-card {
   display: flex;
   gap: 40px;
   font-size: 25px;
@@ -68,15 +68,15 @@ header {
   color: green;
 }
 
-.navbar .cart a {
+.navbar .card a {
   color: #616161;
 }
 
-.navbar .cart {
+.navbar .card {
   position: relative;
 }
 
-.navbar .cart .count {
+.navbar .card .count {
   background-color: orange;
   padding: 2px 5px;
   border-radius: 50%;
@@ -530,8 +530,8 @@ input[type="submit"]:hover {
   position: fixed;
   top:50%;
   left: 50%;
-  transform:translate(-50%,-50%);
-  width: 40%;
+  transform:translate(-50%,-44.5%);
+  width: 51vh;
   height: max-content;
   z-index: 999;
   background: rgba(251, 251, 251, 0.875);
