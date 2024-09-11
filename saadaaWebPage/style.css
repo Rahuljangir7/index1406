@@ -530,16 +530,62 @@ input[type="submit"]:hover {
   position: fixed;
   top:50%;
   left: 50%;
-  transform:translate(-50%,-44.5%);
-  width: 51vh;
+  transform:translate(-50%,-40%);
+  width: 50vh;
   height: max-content;
   z-index: 999;
   background: rgba(251, 251, 251, 0.875);
-  text-align: center;
   cursor: pointer;
   border: 1px solid black;
 }
 
-.popup img{
+.popup .shop-now{
+ display: flex;
+ padding: 10px 20px;
+ justify-content: space-between;
+ align-items: center;
+}
+
+.popup .shop-now .value-box{
+  display: flex;
+  gap:20px;
+}
+
+.popup .shop-now button{
+  padding: 2px 10px;
+  font-weight: bold;
+  font-size: 20px;
+  border: 1px solid gray;
+}
+
+.popup .shop-now .order-btn button{
+  color: blue;
+  background: transparent;;
+  border-radius: 4px;
+}
+
+.shop-now button:nth-child(1):hover{
+  background: green;
+  color: white;
+  border: 1px solid green;
+}
+
+.shop-now button:nth-child(3):hover{
+  background: red;
+  color: white;
+  border: 1px solid red;
+}
+
+.shop-now .order-btn button:hover{
+  color:white;
+  background-color: blue;
+  border-color: currentColor;
+}
+
+.popup-container img{
   width: 100%;
+}
+
+.popup .images-content{
+  padding: 5px 20px;
 }

@@ -2,6 +2,10 @@ let input = document.createElement("input");
 let isOpen = false; // A flag to track the open/close state
 let cart = document.getElementsByClassName("cart");
 let popup = document.querySelector(".popup");
+let popCnt = document.querySelector(".popup-container");
+const addBtn = document.querySelector(".add-value");
+const subBtn = document.querySelector(".sub-value");
+let countVal = document.getElementById("count");
 
 function searchBar() {
   const magnifyingGlass = document.querySelector(".fa-magnifying-glass");
@@ -52,7 +56,7 @@ const navbar = () => {
 
 Array.from(cart).forEach((value) => {
   value.addEventListener("click", () => {
-    popup.innerHTML = value.innerHTML;
+    popCnt.innerHTML = value.innerHTML;
     popup.style.display = "block";
   });
 });
@@ -60,6 +64,7 @@ Array.from(cart).forEach((value) => {
 function popupBox() {
   if (popup.style.display === "block") {
     popup.style.display = "";
+    countVal.innerText = 0;
   }
   return true;
 }
@@ -74,3 +79,15 @@ window.addEventListener("scroll", () => {
   popupBox();
 
 });
+
+// ordering programe
+
+function clickBtn(){
+  let count = 0;
+  return function(){
+    count++;
+    return countVal.innerText = count;
+  }
+}
+
+addBtn.addEventListener("click",clickBtn());
