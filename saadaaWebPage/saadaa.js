@@ -6,6 +6,19 @@ let popCnt = document.querySelector(".popup-container");
 const addBtn = document.querySelector(".add-value");
 const subBtn = document.querySelector(".sub-value");
 let countVal = document.getElementById("count");
+let addImg = document.getElementsByClassName("fa-plus");
+
+for (const icon of addImg) {
+  icon.addEventListener("click", () => {
+    if (icon.className == "fa-solid fa-plus") {
+      icon.classList.remove("fa-plus");
+      icon.classList.add("fa-check");
+    } else {
+      icon.classList.remove("fa-check");
+      icon.classList.add("fa-plus");
+    }
+  });
+}
 
 function searchBar() {
   const magnifyingGlass = document.querySelector(".fa-magnifying-glass");
@@ -77,17 +90,18 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("scroll", () => {
   popupBox();
-
 });
 
 // ordering programe
 
-function clickBtn(){
+function clickBtn() {
   let count = 0;
-  return function(){
+  return function () {
+    
     count++;
-    return countVal.innerText = count;
-  }
+    return (countVal.innerText = count);
+  };
 }
 
-addBtn.addEventListener("click",clickBtn());
+addBtn.addEventListener("click", clickBtn());
+subBtn.addEventListener("click",clickBtn());
