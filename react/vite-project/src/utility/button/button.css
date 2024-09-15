@@ -1,0 +1,7 @@
+button{
+    background-color: var(--color-brown);
+    padding: 15px 25px;
+    color: white;
+    border: 2px solid var(--color-brown);
+    cursor: pointer;
+}

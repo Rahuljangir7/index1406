@@ -1,0 +1,16 @@
+nav{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 3rem ;
+}
+
+nav h1{
+    letter-spacing: 0.2rem;    
+}
+
+nav svg{
+    font-size: 30px;
+    cursor: pointer;
+}

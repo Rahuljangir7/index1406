@@ -1,0 +1,13 @@
+.links{
+    display: flex;
+    justify-content: space-around;
+    padding: 2rem 4rem;
+}
+
+.links a{
+    color: #fff;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 7px;
+    font-weight: 600;
+}

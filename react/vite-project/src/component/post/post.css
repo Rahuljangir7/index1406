@@ -1,0 +1,44 @@
+.post-img {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 6pc;
+}
+
+.post-img img {
+  width: 100%;
+  display: block;
+}
+
+.travel-img {
+  position: relative;
+  overflow: hidden;
+}
+
+.travel-img img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.travel-img .img-name {
+  position: absolute;
+  width: 100%;
+  text-transform: uppercase;
+  box-sizing: border-box;
+  top: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: bold;
+  background-color: rgba(0, 0, 0, 0.446);
+  cursor: pointer;
+  letter-spacing: 0.2rem;
+}
+
+.travel-img .img-name:hover {
+  background-color: rgba(0, 0, 0, 0.546);
+}

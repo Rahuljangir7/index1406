@@ -1,0 +1,19 @@
+*{
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+body{
+  font-family: sans-serif;
+}
+
+:root{
+  --color-brown:rgb(146, 64, 14);
+  --bg-light-black:rgb(243, 244, 246);
+  --para-color: rgb(75, 85, 99);
+  --heading-color:rgb(55, 65, 81);
+  --footer-color:rgb(65, 70, 82);
+  --footer-fontColor: rgb(160,163,169);
+}
