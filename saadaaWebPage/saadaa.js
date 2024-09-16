@@ -8,9 +8,13 @@ const subBtn = document.querySelector(".sub-value");
 let countVal = document.getElementById("count");
 let addImg = document.getElementsByClassName("fa-plus");
 
+// Toggle the plus/check icon on click
 for (const icon of addImg) {
-  icon.addEventListener("click", () => {
-    if (icon.className == "fa-solid fa-plus") {
+  icon.addEventListener("click", (event) => {
+    event.stopPropagation(); // Prevent the click from reaching the cart click event
+
+    if (icon.classList.contains("fa-plus")) {
+      // return true and false result
       icon.classList.remove("fa-plus");
       icon.classList.add("fa-check");
     } else {
@@ -20,6 +24,7 @@ for (const icon of addImg) {
   });
 }
 
+// Search Bar functionality
 function searchBar() {
   const magnifyingGlass = document.querySelector(".fa-magnifying-glass");
 
@@ -56,6 +61,7 @@ function searchBar() {
 
 const navLinks = document.getElementById("nav-links").style;
 let bodyWidth = null;
+
 const navbar = () => {
   if (navLinks.display == "") {
     navLinks.display = "initial";
@@ -65,8 +71,7 @@ const navbar = () => {
   }
 };
 
-// card option container when click the image container
-
+// Cart item click to show popup
 Array.from(cart).forEach((value) => {
   value.addEventListener("click", () => {
     popCnt.innerHTML = value.innerHTML;
@@ -74,34 +79,52 @@ Array.from(cart).forEach((value) => {
   });
 });
 
-function popupBox() {
+// Close popup box
+function closePopup() {
   if (popup.style.display === "block") {
     popup.style.display = "";
-    countVal.innerText = 0;
+    countVal.innerText = 0; // Reset the count value when popup closes
+    count = 0;
   }
   return true;
 }
 
+// Close popup when clicking outside the popup
+document.addEventListener("click", (event) => {
+
+  if (!popup.contains(event.target) && !event.target.closest(".cart")) {
+    popup.style.display = "none"; // This will close the popup only when clicking outside
+    countVal.innerText = 0;
+    count = 0;
+  }
+});
+
+// Window resize logic to reset nav links
 window.addEventListener("resize", () => {
   if (innerWidth !== bodyWidth && bodyWidth !== null) {
     navLinks.display = "";
   }
 });
 
+// Scroll event to close the popup box
 window.addEventListener("scroll", () => {
-  popupBox();
+  closePopup();
 });
 
-// ordering programe
+// Increment/Decrement Counter Program
+let count = 0;
 
-function clickBtn() {
-  let count = 0;
+function updateCount(increment) {
   return function () {
-    
-    count++;
-    return (countVal.innerText = count);
+    if (increment) {
+      count++;
+    } else if (count > 0) {
+      count--;
+    }
+    countVal.innerText = count;
   };
 }
 
-addBtn.addEventListener("click", clickBtn());
-subBtn.addEventListener("click",clickBtn());
+// Attach separate event listeners for add and subtract buttons
+addBtn.addEventListener("click", updateCount(true));
+subBtn.addEventListener("click", updateCount(false));
