@@ -59,15 +59,17 @@ function searchBar() {
   }
 }
 
-const navLinks = document.getElementById("nav-links").style;
+const navLinks = document.getElementById("nav-links");
 let bodyWidth = null;
 
 const navbar = () => {
-  if (navLinks.display == "") {
-    navLinks.display = "initial";
+  if (navLinks.style.display == "") {
+    navLinks.style.display = "initial";
     bodyWidth = document.body.clientWidth;
+    return true;
   } else {
-    navLinks.display = "";
+    navLinks.style.display = "";
+    return false;
   }
 };
 
@@ -91,6 +93,12 @@ function closePopup() {
 
 // Close popup when clicking outside the popup
 document.addEventListener("click", (event) => {
+  if (
+    !navLinks.contains(event.target) &&
+    !document.querySelector(".fa-bars").contains(event.target)
+  ) {
+    navLinks.style.display = "";
+  }
 
   if (!popup.contains(event.target) && !event.target.closest(".cart")) {
     popup.style.display = "none"; // This will close the popup only when clicking outside
@@ -102,12 +110,13 @@ document.addEventListener("click", (event) => {
 // Window resize logic to reset nav links
 window.addEventListener("resize", () => {
   if (innerWidth !== bodyWidth && bodyWidth !== null) {
-    navLinks.display = "";
+    navLinks.style.display = "";
   }
 });
 
 // Scroll event to close the popup box
 window.addEventListener("scroll", () => {
+  navLinks.style.display = "";
   closePopup();
 });
 
