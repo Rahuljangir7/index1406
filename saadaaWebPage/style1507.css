@@ -43,12 +43,16 @@
     background-color: rgba(0, 0, 0, 0.72);
   }
 
+  #nav-links ul #myWht {
+    display: block;
+  }
+
   #nav-links ul li a {
     font-size: 20px;
     color: white;
   }
 
-  i.fa-whatsapp,
+  .social-card i.fa-whatsapp,
   i.fa-magnifying-glass {
     display: none;
   }

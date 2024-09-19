@@ -87,6 +87,10 @@ header {
   right: -10px;
 }
 
+#nav-links ul #myWht {
+  display: none;
+}
+
 /* End Navbar and Header Section End*/
 
 /* Start Hero Section */
@@ -304,7 +308,7 @@ a.view-more-btn,
   position: absolute;
   top: 0;
   background: white;
-  font-size: 30px;
+  font-size: calc(0.5rem + 2vw);
   font-weight: bold;
   padding: 5px;
   border-top: 1px solid rgba(128, 128, 128, 0.3);
@@ -547,14 +551,15 @@ input[type="submit"]:hover {
 /* popup  */
 .popup {
   display: none;
+  position: relative;
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -40%);
+  transform: translate(-50%, -45%);
   width: 50vh;
-  height: max-content;
+  height: min-content;
   z-index: 999;
-  background: rgba(251, 251, 251, 0.875);
+  background: rgba(251, 251, 251, 0.959);
   cursor: pointer;
   border: 1px solid black;
 }
@@ -578,7 +583,8 @@ input[type="submit"]:hover {
   border: 1px solid gray;
 }
 
-.popup .shop-now .order-btn button {
+.popup .shop-now .order-btn button,
+.popup .more-btn a {
   color: blue;
   background: transparent;
   border-radius: 4px;
@@ -596,7 +602,8 @@ input[type="submit"]:hover {
   border: 1px solid red;
 }
 
-.shop-now .order-btn button:hover {
+.shop-now .order-btn button:hover,
+.popup .more-btn a:hover {
   color: white;
   background-color: blue;
   border-color: currentColor;
@@ -612,4 +619,15 @@ input[type="submit"]:hover {
 
 .popup .images-content {
   padding: 5px 20px;
+}
+
+.popup .more-btn {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.popup .more-btn a {
+  padding: 5px 10px;
+  box-shadow: 1px 1px 1px;
 }

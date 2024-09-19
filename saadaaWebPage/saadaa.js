@@ -1,3 +1,4 @@
+"use strict";
 let input = document.createElement("input");
 let isOpen = false; // A flag to track the open/close state
 let cart = document.getElementsByClassName("cart");
