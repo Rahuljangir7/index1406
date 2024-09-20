@@ -1,18 +1,18 @@
 import React from "react";
 import {
-    AppBar,
-    Container,
-    Toolbar,
-    Typography,
-    Box,
-    IconButton,
-    MenuItem,
-    Menu,
+  AppBar,
+  Container,
+  Toolbar,
+  Typography,
+  Box,
+  IconButton,
+  MenuItem,
+  Menu,
   Button,
 } from "@mui/material";
-import MenuIcon from '@mui/icons-material/Menu';
+import MenuIcon from "@mui/icons-material/Menu";
 
-const pages = ['Home', 'Service', 'Contact', 'About'];
+const pages = ["Home", "Service", "Contact", "About"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -26,17 +26,18 @@ const Navbar = () => {
   };
   return (
     <>
-      <AppBar position="static" sx={{border: '2px solid red',}}>
+      <AppBar position="fixed" sx={{ bgcolor: "rgba(0, 0, 0, 0.301)" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography
-              variant="h6"
+              variant="h5"
               sx={{
                 mr: 8,
                 display: { xs: "none", md: "flex" },
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".1rem",
+                lineHeight: "1.5rem",
                 color: "inherit",
               }}
             >
@@ -86,16 +87,32 @@ const Navbar = () => {
                 fontFamily: "monospace",
                 fontWeight: 700,
                 letterSpacing: ".1rem",
+                fontSize: "calc(13px + 2vw)",
               }}
             >
               HEALTH-CARE HOSPITAL
             </Typography>
-            <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
+            <Box
+              sx={{
+                flexGrow: 1,
+                display: { xs: "none", md: "flex" },
+                justifyContent: "end",
+                gap: 10,
+                alignItems: "center",
+              }}
+            >
               {pages.map((page) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{
+                    my: 3,
+                    color: "rgba(255, 255, 255, 0.8)",
+                    display: "block",
+                    fontWeight: "bolder",
+                    letterSpacing: "0.1rem",
+                    fontSize: "1.2rem",
+                  }}
                 >
                   {page}
                 </Button>
