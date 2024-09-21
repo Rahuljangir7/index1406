@@ -9,7 +9,7 @@ const Hero = () => {
         maxWidth="100%"
         sx={{
           padding: "0 !important",
-          position: "absolute",
+          position: "relative",
         }}
       >
         <CardMedia

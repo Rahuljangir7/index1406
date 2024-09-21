@@ -97,7 +97,7 @@ const Navbar = () => {
                 flexGrow: 1,
                 display: { xs: "none", md: "flex" },
                 justifyContent: "end",
-                gap: 10,
+                gap: 9,
                 alignItems: "center",
               }}
             >
