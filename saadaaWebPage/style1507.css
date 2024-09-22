@@ -1,3 +1,94 @@
+/* rating box style */
+/* Container for the rating box */
+.rating-box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  text-align: center;
+}
+
+/* Title styling */
+.rating-box h3 {
+  padding: 20px 0 5px;
+  margin: 0 0 10px;
+  font-size: 1.2rem;
+  color: #4d4d4d;
+}
+
+/* Subtitle styling */
+.rating-box p {
+  font-size: 0.9rem;
+  color: #000;
+}
+
+/* Stars container styling */
+.stars {
+  margin-bottom: 20px;
+}
+
+/* Styling for each star */
+.stars i {
+  font-size: 30px;
+  color: #ccc;
+  cursor: pointer;
+  transition: color 0.2s ease-in-out;
+}
+
+/* Hover effect */
+.stars i.hover {
+  color: #f7d26a;
+}
+
+/* Selected stars color */
+.stars i.selected {
+  color: #f7b800;
+}
+
+/* Message input styling */
+#msg {
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0 25px;
+  height: 100px;
+  font-size: 0.9rem;
+  outline: none;
+  resize: none;
+}
+
+/* Button styling */
+button {
+  background-color: #6b47dc;
+  color: #fff;
+  border: none;
+  padding: 10px 0;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #5936cc;
+}
+
+/* Maybe later text */
+.maybe-later {
+  padding: 5px 0 10px;
+  color: #888;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+.color-box {
+  padding: 5px 30px 20px;
+  background: #e8ecf6;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+}
+
 /* laptop size media query */
 /* using media query on the image */
 @media screen and (max-width: 992px) {
