@@ -138,3 +138,96 @@ function updateCount(increment) {
 // Attach separate event listeners for add and subtract buttons
 addBtn.addEventListener("click", updateCount(true));
 subBtn.addEventListener("click", updateCount(false));
+
+// ---------------------- rating button -----------------------
+// Select all the stars
+const stars = document.querySelectorAll(".stars i");
+const rateNowBtn = document.querySelector(".rate-now");
+const messageBox = document.getElementById("msg"); // The textarea field
+const checkIcon = document.querySelector(".check-icon"); // Check icon beside the button
+
+// Track the rating value (initial selected stars)
+let ratingValue = 0;
+
+// Add event listeners for hover and click
+stars.forEach((star, index) => {
+  // Hover effect: Highlight stars temporarily
+  star.addEventListener("mouseover", () => {
+    highlightStars(index);
+  });
+
+  // Reset stars back to the selected state when mouse leaves
+  star.addEventListener("mouseout", () => {
+    setStars(ratingValue); // Revert to the selected rating
+  });
+
+  // Click to select the rating permanently
+  star.addEventListener("click", () => {
+    ratingValue = index + 1; // Save the selected rating
+    setStars(ratingValue); // Set the stars as selected
+    checkButtonState(); // Check if the button should be activated
+  });
+});
+
+// Function to highlight stars on hover
+function highlightStars(index) {
+  // Remove any previous highlights (both selected and hover)
+  stars.forEach((star) => {
+    star.classList.remove("selected");
+    star.classList.remove("hover");
+  });
+
+  // Highlight the hovered stars
+  for (let i = 0; i <= index; i++) {
+    stars[i].classList.add("hover");
+  }
+}
+
+// Function to set the stars after selection
+function setStars(rating) {
+  // Reset all stars
+  stars.forEach((star) => {
+    star.classList.remove("hover");
+    star.classList.remove("selected");
+  });
+
+  // Apply 'selected' class only to stars up to the rating value
+  for (let i = 0; i < rating; i++) {
+    stars[i].classList.add("selected");
+  }
+}
+
+// Function to check if the "Rate now" button should be enabled
+function checkButtonState() {
+  if (ratingValue > 0 && messageBox.innerText.trim() !== "") {
+    rateNowBtn.classList.add("active"); // Enable the button
+    rateNowBtn.disabled = false;
+  } else {
+    rateNowBtn.classList.remove("active"); // Disable the button
+    rateNowBtn.disabled = true;
+  }
+}
+
+// Event listener to check message box input for button activation
+messageBox.addEventListener("input", checkButtonState);
+
+// // Event listener for "Rate now" button click
+rateNowBtn.addEventListener("click", () => {
+  if (rateNowBtn.classList.contains("active")) {
+    checkIcon.style.display = "block"; // Show the check icon
+    checkIcon.style.fontSize = "24px"; // Make the check icon larger
+  }
+});
+
+// when click review button
+let reviewBtn = document.getElementById("review-btn");
+let reviewBox = document.querySelector(".review-box").style;
+
+reviewBtn.addEventListener("click", () => {
+  console.log(reviewBox.visibility);
+  if (reviewBox.visibility === "") {
+    reviewBox.visibility = "initial";
+  } else {
+    reviewBox.visibility = "";
+  }
+});

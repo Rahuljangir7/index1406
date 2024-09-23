@@ -231,6 +231,7 @@ a.view-more-btn,
 }
 
 .review-btn a {
+  cursor: pointer;
   color: black;
   padding: 15px 25px;
   border-radius: 0 0 13px 13px;

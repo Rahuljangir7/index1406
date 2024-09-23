@@ -1,9 +1,22 @@
 /* rating box style */
 /* Container for the rating box */
+.review-box {
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffffffea;
+  z-index: 1;
+  visibility: hidden;
+}
+
 .rating-box {
   background-color: #fff;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 8px #000;
   width: 300px;
   text-align: center;
 }
@@ -29,20 +42,16 @@
 
 /* Styling for each star */
 .stars i {
-  font-size: 30px;
-  color: #ccc;
-  cursor: pointer;
-  transition: color 0.2s ease-in-out;
+  font-size: 24px;
+  color: #ccc; /* Default color for unselected stars */
 }
 
-/* Hover effect */
 .stars i.hover {
-  color: #f7d26a;
+  color: #f7d26a; /* Color for hovered stars */
 }
 
-/* Selected stars color */
 .stars i.selected {
-  color: #f7b800;
+  color: #f7b800; /* Color for selected stars */
 }
 
 /* Message input styling */
@@ -87,6 +96,22 @@ button:hover {
   flex-direction: column;
   align-items: stretch;
   justify-content: center;
+}
+
+.rate-now {
+  background-color: #ccc; /* Default color for disabled button */
+  cursor: not-allowed;
+}
+
+.rate-now.active {
+  background-color: #6a1b9a; /* Dark color when button is enabled */
+  cursor: pointer;
+}
+
+.check-icon {
+  display: none; /* Hidden initially */
+  margin-left: 10px;
+  color: #28a745; /* Green color for the check icon */
 }
 
 /* laptop size media query */
