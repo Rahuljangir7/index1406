@@ -1,3 +1,4 @@
+import { Container } from "@mui/material";
 import "./App.css";
 import Cart from "./component/Cart";
 import Heading from "./component/Heading";
@@ -10,17 +11,20 @@ function App() {
     <>
       <Navbar />
       <Hero />
-      <div>
-
-      {data.map((item) => {
-        return (
-          <>
-            <Heading head3={item.title} head5={item.heading} para={item.des} />
-          </>
-        );
-      })}
-      <Cart/>
-      </div>
+      <Container maxWidth>
+        {data.map((item) => {
+          return (
+            <>
+              <Heading
+                head3={item.title}
+                head5={item.heading}
+                para={item.des}
+              />
+            </>
+          );
+        })}
+        <Cart />
+      </Container>
     </>
   );
 }
