@@ -140,94 +140,102 @@ addBtn.addEventListener("click", updateCount(true));
 subBtn.addEventListener("click", updateCount(false));
 
 // ---------------------- rating button -----------------------
-// Select all the stars
+// Select all necessary DOM elements
 const stars = document.querySelectorAll(".stars i");
 const rateNowBtn = document.querySelector(".rate-now");
-const messageBox = document.getElementById("msg"); // The textarea field
-const checkIcon = document.querySelector(".check-icon"); // Check icon beside the button
+const messageBox = document.getElementById("msg");
+const checkIcon = document.querySelector(".check-icon");
+const reviewBtn = document.getElementById("review-btn");
+const reviewBox = document.querySelector(".review-box");
+let ratingValue = 0; // Holds the current selected star rating
 
-// Track the rating value (initial selected stars)
-let ratingValue = 0;
+// Toggle review box visibility when the review button is clicked
+reviewBtn.addEventListener("click", () => {
+  if (reviewBox.style.visibility === "visible") {
+    reviewBox.style.visibility = "hidden"; // Hide review box
+  } else {
+    reviewBox.style.visibility = "visible"; // Show review box
+  }
+});
 
-// Add event listeners for hover and click
+// Add hover and click functionality to stars
 stars.forEach((star, index) => {
-  // Hover effect: Highlight stars temporarily
-  star.addEventListener("mouseover", () => {
-    highlightStars(index);
-  });
+  // Hover: highlight stars temporarily
+  star.addEventListener("mouseover", () => highlightStars(index));
 
-  // Reset stars back to the selected state when mouse leaves
-  star.addEventListener("mouseout", () => {
-    setStars(ratingValue); // Revert to the selected rating
-  });
+  // Mouse out: revert to selected stars
+  star.addEventListener("mouseout", () => setStars(ratingValue));
 
-  // Click to select the rating permanently
+  // Click: permanently select the rating
   star.addEventListener("click", () => {
-    ratingValue = index + 1; // Save the selected rating
-    setStars(ratingValue); // Set the stars as selected
-    checkButtonState(); // Check if the button should be activated
+    ratingValue = index + 1;
+    setStars(ratingValue); // Save selected stars
+    checkButtonState(); // Enable button if conditions met
   });
 });
 
-// Function to highlight stars on hover
-function highlightStars(index) {
-  // Remove any previous highlights (both selected and hover)
-  stars.forEach((star) => {
-    star.classList.remove("selected");
-    star.classList.remove("hover");
-  });
+// first fill the message then stars clicked 
+messageBox.addEventListener("keyup", () => {
+  if (messageBox.value.trim() !== "") {
+    console.log(messageBox.value);
+    checkButtonState(); // Enable button if conditions met
+  }
+});
 
-  // Highlight the hovered stars
+// Highlight stars on hover
+function highlightStars(index) {
+  stars.forEach((star) => star.classList.remove("hover", "selected"));
   for (let i = 0; i <= index; i++) {
     stars[i].classList.add("hover");
   }
 }
 
-// Function to set the stars after selection
+// Set stars based on the selected rating
 function setStars(rating) {
-  // Reset all stars
-  stars.forEach((star) => {
-    star.classList.remove("hover");
-    star.classList.remove("selected");
-  });
-
-  // Apply 'selected' class only to stars up to the rating value
+  stars.forEach((star) => star.classList.remove("hover", "selected"));
   for (let i = 0; i < rating; i++) {
     stars[i].classList.add("selected");
   }
 }
 
-// Function to check if the "Rate now" button should be enabled
+// Check if button should be active (stars selected + message entered)
 function checkButtonState() {
-  if (ratingValue > 0 && messageBox.innerText.trim() !== "") {
-    rateNowBtn.classList.add("active"); // Enable the button
+  if (ratingValue > 0 && messageBox.value.trim() !== "") {
+    rateNowBtn.classList.add("active");
     rateNowBtn.disabled = false;
+    rateNowBtn.style.cursor = "pointer"; // Ensure cursor changes to pointer
   } else {
-    rateNowBtn.classList.remove("active"); // Disable the button
+    rateNowBtn.classList.remove("active");
     rateNowBtn.disabled = true;
+    rateNowBtn.style.cursor = "not-allowed"; // Disable cursor change
   }
 }
 
-// Event listener to check message box input for button activation
-messageBox.addEventListener("input", checkButtonState);
-
-// // Event listener for "Rate now" button click
+// Enable button and show check icon when "Rate Now" clicked
 rateNowBtn.addEventListener("click", () => {
   if (rateNowBtn.classList.contains("active")) {
-    checkIcon.style.display = "block"; // Show the check icon
-    checkIcon.style.fontSize = "24px"; // Make the check icon larger
+    checkIcon.style.display = "block"; // Show check icon
+    checkIcon.style.position = "absolute"; // Make sure it's positioned correctly on top of the color box
+    checkIcon.style.top = "50%"; // Position it within the color box
+    checkIcon.style.left = "50%";
+    checkIcon.style.transform = "translate(-50%, -50%)"; // Center the icon
+    resetForm(); // Reset form after showing icon
   }
 });
 
-// when click review button
-let reviewBtn = document.getElementById("review-btn");
-let reviewBox = document.querySelector(".review-box").style;
+// Reset form after 5 seconds
+function resetForm() {
+  setTimeout(() => {
+    checkIcon.style.display = "none"; // Hide check icon
+    setStars(0); // Reset stars
+    ratingValue = 0; // Reset rating
+    messageBox.value = ""; // Clear message box
+    rateNowBtn.classList.remove("active");
+    rateNowBtn.disabled = true;
+  }, 2000); // Hide check icon after 5 seconds
+}
 
-reviewBtn.addEventListener("click", () => {
-  console.log(reviewBox.visibility);
-  if (reviewBox.visibility === "") {
-    reviewBox.visibility = "initial";
-  } else {
-    reviewBox.visibility = "";
-  }
+// Hide review box when "Maybe later" is clicked
+document.querySelector(".maybe-later").addEventListener("click", () => {
+  reviewBox.style.visibility = "hidden";
 });

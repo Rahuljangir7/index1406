@@ -1,49 +1,37 @@
-/* rating box style */
-/* Container for the rating box */
+/* Review box container */
 .review-box {
   position: fixed;
   top: 0;
+  left: 0;
   height: 100vh;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background: #ffffffea;
+  background: rgba(255, 255, 255, 0.92);
   z-index: 1;
   visibility: hidden;
 }
 
+/* Inner rating box styling */
 .rating-box {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 8px #000;
   width: 300px;
   text-align: center;
-}
-
-/* Title styling */
-.rating-box h3 {
-  padding: 20px 0 5px;
-  margin: 0 0 10px;
-  font-size: 1.2rem;
-  color: #4d4d4d;
-}
-
-/* Subtitle styling */
-.rating-box p {
-  font-size: 0.9rem;
-  color: #000;
+  padding: 20px;
 }
 
 /* Stars container styling */
 .stars {
-  margin-bottom: 20px;
+  margin: 15px 0;
 }
 
-/* Styling for each star */
+/* Star icons styling */
 .stars i {
   font-size: 24px;
-  color: #ccc; /* Default color for unselected stars */
+  color: #ccc; /* Default unselected star color */
 }
 
 .stars i.hover {
@@ -54,69 +42,65 @@
   color: #f7b800; /* Color for selected stars */
 }
 
-/* Message input styling */
+/* Message box styling */
 #msg {
   border: 1px solid #ddd;
   border-radius: 5px;
-  margin: 10px 0 25px;
-  height: 100px;
+  margin: 10px 0 15px;
+  height: 80px;
+  width: 100%;
+  padding: 10px;
   font-size: 0.9rem;
-  outline: none;
   resize: none;
 }
 
-/* Button styling */
+/* Button styles */
 button {
-  background-color: #6b47dc;
+  background-color: #ccc;
   color: #fff;
   border: none;
   padding: 10px 0;
   border-radius: 5px;
-  cursor: pointer;
+  cursor: not-allowed;
   font-size: 0.9rem;
-  transition: background-color 0.3s;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+button.active {
+  background-color: #6b47dc;
+  cursor: pointer;
 }
 
 button:hover {
   background-color: #5936cc;
 }
 
-/* Maybe later text */
+/* Check icon (hidden initially) */
+.check-icon {
+  display: none;
+  color: #28a745; /* Green color */
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+/* Maybe later text link */
 .maybe-later {
-  padding: 5px 0 10px;
+  padding: 5px 0;
   color: #888;
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-}
-.color-box {
-  padding: 5px 30px 20px;
-  background: #e8ecf6;
-  display: flex;
-  flex-direction: column;
-  align-items: stretch;
-  justify-content: center;
-}
-
-.rate-now {
-  background-color: #ccc; /* Default color for disabled button */
-  cursor: not-allowed;
-}
-
-.rate-now.active {
-  background-color: #6a1b9a; /* Dark color when button is enabled */
-  cursor: pointer;
-}
-
-.check-icon {
-  display: none; /* Hidden initially */
-  margin-left: 10px;
-  color: #28a745; /* Green color for the check icon */
+  text-decoration: underline;
 }
 
 /* laptop size media query */
 /* using media query on the image */
 @media screen and (max-width: 992px) {
+  .rating-box {
+    width: 90%;
+  }
+
   .section-style .cart .pro-img {
     width: 200px;
   }
