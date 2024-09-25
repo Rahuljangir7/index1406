@@ -174,7 +174,7 @@ stars.forEach((star, index) => {
   });
 });
 
-// first fill the message then stars clicked 
+// first fill the message then stars clicked
 messageBox.addEventListener("keyup", () => {
   if (messageBox.value.trim() !== "") {
     console.log(messageBox.value);
@@ -238,4 +238,19 @@ function resetForm() {
 // Hide review box when "Maybe later" is clicked
 document.querySelector(".maybe-later").addEventListener("click", () => {
   reviewBox.style.visibility = "hidden";
+});
+
+// check icon count
+const addImgIcon = document.querySelectorAll(".fa-plus");
+let countNo = document.querySelector(".count");
+let num = 0;
+
+addImgIcon.forEach((plusIcon) => {
+  plusIcon.addEventListener("click", () => {
+    if (plusIcon.classList.contains("fa-check") == true) {
+      countNo.innerHTML = ++num;
+    } else {
+      countNo.innerHTML = --num;
+    }
+  });
 });

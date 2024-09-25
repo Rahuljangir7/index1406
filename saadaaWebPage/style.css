@@ -77,14 +77,17 @@ header {
 }
 
 .navbar .card .count {
+  width: 25px;
   background-color: orange;
-  padding: 2px 5px;
+  height: 25px;
   border-radius: 50%;
   color: antiquewhite;
   font-size: 17px;
   position: absolute;
   top: -10px;
   right: -10px;
+  text-align: center;
+  align-content: center;
 }
 
 #nav-links ul #myWht {
@@ -219,7 +222,6 @@ a.view-more-btn,
 }
 
 /* and view more button hero section */
-
 /* Reviews Button fixed position */
 
 .review-btn {
