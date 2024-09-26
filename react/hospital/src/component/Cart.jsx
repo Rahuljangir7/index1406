@@ -3,7 +3,7 @@ import React from "react";
 import { cart1 } from "../data";
 import { FaAmbulance, FaHome, FaBed, FaDollarSign } from "react-icons/fa";
 
-const Cart = () => {
+export const Cart = () => {
   const getIconComponent = (icon) => {
     switch (icon) {
       case "FaAmbulance":
@@ -77,4 +77,12 @@ const Cart = () => {
   );
 };
 
-export default Cart;
+export const Cart1 = () => {
+  return (
+    <>
+    <Container>
+      
+    </Container>
+    </>
+  )
+};
