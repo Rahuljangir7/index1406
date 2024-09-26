@@ -1,7 +1,17 @@
 import { Container, Typography } from "@mui/material";
 import React from "react";
-import { cart1 } from "../data";
-import { FaAmbulance, FaHome, FaBed, FaDollarSign } from "react-icons/fa";
+import { cart } from "../data";
+import {
+  FaAmbulance,
+  FaHome,
+  FaBed,
+  FaDollarSign,
+  FaCampground,
+  FaMedkit,
+  FaClock,
+  FaHospitalAlt,
+  FaLeaf,
+} from "react-icons/fa";
 
 export const Cart = () => {
   const getIconComponent = (icon) => {
@@ -31,7 +41,7 @@ export const Cart = () => {
           padding: "0px calc(1rem + 2vw) !important",
         }}
       >
-        {cart1.map((carts) => {
+        {cart.map((carts) => {
           return (
             <>
               <Container
@@ -77,12 +87,61 @@ export const Cart = () => {
   );
 };
 
-export const Cart1 = () => {
+export const Cart1 = ({ icon, heading, des }) => {
+  const getIconComponent = (icon) => {
+    switch (icon) {
+      case "FaCampground":
+        return <FaCampground />;
+      case "FaMedkit":
+        return <FaMedkit />;
+      case "FaClock":
+        return <FaClock />;
+      case "FaHospitalAlt":
+        return <FaHospitalAlt />;
+      case "FaLeaf":
+        return <FaLeaf />;
+      default:
+        return null;
+    }
+  };
   return (
     <>
-    <Container>
       
-    </Container>
+        <Container
+          sx={{
+            width: "25%",
+            padding: "16px 0 !important",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
+            textAlign: "center",
+          }}
+        >
+          {/* Render Icon */}
+          <div
+            style={{
+              fontSize: "40px",
+              marginBottom: "10px",
+              color: "white",
+              padding: "10px",
+              background: "green",
+              borderRadius: "50%",
+            }}
+          >
+            {getIconComponent(icon)}
+          </div>
+          <Typography
+            variant="h6"
+            sx={{
+              fontWeight: "1000",
+              fontSize: "calc(0.3rem + 1vw)",
+              marginBottom: "8px",
+            }}
+          >
+            {heading}
+          </Typography>
+          <Typography variant="body1">{des}</Typography>
+        </Container>
     </>
-  )
+  );
 };

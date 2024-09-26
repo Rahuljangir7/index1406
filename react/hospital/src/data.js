@@ -8,7 +8,7 @@ export const data = [
   },
 ];
 
-export const cart1 = [
+export const cart = [
   {
     icon: "FaAmbulance",
     heading: "AMBULANCE SERVICE",
@@ -29,4 +29,34 @@ export const cart1 = [
     heading: "NO EXTRA CHARGES",
     des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
   },
+];
+
+export const cart1 = [
+  [
+    {
+      icon: "FaCampground",
+      heading: "FREE CAMPS",
+    },
+    
+    {
+      icon: "FaMedkit",
+      heading: "BEST FACILITIES",
+    },
+    
+    {
+      icon: "FaClock",
+      heading: "24/7 HOURS AVAILABLE",
+    },
+    
+    {
+      icon: "FaHospitalAlt",
+      heading: "CLEAN ENVIRONMENT",
+    },
+    
+    {
+      icon: "FaLeaf",
+      heading: "FREE MADICINES",
+    },
+    
+  ],
 ];

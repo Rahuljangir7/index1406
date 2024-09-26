@@ -10,7 +10,7 @@ const Heading = ({ head5, head3, para }) => {
           flexDirection: "column",
           alignItems: "center",
           gap: 1,
-          padding: "calc(5px + 5vw) 0 0",
+          padding: "calc(5px + 5vw) 0 30px",
           textAlign: "center",
         }}
       >
