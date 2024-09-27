@@ -1,3 +1,20 @@
 .container-2 p {
   display: none;
 }
+
+.container-3 h6 {
+  width: 100%;
+}
+
+.container-2 .number-box .numbers {
+  background: transparent !important;
+  border-radius: 0px !important;
+  border: 2px solid green;
+  width: 150px;
+  text-align: center !important;
+  font-size: calc(1rem + 2vw) !important;
+}
+
+.container-2 .number-box p {
+  display: block;
+}

@@ -126,3 +126,19 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
+export const Nav2 = () => {
+  return (
+    <>
+      <div>
+        <ul className="flex font-bold lg:gap-20 gap-5 items-center justify-center text-[calc(1px+2vw)] flex-wrap">
+          <li>HOSPITAL</li>
+          <li>ROOMS</li>
+          <li>MACHINES</li>
+          <li>AMBULANCES</li>
+          <li>MEDICAL STORES</li>
+        </ul>
+      </div>
+    </>
+  );
+};
