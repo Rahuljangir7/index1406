@@ -6,6 +6,7 @@ import Hero from "./component/Hero";
 import Navbar, { Nav2 } from "./component/Navbar";
 import { data, cart1 } from "./data.js";
 import img from "./assets/hospital.png";
+import Footer from "./component/Footer.jsx";
 
 function App() {
   return (
@@ -185,6 +186,27 @@ function App() {
         />
         <Radio1 />
       </Box>
+
+      <Box className="container-3 pb-10">
+        <Heading
+          head3={"CONTACT US"}
+          head5={"WHERE YOU CAN FIND US"}
+          para={
+            "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC, marking it over 2000 years old."
+          }
+        />
+        <div className="">
+          {cart1[4].map((item) => {
+            return (
+              <>
+                <Cart1 num={item.icon} heading={item.heading} des={item.des} />
+              </>
+            );
+          })}
+        </div>
+      </Box>
+
+      <Footer />
     </>
   );
 }

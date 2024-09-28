@@ -120,4 +120,21 @@ export const cart1 = [
       des: "Sr. Doctor",
     },
   ],
+  [
+    {
+      icon: "",
+      heading: "OUR ADDRESS",
+      des: "SK hospital sikar",
+    },
+    {
+      icon: "",
+      heading: "OUR MAIL",
+      des: "rahul@gmail.com",
+    },
+    {
+      icon: "",
+      heading: "OUR CALL",
+      des: "0123-456-789",
+    },
+  ],
 ];
