@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Container, Typography } from "@mui/material";
 import { cart } from "../data";
 import Radio from "@mui/material/Radio";
 import * as React from "react";
@@ -107,7 +107,7 @@ export const Cart1 = ({ icon, heading, des, num }) => {
   };
   return (
     <>
-      <Container
+      <Box
         sx={{
           width: "25%",
           padding: "16px 0 !important",
@@ -143,7 +143,7 @@ export const Cart1 = ({ icon, heading, des, num }) => {
           {heading}
         </Typography>
         <Typography variant="body1">{des}</Typography>
-      </Container>
+      </Box>
     </>
   );
 };

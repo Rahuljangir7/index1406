@@ -18,3 +18,13 @@
 .container-2 .number-box p {
   display: block;
 }
+
+.container-3 .grid div{
+  width: 80% ;
+  margin: auto;
+  text-align: start;
+}
+
+.container-3 .grid div .numbers{
+  display: none;
+}

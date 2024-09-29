@@ -127,7 +127,7 @@ function App() {
             "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC"
           }
         />
-        <div className="">
+        <div className="grid grid-cols-2 ">
           {cart1[2].map((item) => {
             return (
               <>
@@ -187,6 +187,7 @@ function App() {
         <Radio1 />
       </Box>
 
+      {/* Contact container */}
       <Box className="container-3 pb-10">
         <Heading
           head3={"CONTACT US"}
@@ -195,7 +196,7 @@ function App() {
             "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC, marking it over 2000 years old."
           }
         />
-        <div className="">
+        <div className="flex justify-center">
           {cart1[4].map((item) => {
             return (
               <>
