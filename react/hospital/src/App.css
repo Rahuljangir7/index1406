@@ -6,25 +6,61 @@
   width: 100%;
 }
 
-.container-2 .number-box .numbers {
+.container-2 .facility div div {
   background: transparent !important;
-  border-radius: 0px !important;
-  border: 2px solid green;
-  width: 150px;
-  text-align: center !important;
-  font-size: calc(1rem + 2vw) !important;
 }
 
-.container-2 .number-box p {
-  display: block;
+.facility svg {
+  font-size: 45pt;
 }
 
-.container-3 .grid div{
-  width: 80% ;
+.number-box1 {
+  justify-content: space-around;
+}
+
+.container-2 .number-box1 div {
+  border: 1px solid green;
+  width: calc(5rem + 6vw);
+  text-align: center;
+  padding: 0 !important;
+}
+
+.number-box1 .numbers,
+.the-team .numbers {
+  background: transparent !important;
+  border: none !important;
+  margin-bottom: 0 !important;
+}
+
+.the-team p{
+  display: initial;
+}
+
+.container-2 .number-box2 div {
+  border: solid;
+  border-color: green;
+  width: min-content;
+  height: min-content;
+  padding: 0 !important;
+}
+
+.the-team .numbers svg {
+  background: #e4e6e7;
+  color: #aeb4b7;
+  padding: 2px 5px;
+  font-size: 6rem;
+}
+
+.container-3 .grid div {
+  width: 80%;
   margin: auto;
   text-align: start;
 }
 
-.container-3 .grid div .numbers{
+.container-3 .grid div .numbers {
   display: none;
+}
+
+.contact h6{
+  margin-bottom: 0 !important;
 }

@@ -1,10 +1,10 @@
-import { Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import React from "react";
 
 const Heading = ({ head5, head3, para }) => {
   return (
     <>
-      <Container
+      <Box
         sx={{
           display: "flex",
           flexDirection: "column",
@@ -46,7 +46,7 @@ const Heading = ({ head5, head3, para }) => {
         >
           {para}
         </Typography>
-      </Container>
+      </Box>
     </>
   );
 };

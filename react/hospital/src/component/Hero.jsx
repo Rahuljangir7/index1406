@@ -1,12 +1,11 @@
 import React from "react";
 import hero from "../assets/hero-img.jpg";
-import { Box, Button, CardMedia, Container, Typography } from "@mui/material";
+import { Box, Button, CardMedia, Typography } from "@mui/material";
 
 const Hero = () => {
   return (
     <>
-      <Container
-        maxWidth="100%"
+      <Box
         sx={{
           padding: "0 !important",
           position: "relative",
@@ -50,15 +49,15 @@ const Hero = () => {
             sx={{
               fontWeight: "1000",
               bgcolor: "green",
-              textTransform: 'lowercase',
-              fontSize:'calc(4px + 1vw)',
-              padding:'0.5% 2%'
+              textTransform: "lowercase",
+              fontSize: "calc(4px + 1vw)",
+              padding: "0.5% 2%",
             }}
           >
             call now
           </Button>
         </Box>
-      </Container>
+      </Box>
     </>
   );
 };

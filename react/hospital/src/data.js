@@ -1,5 +1,3 @@
-import React from "react";
-
 export const data = [
   {
     title: "OUR SERVICES",
@@ -9,29 +7,28 @@ export const data = [
 ];
 
 export const cart = [
-  {
-    icon: "FaAmbulance",
-    heading: "AMBULANCE SERVICE",
-    des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    icon: "FaHome",
-    heading: "HOME CARE SERVICE",
-    des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    icon: "FaBed",
-    heading: "FREE BED SERVICE",
-    des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-  {
-    icon: "FaDollarSign",
-    heading: "NO EXTRA CHARGES",
-    des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
-  },
-];
-
-export const cart1 = [
+  [
+    {
+      icon: "FaAmbulance",
+      heading: "AMBULANCE SERVICE",
+      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+      icon: "FaHome",
+      heading: "HOME CARE SERVICE",
+      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+      icon: "FaBed",
+      heading: "FREE BED SERVICE",
+      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+    {
+      icon: "FaDollarSign",
+      heading: "NO EXTRA CHARGES",
+      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+    },
+  ],
   [
     {
       icon: "FaCampground",
@@ -100,39 +97,42 @@ export const cart1 = [
   ],
   [
     {
-      icon: "",
+      icon: "IoMdPerson",
       heading: "Mr.Ramesh",
       des: "Sr. Doctor",
     },
     {
-      icon: "",
+      icon: "IoMdPerson",
       heading: "Mr.Ram",
       des: "Sr. Doctor",
     },
     {
-      icon: "",
+      icon: "IoMdPerson",
       heading: "Mr.Rahul",
       des: "Sr. Doctor",
     },
     {
-      icon: "",
+      icon: "IoMdPerson",
       heading: "Mr.Rajesh",
       des: "Sr. Doctor",
     },
   ],
   [
     {
-      icon: "",
+      id: 0,
+      icon: "FaMapMarkerAlt",
       heading: "OUR ADDRESS",
       des: "SK hospital sikar",
     },
     {
-      icon: "",
+      id: 1,
+      icon: "FaEnvelope",
       heading: "OUR MAIL",
       des: "rahul@gmail.com",
     },
     {
-      icon: "",
+      id: 2,
+      icon: "FaPhone",
       heading: "OUR CALL",
       des: "0123-456-789",
     },

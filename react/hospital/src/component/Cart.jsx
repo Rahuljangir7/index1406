@@ -1,7 +1,8 @@
-import { Box, Container, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { cart } from "../data";
 import Radio from "@mui/material/Radio";
 import * as React from "react";
+import { IoMdPerson } from "react-icons/io";
 import {
   FaAmbulance,
   FaHome,
@@ -12,6 +13,9 @@ import {
   FaClock,
   FaHospitalAlt,
   FaLeaf,
+  FaMapMarkerAlt,
+  FaEnvelope,
+  FaPhone,
 } from "react-icons/fa";
 
 export const Cart = () => {
@@ -26,14 +30,13 @@ export const Cart = () => {
       case "FaDollarSign":
         return <FaDollarSign />;
       default:
-        return null;
+        return <FaMedkit />; // Default icon if no match
     }
   };
 
   return (
     <>
-      <Container
-        maxWidth
+      <Box
         sx={{
           margin: "0 !important",
           display: "flex",
@@ -42,48 +45,47 @@ export const Cart = () => {
           padding: "0px calc(1rem + 2vw) !important",
         }}
       >
-        {cart.map((carts) => {
+        {cart[0].map((carts, index) => {
           return (
-            <>
-              <Container
-                sx={{
-                  width: "25%",
-                  padding: "16px 0 !important",
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "center",
-                  textAlign: "center",
+            <Box
+              key={index} // Add a key here
+              sx={{
+                width: "25%",
+                padding: "16px 0 !important",
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+                textAlign: "center",
+              }}
+            >
+              {/* Render Icon */}
+              <div
+                style={{
+                  fontSize: "40px",
+                  marginBottom: "10px",
+                  color: "white",
+                  padding: "10px",
+                  background: "green",
+                  borderRadius: "50%",
                 }}
               >
-                {/* Render Icon */}
-                <div
-                  style={{
-                    fontSize: "40px",
-                    marginBottom: "10px",
-                    color: "white",
-                    padding: "10px",
-                    background: "green",
-                    borderRadius: "50%",
-                  }}
-                >
-                  {getIconComponent(carts.icon)}
-                </div>
-                <Typography
-                  variant="h6"
-                  sx={{
-                    fontWeight: "1000",
-                    fontSize: "calc(0.4rem + 1vw)",
-                    marginBottom: "8px",
-                  }}
-                >
-                  {carts.heading}
-                </Typography>
-                <Typography variant="body1">{carts.des}</Typography>
-              </Container>
-            </>
+                {getIconComponent(carts.icon)}
+              </div>
+              <Typography
+                variant="h6"
+                sx={{
+                  fontWeight: "1000",
+                  fontSize: "calc(0.4rem + 1vw)",
+                  marginBottom: "8px",
+                }}
+              >
+                {carts.heading}
+              </Typography>
+              <Typography variant="body1">{carts.des}</Typography>
+            </Box>
           );
         })}
-      </Container>
+      </Box>
     </>
   );
 };
@@ -101,6 +103,14 @@ export const Cart1 = ({ icon, heading, des, num }) => {
         return <FaHospitalAlt />;
       case "FaLeaf":
         return <FaLeaf />;
+      case "FaMapMarkerAlt":
+        return <FaMapMarkerAlt />;
+      case "FaEnvelope":
+        return <FaEnvelope />;
+      case "FaPhone":
+        return <FaPhone />;
+      case "IoMdPerson":
+        return <IoMdPerson />;
       default:
         return null;
     }
