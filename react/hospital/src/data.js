@@ -20,7 +20,7 @@ export const cart = [
     },
     {
       icon: "FaBed",
-      heading: "FREE BED SERVICE",
+      heading: "FREE BED SERVICES",
       des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
     },
     {

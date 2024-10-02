@@ -6,60 +6,62 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 const Footer = () => {
   return (
     <>
-      <Box
-        className="bg-[#323232] text-white "
-        sx={{
-          padding: "0 80px 50px",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-        }}
-      >
-        <Heading
-          head5={"SEND US MESSAGE"}
-          para={
-            "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
-          }
-        />
-        <Button
-          variant="contained"
+      <footer>
+        <Box
+          className="bg-[#323232] text-white "
           sx={{
-            fontWeight: "1000",
-            bgcolor: "green",
-            textTransform: "lowercase",
-            fontSize: "calc(4px + 1vw)",
-            padding: "0.9% 2.5%",
+            padding: "0 80px 50px",
+            display: "flex",
+            flexDirection: "column",
+            alignItems: "center",
           }}
         >
-          Send message
-        </Button>
-        <Box
-          sx={{
-            border: "2px solid green",
-            width: "100%",
-            margin: "20px 0",
-          }}
-        ></Box>
-        <Box>
-          <Typography variant="body1">
-            © Copyright HEALTH-CARE HOSPITAL 2023 reserved
-          </Typography>
-          <Box
+          <Heading
+            head5={"SEND US MESSAGE"}
+            para={
+              "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
+            }
+          />
+          <Button
+            variant="contained"
             sx={{
-              display: "flex",
-              justifyContent: "center",
-              padding: "10px 0",
-              fontSize: "calc(1rem + 2vw)",
-              gap: "20px",
+              fontWeight: "1000",
+              bgcolor: "green",
+              textTransform: "lowercase",
+              fontSize: "calc(4px + 1vw)",
+              padding: "0.9% 2.5%",
             }}
           >
-            <FaFacebook />
-            <FaLinkedin />
-            <FaInstagram />
-            <FaYoutube />
+            Send message
+          </Button>
+          <Box
+            sx={{
+              border: "2px solid green",
+              width: "100%",
+              margin: "20px 0",
+            }}
+          ></Box>
+          <Box>
+            <Typography variant="body1">
+              © Copyright HEALTH-CARE HOSPITAL 2023 reserved
+            </Typography>
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                padding: "10px 0",
+                fontSize: "calc(1rem + 2vw)",
+                gap: "20px",
+              }}
+            >
+              <FaFacebook />
+              <FaLinkedin />
+              <FaInstagram />
+              <FaYoutube />
+            </Box>
           </Box>
         </Box>
-      </Box>
+      </footer>
     </>
   );
 };

@@ -41,7 +41,7 @@ const Heading = ({ head5, head3, para }) => {
           variant="subtitle1"
           sx={{
             fontWeight: "700",
-            width: "60%",
+            width:{ lg: '60%',xs: '90%'},
           }}
         >
           {para}

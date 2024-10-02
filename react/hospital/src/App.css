@@ -2,10 +2,6 @@
   display: none;
 }
 
-.container-3 h6 {
-  width: 100%;
-}
-
 .container-2 .facility div div {
   background: transparent !important;
 }
@@ -23,6 +19,7 @@
   width: calc(5rem + 6vw);
   text-align: center;
   padding: 0 !important;
+  margin: auto;
 }
 
 .number-box1 .numbers,
@@ -32,7 +29,7 @@
   margin-bottom: 0 !important;
 }
 
-.the-team p{
+.the-team p {
   display: initial;
 }
 
@@ -61,6 +58,16 @@
   display: none;
 }
 
-.contact h6{
+.contact h6 {
   margin-bottom: 0 !important;
+}
+
+footer > div > div > p {
+  display: none;
+}
+
+@media (max-width:480px) {
+  .contact{
+    flex-direction: column;
+  }
 }

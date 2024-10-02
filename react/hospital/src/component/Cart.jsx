@@ -17,6 +17,7 @@ import {
   FaEnvelope,
   FaPhone,
 } from "react-icons/fa";
+import { pink } from "@mui/material/colors";
 
 export const Cart = () => {
   const getIconComponent = (icon) => {
@@ -39,8 +40,12 @@ export const Cart = () => {
       <Box
         sx={{
           margin: "0 !important",
-          display: "flex",
-          justifyContent: "space-around",
+          display: "grid",
+          gridTemplateColumns: {
+            lg: "repeat(4,1fr)",
+            md: "repeat(2, 1fr)",
+            sm: "repeat(1, 1fr)",
+          },
           gap: "20px",
           padding: "0px calc(1rem + 2vw) !important",
         }}
@@ -50,7 +55,7 @@ export const Cart = () => {
             <Box
               key={index} // Add a key here
               sx={{
-                width: "25%",
+                width: { md: "80%", sm: "100%" },
                 padding: "16px 0 !important",
                 display: "flex",
                 flexDirection: "column",
@@ -75,8 +80,8 @@ export const Cart = () => {
                 variant="h6"
                 sx={{
                   fontWeight: "1000",
-                  fontSize: "calc(0.4rem + 1vw)",
-                  marginBottom: "8px",
+                  fontSize: { md: "calc(0.3rem + 1vw)", sm: "25px" },
+                  marginBottom: "2px",
                 }}
               >
                 {carts.heading}
@@ -119,8 +124,7 @@ export const Cart1 = ({ icon, heading, des, num }) => {
     <>
       <Box
         sx={{
-          width: "25%",
-          padding: "16px 0 !important",
+          padding: "16px 5px !important",
           display: "flex",
           flexDirection: "column",
           alignItems: "center",
@@ -165,29 +169,43 @@ export const Radio1 = () => {
     setSelectedValue(event.target.value);
   };
 
+  const controlProps = (item) => ({
+    checked: selectedValue === item,
+    onChange: handleChange,
+    value: item,
+    name: "radio-buttons",
+    inputProps: { "arial-label": item },
+  });
+
   return (
     <>
       <div className="radio-btn flex justify-center">
         <Radio
-          checked={selectedValue === "a"}
-          onChange={handleChange}
-          value="a"
-          name="radio-buttons"
-          inputProps={{ "aria-label": "A" }}
+          {...controlProps("a")}
+          sx={{
+            color: pink[50],
+            "&.Mui-checked": {
+              color: pink[50],
+            },
+          }}
         />
         <Radio
-          checked={selectedValue === "b"}
-          onChange={handleChange}
-          value="b"
-          name="radio-buttons"
-          inputProps={{ "aria-label": "B" }}
+          {...controlProps("b")}
+          sx={{
+            color: pink[50],
+            "&.Mui-checked": {
+              color: pink[50],
+            },
+          }}
         />
         <Radio
-          checked={selectedValue === "c"}
-          onChange={handleChange}
-          value="c"
-          name="radio-buttons"
-          inputProps={{ "aria-label": "C" }}
+          {...controlProps("c")}
+          sx={{
+            color: pink[50],
+            "&.Mui-checked": {
+              color: pink[50],
+            },
+          }}
         />
       </div>
     </>

@@ -43,7 +43,7 @@ function App() {
           head3={"HOW WE DO IT"}
           para={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
         />
-        <div className="flex content-center facility">
+        <div className="flex items-center justify-center flex-wrap gap-6 facility md:flex-nowrap  px-2">
           {cart[1].map((item, index) => {
             return (
               <Cart1
@@ -56,6 +56,7 @@ function App() {
         </div>
       </Box>
 
+      {/* navbar 2 */}
       <Box className="container-3 pb-10">
         <Heading
           head3={"OUR FACILITIES"}
@@ -71,6 +72,7 @@ function App() {
         <img src={img} alt="hospital related image" />
       </Box>
 
+      {/* contact container */}
       <Box className="container-2 text-center pb-12">
         <Heading
           head3={"DO YOU LIKE OUR SERVICES"}
@@ -109,7 +111,7 @@ function App() {
             "Contrary to popular belief, Lorem lpsum is not simpley random text. It has roots in a piece of calassical Latin literature from"
           }
         />
-        <div className="flex content-center number-box1">
+        <div className="grid md:grid-cols-4 grid-cols-2 max-[400px]:grid-cols-1 gap-y-3 number-box1 ">
           {cart[2].map((item, index) => {
             return (
               <Cart1
@@ -122,10 +124,11 @@ function App() {
         </div>
       </Box>
 
+      {/* about container */}
       <Box className="container-3 pb-10">
         <Heading
-          head3={"ABOUT US"}
-          head5={"WHO WE ARE"}
+          head3={"WHO WE ARE"}
+          head5={"ABOUT US"}
           para={
             "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC"
           }
@@ -150,8 +153,7 @@ function App() {
           margin: "0 !important",
           display: "flex",
           flexDirection: "column",
-          gap: "20px",
-          padding: "0px calc(1rem + 2vw) 50px !important",
+          padding: "0px calc(1rem + 2vw) 20px !important",
           background: "#f1f1f1",
         }}
         className="container-2"
@@ -162,7 +164,7 @@ function App() {
             "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece"
           }
         />
-        <div className="flex content-center the-team">
+        <div className="grid md:grid-cols-4 grid-cols-2 max-[400px]:grid-cols-1 gap-y-3 the-team">
           {cart[4].map((item, index) => {
             return (
               <Cart1
@@ -204,7 +206,7 @@ function App() {
             "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC, marking it over 2000 years old."
           }
         />
-        <div className="flex justify-center contact">
+        <div className="flex justify-center sm:gap-20 gap-10  contact">
           {cart[5].map((item) => {
             return (
               <Cart1
