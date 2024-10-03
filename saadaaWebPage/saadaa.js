@@ -7,23 +7,45 @@ let popCnt = document.querySelector(".popup-container");
 const addBtn = document.querySelector(".add-value");
 const subBtn = document.querySelector(".sub-value");
 let countVal = document.getElementById("count");
-let addImg = document.getElementsByClassName("fa-plus");
+let addImg = document.querySelectorAll(".fa-plus , .fa-check");
 
-// Toggle the plus/check icon on click
-for (const icon of addImg) {
+// Function to update the localStorage when an icon is toggled
+function updateIconState(icon, isPlus) {
+  const iconId = icon.getAttribute("data-id"); // Assuming each icon has a unique data-id attribute
+  localStorage.setItem(`iconState_${iconId}`, isPlus ? "plus" : "check");
+}
+
+// Function to load the icon state from localStorage
+function loadIconState(icon) {
+  const iconId = icon.getAttribute("data-id");
+  const storedState = localStorage.getItem(`iconState_${iconId}`);
+  if (storedState === "check") {
+    icon.classList.remove("fa-plus");
+    icon.classList.add("fa-check");
+  } else {
+    icon.classList.remove("fa-check");
+    icon.classList.add("fa-plus");
+  }
+}
+
+addImg.forEach((icon) => {
+  // Load the initial state from localStorage when the page loads
+  loadIconState(icon);
+
   icon.addEventListener("click", (event) => {
-    event.stopPropagation(); // Prevent the click from reaching the cart click event
+    event.stopPropagation(); // Prevent the click from affecting other elements
 
     if (icon.classList.contains("fa-plus")) {
-      // return true and false result
       icon.classList.remove("fa-plus");
       icon.classList.add("fa-check");
+      updateIconState(icon, false); // Save "check" state
     } else {
       icon.classList.remove("fa-check");
       icon.classList.add("fa-plus");
+      updateIconState(icon, true); // Save "plus" state
     }
   });
-}
+});
 
 // Search Bar functionality
 function searchBar() {
@@ -243,14 +265,18 @@ document.querySelector(".maybe-later").addEventListener("click", () => {
 // check icon count
 const addImgIcon = document.querySelectorAll(".fa-plus");
 let countNo = document.querySelector(".count");
-let num = 0;
+let counting = localStorage.getItem("number")
+  ? parseInt(localStorage.getItem("number"))
+  : 0;
+countNo.innerHTML = counting;
 
 addImgIcon.forEach((plusIcon) => {
   plusIcon.addEventListener("click", () => {
-    if (plusIcon.classList.contains("fa-check") == true) {
-      countNo.innerHTML = ++num;
-    } else {
-      countNo.innerHTML = --num;
+    if (plusIcon.classList.contains("fa-check")) {
+      countNo.innerHTML = ++counting;
+    } else if (plusIcon.classList.contains("fa-plus")) {
+      countNo.innerHTML = --counting;
     }
+    localStorage.setItem("number", counting);
   });
 });
