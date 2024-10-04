@@ -48,14 +48,18 @@
   font-size: 6rem;
 }
 
-.container-3 .grid div {
+.container-3 .about > div {
   width: 80%;
   margin: auto;
-  text-align: start;
 }
 
-.container-3 .grid div .numbers {
+.container-3 .about div .numbers {
   display: none;
+}
+
+.about div div.css-wflofb:nth-child(2) {
+  align-items: start;
+  text-align: start;
 }
 
 .contact h6 {
@@ -66,8 +70,12 @@ footer > div > div > p {
   display: none;
 }
 
-@media (max-width:480px) {
-  .contact{
+.about h6 {
+  margin-bottom: 0px;
+}
+
+@media (max-width: 480px) {
+  .contact {
     flex-direction: column;
   }
 }

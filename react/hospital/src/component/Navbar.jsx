@@ -26,7 +26,7 @@ const Navbar = () => {
   };
   return (
     <>
-      <AppBar position="fixed" sx={{ bgcolor: "rgba(0, 0, 0, 0.301)" }}>
+      <AppBar position="fixed" sx={{ bgcolor: "rgba(0, 0, 0, 0.501)" }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Typography

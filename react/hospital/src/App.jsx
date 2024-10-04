@@ -1,5 +1,5 @@
 import { Box, Button } from "@mui/material";
-import { Cart, Cart1, Radio1 } from "./component/Cart";
+import { Cart, Cart1, Radio1, Icons } from "./component/Cart";
 import Navbar, { Nav2 } from "./component/Navbar";
 import { data, cart } from "./data.js";
 import Heading from "./component/Heading";
@@ -69,7 +69,7 @@ function App() {
       </Box>
 
       <Box>
-        <img src={img} alt="hospital related image" />
+        <img src={img} alt="hospital related image" width={"100%"} />
       </Box>
 
       {/* contact container */}
@@ -133,15 +133,23 @@ function App() {
             "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC"
           }
         />
-        <div className="grid grid-cols-2 ">
+        <div className="grid md:grid-cols-2 grid-cols-1 gap-4 about">
           {cart[3].map((item, index) => {
             return (
-              <Cart1
-                key={index} // Add the unique key prop here
-                num={item.num}
-                heading={item.heading}
-                des={item.des}
-              />
+              <div
+                className="grid grid-flow-col max-[400px]:grid-flow-dense"
+                key={index}
+              >
+                <div className="flex items-center justify-center">
+                  <Icons i={item.icon} />
+                </div>
+                <Cart1
+                  key={index} // Add the unique key prop here
+                  num={item.num}
+                  heading={item.heading}
+                  des={item.des}
+                />
+              </div>
             );
           })}
         </div>

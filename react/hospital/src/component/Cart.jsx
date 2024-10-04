@@ -16,7 +16,11 @@ import {
   FaMapMarkerAlt,
   FaEnvelope,
   FaPhone,
+  FaHandshake,
+  FaThumbsUp,
+  FaUserNurse,
 } from "react-icons/fa";
+import { MdOutlineAccessTimeFilled } from "react-icons/md";
 import { pink } from "@mui/material/colors";
 
 export const Cart = () => {
@@ -47,7 +51,7 @@ export const Cart = () => {
             sm: "repeat(1, 1fr)",
           },
           gap: "20px",
-          padding: "0px calc(1rem + 2vw) !important",
+          padding: "0px calc(1rem + 2vw) 20px !important",
         }}
       >
         {cart[0].map((carts, index) => {
@@ -207,6 +211,28 @@ export const Radio1 = () => {
             },
           }}
         />
+      </div>
+    </>
+  );
+};
+
+export const Icons = ({ i }) => {
+  const getIcons = (icon) => {
+    switch (icon) {
+      case "MdOutlineAccessTimeFilled ":
+        return <MdOutlineAccessTimeFilled />;
+      case "FaHandshake ":
+        return <FaHandshake />;
+      case "FaThumbsUp ":
+        return <FaThumbsUp />;
+      case "FaUserNurse ":
+        return <FaUserNurse />;
+    }
+  };
+  return (
+    <>
+      <div className="text-[calc(1.5rem_+_2vw)] p-2 rounded-full text-white bg-green-800 m-2 me-4">
+        {getIcons(i)}
       </div>
     </>
   );

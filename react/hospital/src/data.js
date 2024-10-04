@@ -75,22 +75,22 @@ export const cart = [
   ],
   [
     {
-      icon: "",
+      icon: "MdOutlineAccessTimeFilled ",
       heading: "ON TIME WORK",
       des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
     },
     {
-      icon: "",
+      icon: "FaHandshake ",
       heading: "FULLY SUPPORT",
       des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
     },
     {
-      icon: "",
+      icon: "FaThumbsUp ",
       heading: "PROFESSIONAL EXPERIENCE",
       des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
     },
     {
-      icon: "",
+      icon: "FaUserNurse ",
       heading: "24/7 AVAILABLE STAFF",
       des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
     },
