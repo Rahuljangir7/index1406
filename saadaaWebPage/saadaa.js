@@ -8,6 +8,9 @@ const addBtn = document.querySelector(".add-value");
 const subBtn = document.querySelector(".sub-value");
 let countVal = document.getElementById("count");
 let addImg = document.querySelectorAll(".fa-plus , .fa-check");
+// check icon count
+const addImgIcon = document.querySelectorAll(".fa-plus");
+let countNo = document.querySelector(".count");
 
 // Function to update the localStorage when an icon is toggled
 function updateIconState(icon, isPlus) {
@@ -28,6 +31,12 @@ function loadIconState(icon) {
   }
 }
 
+// Variable to track the count
+let counting = localStorage.getItem("number")
+  ? parseInt(localStorage.getItem("number"))
+  : 0;
+countNo.innerHTML = counting; // Update the initial count on page load
+
 addImg.forEach((icon) => {
   // Load the initial state from localStorage when the page loads
   loadIconState(icon);
@@ -39,11 +48,15 @@ addImg.forEach((icon) => {
       icon.classList.remove("fa-plus");
       icon.classList.add("fa-check");
       updateIconState(icon, false); // Save "check" state
+      countNo.innerHTML = ++counting; // Increment count
     } else {
       icon.classList.remove("fa-check");
       icon.classList.add("fa-plus");
       updateIconState(icon, true); // Save "plus" state
+      countNo.innerHTML = --counting; // Decrement count
     }
+    // Save the updated count to localStorage
+    localStorage.setItem("number", counting);
   });
 });
 
@@ -260,23 +273,4 @@ function resetForm() {
 // Hide review box when "Maybe later" is clicked
 document.querySelector(".maybe-later").addEventListener("click", () => {
   reviewBox.style.visibility = "hidden";
-});
-
-// check icon count
-const addImgIcon = document.querySelectorAll(".fa-plus");
-let countNo = document.querySelector(".count");
-let counting = localStorage.getItem("number")
-  ? parseInt(localStorage.getItem("number"))
-  : 0;
-countNo.innerHTML = counting;
-
-addImgIcon.forEach((plusIcon) => {
-  plusIcon.addEventListener("click", () => {
-    if (plusIcon.classList.contains("fa-check")) {
-      countNo.innerHTML = ++counting;
-    } else if (plusIcon.classList.contains("fa-plus")) {
-      countNo.innerHTML = --counting;
-    }
-    localStorage.setItem("number", counting);
-  });
 });
