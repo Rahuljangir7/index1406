@@ -2,6 +2,7 @@ import { Box, Button, Typography } from "@mui/material";
 import React from "react";
 import Heading from "./Heading";
 import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
+import Form from "./Form";
 
 const Footer = () => {
   return (
@@ -22,6 +23,7 @@ const Footer = () => {
               "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
             }
           />
+          <Form/>
           <Button
             variant="contained"
             sx={{
