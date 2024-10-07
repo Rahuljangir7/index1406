@@ -113,6 +113,7 @@ const Navbar = () => {
                     letterSpacing: "0.1rem",
                     fontSize: "1.2rem",
                   }}
+                  className="hover:text-green-400"
                 >
                   {page}
                 </Button>
@@ -132,11 +133,13 @@ export const Nav2 = () => {
     <>
       <div>
         <ul className="flex font-extrabold lg:gap-20 gap-5 items-center justify-center text-[calc(1px+2vw)] flex-wrap">
-          <li>HOSPITAL</li>
-          <li>ROOMS</li>
-          <li>MACHINES</li>
-          <li>AMBULANCES</li>
-          <li>MEDICAL STORES</li>
+          <li className="hover:text-green-700 cursor-pointer">HOSPITAL</li>
+          <li className="hover:text-green-700 cursor-pointer">ROOMS</li>
+          <li className="hover:text-green-700 cursor-pointer">MACHINES</li>
+          <li className="hover:text-green-700 cursor-pointer">AMBULANCES</li>
+          <li className="hover:text-green-700 cursor-pointer">
+            MEDICAL STORES
+          </li>
         </ul>
       </div>
     </>

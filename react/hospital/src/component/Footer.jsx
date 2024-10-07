@@ -23,19 +23,7 @@ const Footer = () => {
               "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
             }
           />
-          <Form/>
-          <Button
-            variant="contained"
-            sx={{
-              fontWeight: "1000",
-              bgcolor: "green",
-              textTransform: "lowercase",
-              fontSize: "calc(4px + 1vw)",
-              padding: "0.9% 2.5%",
-            }}
-          >
-            Send message
-          </Button>
+          <Form />
           <Box
             sx={{
               border: "2px solid green",
