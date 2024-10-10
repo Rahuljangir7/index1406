@@ -26,6 +26,7 @@ const Heading = ({ head5, head3, para }) => {
           variant="h3"
           sx={{
             fontWeight: "bold",
+            fontSize:{md:"3rem",xs:"2rem"}
           }}
         >
           {head3}

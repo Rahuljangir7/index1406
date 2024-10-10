@@ -11,8 +11,9 @@ import {
   Button,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-scroll";
 
-const pages = ["Home", "Service", "Contact", "About"];
+const pages = ["Home", "Service", "About", "Contact"];
 
 const Navbar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -39,7 +40,9 @@ const Navbar = () => {
                 letterSpacing: ".1rem",
                 lineHeight: "1.5rem",
                 color: "inherit",
+                textAlign:"center",
               }}
+              className="hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:bg-clip-text"
             >
               HEALTH-CARE <br /> HOSPITAL
             </Typography>
@@ -101,7 +104,7 @@ const Navbar = () => {
                 alignItems: "center",
               }}
             >
-              {pages.map((page) => (
+              {pages.map((page ,index) => (
                 <Button
                   key={page}
                   onClick={handleCloseNavMenu}
@@ -115,7 +118,7 @@ const Navbar = () => {
                   }}
                   className="hover:text-green-400"
                 >
-                  {page}
+                  <Link to={`section${index}`} smooth={true} duration={1000}>{page}</Link>
                 </Button>
               ))}
             </Box>
