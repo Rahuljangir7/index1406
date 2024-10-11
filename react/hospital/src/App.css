@@ -1,4 +1,4 @@
-header h5:hover{
+header h5:hover {
   color: transparent !important;
   cursor: pointer;
 }
@@ -32,6 +32,14 @@ header h5:hover{
   background: transparent !important;
   border: none !important;
   margin-bottom: 0 !important;
+  cursor: pointer;
+}
+
+.number-box1 > div:hover{
+  background: green ;
+  cursor: pointer;
+  border-radius: 40px;
+  transition: border-radius 0.5s linear;
 }
 
 .the-team p {

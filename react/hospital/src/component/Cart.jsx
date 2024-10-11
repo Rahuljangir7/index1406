@@ -22,6 +22,7 @@ import {
 } from "react-icons/fa";
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
 import { pink } from "@mui/material/colors";
+import Counter from "../utility/Counter";
 
 export const Cart = () => {
   const getIconComponent = (icon) => {
@@ -99,7 +100,7 @@ export const Cart = () => {
   );
 };
 
-export const Cart1 = ({ icon, heading, des, num }) => {
+export const Cart1 = ({ icon, heading, des, num, useCounter }) => {
   const getIconComponent = (icon) => {
     switch (icon) {
       case "FaCampground":
@@ -148,7 +149,8 @@ export const Cart1 = ({ icon, heading, des, num }) => {
           }}
         >
           {getIconComponent(icon)}
-          {num}
+          {/* Render num or Counter based on useCounter prop */}
+          {useCounter ? <Counter num={num} /> : num}
         </div>
         <Typography
           variant="h6"

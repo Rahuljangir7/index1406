@@ -16,6 +16,7 @@ function App() {
       <Element name="section0">
         <Hero />
       </Element>
+
       <Element name="section1">
         <Box>
           {data.map((item, index) => {
@@ -77,7 +78,7 @@ function App() {
         <img src={img} alt="hospital related image" width={"100%"} />
       </Box>
 
-      {/* contact container */}
+      {/* services container */}
       <Box className="container-2 text-center pb-12">
         <Heading
           head3={"DO YOU LIKE OUR SERVICES"}
@@ -123,6 +124,7 @@ function App() {
                 key={index} // Add the unique key prop here
                 num={item.num}
                 heading={item.heading}
+                useCounter={true} // Enable Counter animation
               />
             );
           })}
@@ -151,7 +153,6 @@ function App() {
                   </div>
                   <Cart1
                     key={index} // Add the unique key prop here
-                    num={item.num}
                     heading={item.heading}
                     des={item.des}
                   />
