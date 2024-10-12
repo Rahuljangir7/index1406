@@ -54,11 +54,12 @@ header h5:hover {
   padding: 0 !important;
 }
 
-.the-team .numbers svg {
+.the-team .numbers img {
   background: #e4e6e7;
   color: #aeb4b7;
   padding: 2px 5px;
   font-size: 6rem;
+  border-radius: 4px;
 }
 
 .container-3 .about > div {

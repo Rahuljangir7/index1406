@@ -46,7 +46,9 @@ function App() {
         >
           <Heading
             head3={"HOW WE DO IT"}
-            para={"Lorem ipsum dolor sit amet consectetur adipisicing elit."}
+            para={
+              "At our hospital, patient care is our top priority. With cutting-edge technology, skilled medical professionals, and round-the-clock services, we ensure that every patient receives personalized care tailored to their needs."
+            }
           />
           <div className="flex items-center justify-center flex-wrap gap-6 facility md:flex-nowrap  px-2">
             {cart[1].map((item, index) => {
@@ -68,7 +70,7 @@ function App() {
           head3={"OUR FACILITIES"}
           head5={"OUR FACILITY'S GALLERY"}
           para={
-            "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus, eaque voluptates. Delectus aspernatur ipsam dignissimos excepturi? Totam voluptatem exercitationem architecto officia? Numquam maiores, dolore corporis dolores tenetur perferendis fuga aspernatur facilis modi alias laudantium voluptatem maxime voluptates officiis temporibus ipsum sequi vero culpa doloremque."
+            "Explore our modern and advanced facilities, from our spacious hospital rooms and high-tech medical equipment to our fully-equipped ambulances and stocked medical stores."
           }
         />
         <Nav2 />
@@ -83,7 +85,7 @@ function App() {
         <Heading
           head3={"DO YOU LIKE OUR SERVICES"}
           para={
-            "Contrary to popular belief, Lorem lpsum is not simpley random text"
+            "We are dedicated to providing exceptional healthcare services tailored to meet your needs. If you have received care from us, we would love to hear your feedback. Your opinion helps us improve and continue offering the best care to our patients."
           }
         />
         <Button
@@ -114,7 +116,7 @@ function App() {
         <Heading
           head3={"WE ARE PROUD OF THESE NUMBERS"}
           para={
-            "Contrary to popular belief, Lorem lpsum is not simpley random text. It has roots in a piece of calassical Latin literature from"
+            "Our success is measured by the trust of our patients and the dedication of our staff. These numbers highlight our continuous commitment to providing quality healthcare across all services."
           }
         />
         <div className="grid md:grid-cols-4 grid-cols-2 max-[400px]:grid-cols-1 gap-y-3 number-box1 ">
@@ -138,7 +140,7 @@ function App() {
             head3={"WHO WE ARE"}
             head5={"ABOUT US"}
             para={
-              "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC"
+              "We are a dedicated team of healthcare professionals who prioritize the well-being of our patients. With years of experience and a patient-first approach, we aim to deliver the best medical care to all."
             }
           />
           <div className="grid md:grid-cols-2 grid-cols-1 gap-4 about">
@@ -176,7 +178,7 @@ function App() {
           <Heading
             head3={"THE TEAM"}
             para={
-              "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece"
+              "Meet our team of dedicated doctors, specialists, and medical staff, all of whom are committed to delivering the best possible care to our patients."
             }
           />
           <div className="grid md:grid-cols-4 grid-cols-2 max-[400px]:grid-cols-1 gap-y-3 the-team">
@@ -206,7 +208,7 @@ function App() {
       >
         <Heading
           head5={
-            "Contrary to popularbelief, Lorem lpsum is not simply random text, It has roots in a piece"
+            "Reach out to us for any inquiries, appointment bookings, or information about our services. Our team is always ready to assist you."
           }
           para={"Alex Montio"}
         />
@@ -220,7 +222,7 @@ function App() {
             head3={"CONTACT US"}
             head5={"WHERE YOU CAN FIND US"}
             para={
-              "Contrary to popular belief, Lorem lpsum is not simply random text, It has roots in a piece of classical Latin literature from 45 BC, marking it over 2000 years old."
+              "Our hospital is located in the heart of the city, making it easily accessible for all. Whether you’re reaching out by phone, email, or visiting us directly, our team is ready to provide you with the care and support you need. We are here to serve you 24/7."
             }
           />
           <div className="flex justify-center sm:gap-20 gap-10  contact">

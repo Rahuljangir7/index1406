@@ -20,7 +20,7 @@ const Footer = () => {
           <Heading
             head5={"SEND US MESSAGE"}
             para={
-              "Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots"
+              "Have any questions or need to get in touch? Send us a message, and we’ll respond as soon as possible to help with your healthcare needs."
             }
           />
           <Form />

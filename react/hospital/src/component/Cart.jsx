@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import { cart } from "../data";
 import Radio from "@mui/material/Radio";
 import * as React from "react";
-import { IoMdPerson } from "react-icons/io";
 import {
   FaAmbulance,
   FaHome,
@@ -23,6 +22,7 @@ import {
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
 import { pink } from "@mui/material/colors";
 import Counter from "../utility/Counter";
+import docimg from '../assets/doctorimg.png'
 
 export const Cart = () => {
   const getIconComponent = (icon) => {
@@ -100,7 +100,8 @@ export const Cart = () => {
   );
 };
 
-export const Cart1 = ({ icon, heading, des, num, useCounter }) => {
+
+export const Cart1 = ({ icon, heading, des, num, useCounter,imgSrc,condition }) => {
   const getIconComponent = (icon) => {
     switch (icon) {
       case "FaCampground":
@@ -119,8 +120,8 @@ export const Cart1 = ({ icon, heading, des, num, useCounter }) => {
         return <FaEnvelope />;
       case "FaPhone":
         return <FaPhone />;
-      case "IoMdPerson":
-        return <IoMdPerson />;
+      case "doctorImg":
+        return <img src={docimg} alt={"doctor image"}/>;
       default:
         return null;
     }

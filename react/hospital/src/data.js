@@ -1,10 +1,8 @@
-
-
 export const data = [
   {
     title: "OUR SERVICES",
     heading: "WHAT WE ARE KNOWN FOR",
-    des: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis, pariatur quos ut quis adipisci facilis repellat ab distinctio ea aspernatur?",
+    des: "Our hospital is recognized for providing essential medical services with efficiency and care. From emergency services to home healthcare, we ensure that every patient receives comprehensive and compassionate treatment",
   },
 ];
 
@@ -13,22 +11,22 @@ export const cart = [
     {
       icon: "FaAmbulance",
       heading: "AMBULANCE SERVICE",
-      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      des: "We offer free ambulance services to ensure that patients in critical conditions can reach the hospital promptly and safely, providing immediate medical support on the go.",
     },
     {
       icon: "FaHome",
       heading: "HOME CARE SERVICE",
-      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      des: "Our home care service allows patients to receive medical treatment in the comfort of their homes. We send qualified nurses and doctors to manage chronic conditions or post-surgery care at home.",
     },
     {
       icon: "FaBed",
       heading: "FREE BED SERVICES",
-      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      des: "We ensure that no patient is left without care. Our hospital provides free bed services for those who need urgent medical attention but cannot afford it.",
     },
     {
       icon: "FaDollarSign",
       heading: "NO EXTRA CHARGES",
-      des: "Lorem, ipsum dolor sit amet consectetur adipisicing elit.",
+      des: "Our transparent billing ensures that patients only pay for the services they receive. We are committed to fair and honest pricing, with no hidden charges.",
     },
   ],
   [
@@ -78,43 +76,43 @@ export const cart = [
   [
     {
       icon: "MdOutlineAccessTimeFilled ",
-      heading: "ON TIME WORK",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
+      heading: "ONE TIME WORK",
+      des: "We believe in delivering efficient medical care right from the first time. Whether it's a consultation or a surgery, we ensure that every step is carried out with precision and care.",
     },
     {
       icon: "FaHandshake ",
       heading: "FULLY SUPPORT",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
+      des: "Our hospital offers full support to patients, from diagnosis to recovery. Our doctors and staff are always available to assist and guide patients through every stage of their medical journey.",
     },
     {
       icon: "FaThumbsUp ",
       heading: "PROFESSIONAL EXPERIENCE",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
+      des: "Our team consists of experienced professionals who have expertise across various medical fields. Their knowledge and dedication ensure that patients receive top-tier care.",
     },
     {
       icon: "FaUserNurse ",
       heading: "24/7 AVAILABLE STAFF",
-      des: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eveniet quibusdam architecto excepturi pariatur suscipit alias earum at quaerat eos. Explicabo nesciunt",
+      des: "Our staff is available around the clock to attend to patients' needs. Whether it's an emergency or routine care, we make sure that assistance is always just a call away.",
     },
   ],
   [
     {
-      icon: "IoMdPerson",
+      icon: "doctorImg",
       heading: "Mr.Ramesh",
       des: "Sr. Doctor",
     },
     {
-      icon: "IoMdPerson",
+      icon: "doctorImg",
       heading: "Mr.Ram",
       des: "Sr. Doctor",
     },
     {
-      icon: "IoMdPerson",
+      icon: "doctorImg",
       heading: "Mr.Rahul",
       des: "Sr. Doctor",
     },
     {
-      icon: "IoMdPerson",
+      icon: "doctorImg",
       heading: "Mr.Rajesh",
       des: "Sr. Doctor",
     },
