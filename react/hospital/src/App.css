@@ -88,6 +88,37 @@ footer > div > div > p {
   margin-bottom: 0px;
 }
 
+/* Position the popup and initially hide it */
+.popup-box {
+  display: none;
+  position: absolute;
+  top: 100%; /* Position the box below the item */
+  left: 0;
+  background-color: white;
+  padding: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  z-index: 1;
+  white-space: nowrap; /* Ensure text doesn't wrap */
+  border: 1px solid #ccc;
+}
+
+/* Show the popup when hovering over the list item */
+li:hover .popup-box {
+  display: block;
+}
+
+/* Additional styles for the popup box content */
+.popup-box p {
+  margin: 5px 0;
+  color: black;
+  font-size: 0.9rem;
+}
+
+.popup-box p:hover {
+  color: green; /* Optional: add hover effect for each item */
+}
+
 @media (max-width: 480px) {
   .contact {
     flex-direction: column;

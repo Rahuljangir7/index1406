@@ -22,7 +22,7 @@ import {
 import { MdOutlineAccessTimeFilled } from "react-icons/md";
 import { pink } from "@mui/material/colors";
 import Counter from "../utility/Counter";
-import docimg from '../assets/doctorimg.png'
+import docimg from "../assets/doctorimg.png";
 
 export const Cart = () => {
   const getIconComponent = (icon) => {
@@ -100,20 +100,20 @@ export const Cart = () => {
   );
 };
 
-
-export const Cart1 = ({ icon, heading, des, num, useCounter,imgSrc,condition }) => {
+export const Cart1 = ({ icon, heading, des, num, useCounter }) => {
+  let hoverStyles = ["hover:text-green-600"];
   const getIconComponent = (icon) => {
     switch (icon) {
       case "FaCampground":
-        return <FaCampground />;
+        return <FaCampground className={hoverStyles} />;
       case "FaMedkit":
-        return <FaMedkit />;
+        return <FaMedkit className={hoverStyles} />;
       case "FaClock":
-        return <FaClock />;
+        return <FaClock className={hoverStyles} />;
       case "FaHospitalAlt":
-        return <FaHospitalAlt />;
+        return <FaHospitalAlt className={hoverStyles} />;
       case "FaLeaf":
-        return <FaLeaf />;
+        return <FaLeaf className={hoverStyles} />;
       case "FaMapMarkerAlt":
         return <FaMapMarkerAlt />;
       case "FaEnvelope":
@@ -121,7 +121,7 @@ export const Cart1 = ({ icon, heading, des, num, useCounter,imgSrc,condition }) 
       case "FaPhone":
         return <FaPhone />;
       case "doctorImg":
-        return <img src={docimg} alt={"doctor image"}/>;
+        return <img src={docimg} alt={"doctor image"} />;
       default:
         return null;
     }
@@ -139,7 +139,7 @@ export const Cart1 = ({ icon, heading, des, num, useCounter,imgSrc,condition }) 
       >
         {/* Render Icon */}
         <div
-          className="numbers"
+          className={"numbers"}
           style={{
             fontSize: "40px",
             marginBottom: "10px",
