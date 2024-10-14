@@ -1,12 +1,15 @@
 import "./App.css";
 import Form from "./component/form/Form";
-import Starfield from "./component/Starfield.jsx";
+import Starfield from "./component/form/Starfield";
 
 function App() {
   return (
-    <>
-     <Form/>
-    </>
+    <div className="App">
+      <Starfield />
+      <div className="content">
+        <Form />
+      </div>
+    </div>
   );
 }
 

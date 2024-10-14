@@ -1,7 +1,7 @@
 // Starfield.jsx
-import React, { useRef, useState, useEffect } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
+import React, { useRef, useState, useEffect } from "react";
+import { Canvas, useFrame } from "@react-three/fiber";
+import * as THREE from "three";
 
 const Stars = ({ mousePosition, resetPositions }) => {
   const starGeometry = new THREE.SphereGeometry(0.5, 24, 24); // Increased size
@@ -28,7 +28,11 @@ const Stars = ({ mousePosition, resetPositions }) => {
 
   useEffect(() => {
     // Save original positions when stars are first created
-    const positions = stars.map(star => ({ x: star.position.x, y: star.position.y, z: star.position.z }));
+    const positions = stars.map((star) => ({
+      x: star.position.x,
+      y: star.position.y,
+      z: star.position.z,
+    }));
     setOriginalPositions(positions);
   }, [stars]);
 
@@ -54,9 +58,12 @@ const Stars = ({ mousePosition, resetPositions }) => {
     // If resetPositions is true, gradually return stars to their original positions
     if (resetPositions) {
       stars.forEach((star, index) => {
-        star.position.x += (originalPositions[index].x - star.position.x) * 0.05; // Smooth return
-        star.position.y += (originalPositions[index].y - star.position.y) * 0.05;
-        star.position.z += (originalPositions[index].z - star.position.z) * 0.05;
+        star.position.x +=
+          (originalPositions[index].x - star.position.x) * 0.05; // Smooth return
+        star.position.y +=
+          (originalPositions[index].y - star.position.y) * 0.05;
+        star.position.z +=
+          (originalPositions[index].z - star.position.z) * 0.05;
       });
     }
   });
@@ -93,18 +100,21 @@ const Starfield = () => {
       mouseTimer.current = setTimeout(() => {
         setIsMouseMoving(false); // Mouse has stopped moving
         setResetPositions(false); // Disable reset when mouse stops
-      }, 1000); // 0.5 seconds
+      }, 1000); // 1 seconds
     };
 
-    window.addEventListener('mousemove', handleMouseMove);
+    window.addEventListener("mousemove", handleMouseMove);
     return () => {
-      window.removeEventListener('mousemove', handleMouseMove);
+      window.removeEventListener("mousemove", handleMouseMove);
     };
   }, []);
 
   return (
     <Canvas camera={{ position: [0, 0, 100], fov: 75 }}>
-      <Stars mousePosition={!isMouseMoving ? mousePosition : null} resetPositions={resetPositions} />
+      <Stars
+        mousePosition={!isMouseMoving ? mousePosition : null}
+        resetPositions={resetPositions}
+      />
     </Canvas>
   );
 };
