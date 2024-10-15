@@ -42,19 +42,19 @@ const Form = () => {
             label="Name"
             type="text"
             variant="outlined"
-            sx={inputStyle()}
+            sx={inputStyle}
           />
           <TextField
             label="Number"
             type="number"
             variant="outlined"
-            sx={inputStyle()}
+            sx={inputStyle}
           />
           <TextField
             label="Gmail"
             type="email"
             variant="outlined"
-            sx={inputStyle()}
+            sx={inputStyle}
           />
         </div>
         <textarea
