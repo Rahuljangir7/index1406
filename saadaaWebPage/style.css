@@ -558,13 +558,35 @@ input[type="submit"]:hover {
   position: fixed;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -45%);
-  width: 50vh;
-  height: min-content;
+  transform: translate(-50%, -50%);
+  width: 100%;
   z-index: 999;
-  background: rgba(251, 251, 251, 0.959);
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.89);
   cursor: pointer;
-  border: 1px solid black;
+}
+
+.fa-arrow-right{
+  position: absolute;
+  padding: 10px;
+  border:3px solid white;
+  border-radius: 50%;
+  font-size: calc(1rem + 1vw);
+  color: black;
+  top: 30px;
+  right: 30px;
+  background: rgb(158, 158, 158);
+}
+
+.popupBox {
+  position: relative;
+  width: 50vh;
+  left: 50%;
+  background: rgba(251, 251, 251, 0.959);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: min-content;
+  position: absolute;
 }
 
 .popup .shop-now {
@@ -584,6 +606,7 @@ input[type="submit"]:hover {
   font-weight: bold;
   font-size: 20px;
   border: 1px solid gray;
+  cursor: pointer;
 }
 
 .popup .shop-now .order-btn button,
@@ -631,6 +654,9 @@ input[type="submit"]:hover {
 }
 
 .popup .more-btn a {
+  background: #eee;
   padding: 5px 10px;
   box-shadow: 1px 1px 1px;
+  color: black;
+  font-weight: bold;
 }

@@ -214,3 +214,11 @@ button:hover {
     font-size: 10px;
   }
 }
+
+/* height media query */
+@media (max-height:600px) {
+  .popup .shop-now{
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+}

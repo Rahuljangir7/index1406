@@ -127,20 +127,12 @@ function closePopup() {
   return true;
 }
 
-// Close popup when clicking outside the popup
-document.addEventListener("click", (event) => {
-  if (
-    !navLinks.contains(event.target) &&
-    !document.querySelector(".fa-bars").contains(event.target)
-  ) {
-    navLinks.style.display = "";
-  }
-
-  if (!popup.contains(event.target) && !event.target.closest(".cart")) {
-    popup.style.display = "none"; // This will close the popup only when clicking outside
-    countVal.innerText = 0;
-    count = 0;
-  }
+// Close popup when clicking arrow-right icon
+document.querySelector(".fa-arrow-right").addEventListener("click", () => {
+  // console.log( event.target.closest(".cart") ,popup.contains(event.target));
+  popup.style.display = "none"; // This will close the popup only when clicking outside
+  countVal.innerText = 0;
+  count = 0;
 });
 
 // Window resize logic to reset nav links
@@ -179,7 +171,7 @@ subBtn.addEventListener("click", updateCount(false));
 const stars = document.querySelectorAll(".stars i");
 const rateNowBtn = document.querySelector(".rate-now");
 const messageBox = document.getElementById("msg");
-const checkIcon = document.querySelector(".check-icon");
+const checkIcon = document.querySelector("i.check-icon");
 const reviewBtn = document.getElementById("review-btn");
 const reviewBox = document.querySelector(".review-box");
 let ratingValue = 0; // Holds the current selected star rating
