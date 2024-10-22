@@ -101,10 +101,6 @@ button:hover {
     width: 90%;
   }
 
-  .section-style .cart .pro-img {
-    width: 200px;
-  }
-
   .hero-section .img-content h1,
   .section-style h2 {
     font-size: 35px;
@@ -215,10 +211,6 @@ button:hover {
   }
 }
 
-/* height media query */
-@media (max-height:600px) {
-  .popup .shop-now{
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
+.popup .shop-now .order-btn button{
+  font-size: 18px;
 }
