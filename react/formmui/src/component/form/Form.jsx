@@ -13,7 +13,7 @@ import "./form.css";
 const inputStyle = {
   "& label": {
     color: "#aaa", // Label color
-    padding:"0 10px",
+    padding: "0 10px",
   },
   "& label.Mui-focused": {
     color: "#aaa", // Label color when focused
@@ -26,18 +26,20 @@ const inputStyle = {
   },
   "& .MuiInputBase-input": {
     color: "#fff", // Input text color
-    padding:"5px 10px"
+    padding: "5px 10px",
   },
   "& .MuiInput-underline:hover:not(.Mui-disabled):before": {
     borderBottomColor: "#aaa", // Border color on hover
-  }
+  },
 };
 
 const Form = () => {
   return (
     <>
       <Box>
-        <Typography variant="h4" sx={{fontWeight:"bold"}}>Shipping address</Typography>
+        <Typography variant="h4" sx={{ fontWeight: "bold" }}>
+          Shipping address
+        </Typography>
         <div>
           <TextField
             fullWidth
@@ -109,7 +111,12 @@ const Form = () => {
           />
         </div>
         <div className="btn">
-          <Button variant="contained" sx={{padding: '5px 20px' , fontSize:'large'}}>NEXT</Button>
+          <Button
+            variant="contained"
+            sx={{ padding: "5px 20px", fontSize: "large" }}
+          >
+            NEXT
+          </Button>
         </div>
       </Box>
     </>
