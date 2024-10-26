@@ -5,7 +5,9 @@ import Starfield from "./component/form/Starfield";
 function App() {
   return (
     <div className="App">
-      <Starfield />
+      <div className="starfield">
+        <Starfield />
+      </div>
       <div className="content">
         <Form />
       </div>
