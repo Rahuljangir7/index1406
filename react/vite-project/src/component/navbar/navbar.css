@@ -27,13 +27,14 @@ nav svg {
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 1;
 }
 
 .navpage svg{
     position: absolute;
-    font-size: 40px;
+    font-size: 45px;
     top: 30px;
-    left: 30px;
+    left: 40px;
     color: rgba(120, 53, 15);
 }
 
@@ -41,11 +42,16 @@ nav svg {
     color: rgba(120, 53, 15);
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 30px;
     align-items: center;
 }
 
 .navpage ul li{
     font-weight: bold;
     font-size: 25px;
+}
+
+.navpage ul li:hover{
+    text-decoration: underline 5px;
+    text-underline-offset: 10px;
 }
