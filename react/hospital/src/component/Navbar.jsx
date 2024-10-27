@@ -74,10 +74,19 @@ const Navbar = () => {
                 onClose={handleCloseNavMenu}
                 sx={{ display: { xs: "block", md: "none" } }}
               >
-                {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography sx={{ textAlign: "center" }}>{page}</Typography>
-                  </MenuItem>
+                {pages.map((page, index) => (
+                  <Link
+                    key={page}
+                    to={`section${index}`}
+                    smooth={true}
+                    duration={1000}
+                  >
+                    <MenuItem onClick={handleCloseNavMenu}>
+                      <Typography sx={{ textAlign: "center" }}>
+                        {page}
+                      </Typography>
+                    </MenuItem>
+                  </Link>
                 ))}
               </Menu>
             </Box>
@@ -92,6 +101,7 @@ const Navbar = () => {
                 letterSpacing: ".1rem",
                 fontSize: "calc(13px + 2vw)",
               }}
+              className="hover:bg-gradient-to-r hover:from-sky-500 hover:to-indigo-500 hover:bg-clip-text"
             >
               HEALTH-CARE HOSPITAL
             </Typography>

@@ -5,6 +5,9 @@ import { FaFacebook, FaInstagram, FaLinkedin, FaYoutube } from "react-icons/fa";
 import Form from "./Form";
 
 const Footer = () => {
+  const styles =
+    "hover:text-green-400 hover:border-b-2 hover:border-green-400 pb-3 text-5xl";
+
   return (
     <>
       <footer>
@@ -44,10 +47,10 @@ const Footer = () => {
                 gap: "20px",
               }}
             >
-              <FaFacebook />
-              <FaLinkedin />
-              <FaInstagram />
-              <FaYoutube />
+              <FaFacebook className={styles} />
+              <FaLinkedin className={styles} />
+              <FaInstagram className={styles} />
+              <FaYoutube className={styles} />
             </Box>
           </Box>
         </Box>
