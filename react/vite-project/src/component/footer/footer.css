@@ -1,6 +1,6 @@
 footer{
     background-color: var(--footer-color);
-    padding: 5pc;
+    padding: 5pc 0;
     color: #fff;
 }
 
@@ -29,8 +29,8 @@ footer .footer-links{
 }
 
 footer div.logo-name{
-    padding: 15px ;
-    font-size: 40px;
+    padding: 15px 0;
+    font-size: calc(2rem + 1vw);
     color: var(--footer-fontColor);
     font-family: serif;
     font-weight: bold;

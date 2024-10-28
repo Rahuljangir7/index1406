@@ -1,25 +1,38 @@
-nav {
+/* Default Navbar Styling */
+.navbar {
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 2rem 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background-color: transparent; /* Default transparent background */
 }
 
-nav h1 {
+.navbar h1 {
   letter-spacing: 0.2rem;
 }
 
-nav svg {
+.navbar svg {
   font-size: 30px;
   cursor: pointer;
 }
 
+/* Navbar background for all pages except Home */
+.navbar-other-pages {
+  background-color: #a0522d; /* Brown background color */
+  position: initial;
+}
+
+/* NavPage Styling */
 .navpage {
   box-sizing: border-box;
-  position: relative;
-  background-color: rgb(224, 200, 185);
   position: fixed;
+  background-color: rgb(224, 200, 185);
   width: 100%;
   height: 100vh;
   top: 0;
@@ -30,28 +43,42 @@ nav svg {
   z-index: 1;
 }
 
-.navpage svg{
-    position: absolute;
-    font-size: 45px;
-    top: 30px;
-    left: 40px;
-    color: rgba(120, 53, 15);
+.navpage svg {
+  position: absolute;
+  font-size: 45px;
+  top: 30px;
+  left: 40px;
+  color: rgba(120, 53, 15);
 }
 
 .navpage ul {
-    color: rgba(120, 53, 15);
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
 }
 
-.navpage ul li{
-    font-weight: bold;
-    font-size: 25px;
+.navpage ul li {
+  font-weight: bold;
+  font-size: 25px;
 }
 
-.navpage ul li:hover{
-    text-decoration: underline 5px;
-    text-underline-offset: 10px;
+.navbar ul li a {
+  color: rgba(120, 53, 15);
+}
+
+.navpage ul li a:hover {
+  text-decoration: underline 5px;
+  text-underline-offset: 10px;
+}
+
+@media (max-width:330px) {
+  .navbar-other-pages{
+    padding: 2rem 10px;
+  }
+
+  .navbar-other-pages h1{
+    letter-spacing: 1px;
+    font-size: medium;
+  }
 }

@@ -1,0 +1,27 @@
+.blogpage .about h2{
+    margin-bottom: 30px;
+}
+
+.blogpage-section{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    padding: 0 30px 5rem ;
+}
+
+@media (max-width:1020px) {
+    .blogpage-section{
+        grid-template-columns: repeat(1 , 1fr);
+    }
+}
+@media (max-width:576px) {
+    .blogpage-section{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .blogpage-section .cardBox p{
+        width: 100%;
+        padding-right: 30px;
+    }
+}

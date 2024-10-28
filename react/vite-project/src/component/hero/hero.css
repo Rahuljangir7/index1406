@@ -1,14 +1,15 @@
-header{
-    color: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap:30px;
-    padding: 2rem 4rem;
+header {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  padding: 2rem 4rem;
 }
 
-header h2{
-    font-family:serif;
-    font-size: 60px;
+header h2 {
+  font-family: serif;
+  font-size: calc(3rem + 2vw);
+  text-align: center;
 }

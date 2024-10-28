@@ -4,11 +4,11 @@
 }
 
 .blog {
-  width: 45%;
+  width: auto;
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 6pc;
+  padding: 6pc 0;
   gap: 30px;
 }
 

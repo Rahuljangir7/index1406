@@ -1,0 +1,144 @@
+div.hero-img {
+  height: 120vh;
+  background: linear-gradient(
+      135deg,
+      rgba(120, 54, 15, 0.361),
+      rgba(120, 54, 15, 0.361)
+    ),
+    url("../../assets/hero-img.avif");
+  background-position: top left;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+div.blog-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+.blog-container .box1 {
+  padding: 0 20px;
+  width: 100%;
+  display: flex;
+  justify-content: end;
+}
+.blog-container .box2 {
+  padding: 0 20px;
+  width: 100%;
+  background-color: var(--bg-light-black);
+}
+
+.blog-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.blog-section .blog {
+  align-items: center;
+  width: 100%;
+}
+
+.blog-section h3 {
+  font-size: calc(3rem + 1vw);
+  font-family: serif;
+}
+
+.blog-section p {
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.section-1{
+  padding: 40px 0;
+}
+
+.section-1 button {
+  display: none;
+}
+
+.section-1 p{
+  width: 70ch;
+}
+
+/* travel-container */
+.travel-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 40vh;
+}
+
+div.blog-2 .box1 {
+  background-color: var(--bg-light-black);
+}
+
+div.blog-2 .box2 {
+  background: white;
+}
+
+div.banner {
+  height: 100vh;
+  background-image: url("../../assets/banner.avif");
+  background-position: center center;
+  background-size: cover;
+}
+
+.section-2 {
+  background-image: url("../../assets/footer-img.avif");
+  background-size: cover;
+  background-position: center center;
+  padding: 3pc 0;
+}
+
+.section-2,
+.section-2 h3 {
+  color: white !important;
+}
+
+.section-2 .line {
+  display: none;
+}
+
+.section-2 button {
+  background-color: var(--color-brown);
+  color: white;
+}
+
+/* responsive 992px */
+
+@media (max-width: 992px) {
+  div.blog-container {
+    grid-template-columns: auto;
+    row-gap: 30px;
+    padding: 30px 0 0;
+  }
+
+  div.blog-2 .box1 {
+    grid-row: 2;
+  }
+
+  .section-2 h3 {
+    color: red;
+    font-size: 45px;
+  }
+
+  .blog-section h3 {
+    font-size: calc(2rem + 1vw);
+    text-align: center;
+  }
+
+  .section-1 p{
+    width: 100%;
+  }
+
+  .travel-container {
+    grid-template-columns: auto;
+    height: 140vh;
+  }
+
+  .post-img{
+    padding: 0;
+  }
+}
