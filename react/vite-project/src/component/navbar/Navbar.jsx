@@ -3,7 +3,7 @@ import { FaBars } from "react-icons/fa";
 import "./navbar.css";
 import { useState } from "react";
 import NavPage from "./NavPage";
-import { useLocation } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 const Navbar = () => {
   let [navpage, setNavpage] = useState(false);
@@ -19,7 +19,9 @@ const Navbar = () => {
       <nav className={`navbar ${isNotHomePage ? "navbar-other-pages" : ""}`}>
         <FaBars onClick={navPage} />
         <h1>IMPLUSE</h1>
+        <Link to="/contact" className="mail">
         <MdOutlineMail />
+        </Link>
         {navpage && <NavPage navPage={navPage} />}
       </nav>
     </>

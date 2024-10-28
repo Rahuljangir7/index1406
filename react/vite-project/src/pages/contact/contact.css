@@ -1,0 +1,96 @@
+.contact {
+  padding: 5rem 0;
+}
+
+.contact h2 {
+  text-align: center;
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+  font-family: Playfair Display, serif;
+  color: rgba(55, 65, 81);
+}
+
+.contact-box {
+  padding: 4rem 0 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.contact-box ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: max-content;
+  margin: 0 auto;
+}
+
+.contact-box ul li a {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.contact-box ul li a,
+.contact-box label {
+  color: rgba(55, 65, 81);
+}
+
+.contact-box ul li svg {
+  color: rgba(55, 65, 81, 0.5);
+}
+
+.contact-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0 7rem 0 20px;
+}
+
+.contact-box form input,
+.contact-box form textarea {
+  padding: 15px 10px;
+  border: none;
+  background-color: rgba(243, 244, 246, 1);
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .contact-box {
+    grid-template-columns: repeat(1, 1fr);
+    padding: 0 2rem;
+  }
+
+  .contact-box ul {
+    padding: 4rem 2rem;
+    margin: initial;
+    width: initial;
+  }
+
+  .contact-box form {
+    padding: 0 2rem;
+  }
+}
+
+@media (max-width: 368px) {
+  .contact-box {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+  }
+
+  .contact-box ul {
+    padding: 3rem 1rem;
+    margin: initial;
+  }
+
+  .contact-box form {
+    padding: 0 1rem;
+  }
+
+  .contact-box ul li a {
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 20px;
+  }
+}

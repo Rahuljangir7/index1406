@@ -1,11 +1,12 @@
+import { Link } from 'react-router-dom';
 import './links.css';
 
 const Links = () => {
   return (
     <>
         <div className="links">
-            <a href="https://novolio-impulse.netlify.app/pages/about-us/">FIND OUT MORE</a>
-            <a href="https://novolio-impulse.netlify.app/contact/">GET IN TOUCH</a>
+            <Link to="/about">FIND OUT MORE</Link>
+            <Link to="/contact/">GET IN TOUCH</Link>
         </div>
     </>
   )
