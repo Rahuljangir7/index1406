@@ -51,7 +51,7 @@ div.blog-container {
   font-weight: bold;
 }
 
-.section-1{
+.section-1 {
   padding: 40px 0;
 }
 
@@ -59,7 +59,7 @@ div.blog-container {
   display: none;
 }
 
-.section-1 p{
+.section-1 p {
   width: 70ch;
 }
 
@@ -67,7 +67,13 @@ div.blog-container {
 .travel-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  height: 40vh;
+  height: 50vh;
+}
+
+.travel-container a {
+  display: block;
+  position: relative;
+  height: 100%;
 }
 
 div.blog-2 .box1 {
@@ -129,16 +135,20 @@ div.banner {
     text-align: center;
   }
 
-  .section-1 p{
+  .section-1 p {
     width: 100%;
   }
 
   .travel-container {
-    grid-template-columns: auto;
-    height: 140vh;
+    grid-template-columns: 1fr;
+    height: auto;
   }
 
-  .post-img{
+  .travel-container a {
+    height:50vh;
+  }
+
+  .post-img {
     padding: 0;
   }
 }

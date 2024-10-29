@@ -8,6 +8,7 @@ import Links from "../../component/links/Links";
 import { Blog, Travel } from "../../component/blog/Blog";
 import { Post, PostCon } from "../../component/post/Post";
 import "./home.css";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -40,9 +41,15 @@ const Home = () => {
         />
       </div>
       <div className="travel-container">
-        <PostCon img={img2} name={"Sandy Beaches"} />
-        <PostCon img={img3} name={"Forest Trails"} />
-        <PostCon img={img4} name={"City Streets"} />
+        <Link to="/sandybeach">
+          <PostCon img={img2} name={"Sandy Beaches"} />
+        </Link>
+        <Link to="/foresttrails">
+          <PostCon img={img3} name={"Forest Trails"} />
+        </Link>
+        <Link to="/citystreets">
+          <PostCon img={img4} name={"City Streets"} />
+        </Link>
       </div>
       <div className="blog-container blog-2">
         <div className="box1">
