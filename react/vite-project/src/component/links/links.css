@@ -1,13 +1,30 @@
-.links{
-    display: flex;
-    justify-content: space-around;
-    padding: 2rem 4rem;
+.links {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 4rem;
 }
 
-.links a{
-    color: #fff;
-    cursor: pointer;
-    text-decoration: underline;
-    text-underline-offset: 7px;
-    font-weight: 600;
+.links a {
+  color: #fff;
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 7px;
+  font-weight: 600;
+}
+
+.links a:hover {
+  color: blue;
+}
+
+@media (max-width: 400px) {
+  .links {
+    flex-direction: column;
+    padding: 0 0 10px;
+    gap: 5px;
+    align-items: center;
+  }
+
+  .links a {
+    text-underline-offset: 2px;
+  }
 }
