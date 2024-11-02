@@ -7,20 +7,21 @@ import Footer from "./component/footer/Footer";
 import "./App.css";
 import Navbar from "./component/navbar/Navbar";
 import CategoriesBlog from "./categories/CategoriesBlog";
+import ScrollToTop from "./ScrollToTop";
+import NotFount from "./pages/notfound/NotFount";
 
 const App = () => {
-  
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/blogpage" element={<BlogPage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/sandybeach" element={<CategoriesBlog />} />
-        <Route path="/foresttrails" element={<CategoriesBlog />} />
-        <Route path="/citystreets" element={<CategoriesBlog />} />
+        <Route path="/:category" element={<CategoriesBlog />} />
+        <Route path="/*" element={<NotFount />} /> {/* 404 Not Found route */}
       </Routes>
       <Footer />
     </BrowserRouter>

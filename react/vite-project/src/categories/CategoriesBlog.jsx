@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../utility/Card";
 import About from "../pages/about/About";
 import { categoriesBlog } from "../data";
@@ -6,6 +6,7 @@ import { useLocation } from "react-router-dom";
 
 const CategoriesBlog = () => {
   const location = useLocation();
+
   return (
     <>
       {categoriesBlog.map((item, idx) =>
