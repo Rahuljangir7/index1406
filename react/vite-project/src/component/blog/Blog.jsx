@@ -3,14 +3,16 @@ import Button from "../../utility/button/Button";
 import "./blog.css";
 
 // eslint-disable-next-line react/prop-types
-export const Blog = ({ title, para }) => {
+export const Blog = ({ title, para, linkName }) => {
   return (
     <>
       <div className="blog">
         <div className="line"></div>
         <h3>{title}</h3>
         <p>{para}</p>
-        <Button name="READ MORE" />
+        <Link to={linkName}>
+          <Button name="READ MORE" />
+        </Link>
       </div>
     </>
   );

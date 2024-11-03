@@ -1,13 +1,14 @@
+import { Link } from 'react-router-dom';
 import './post.css';
 
 // eslint-disable-next-line react/prop-types
-export  const Post = ({img}) => {
+export  const Post = ({img,linkName}) => {
   return (
     <>
     <div className="post-img">
-    <a href="https://novolio-impulse.netlify.app/blog/this-is-latest-post/">
+    <Link to={linkName}>
         <img src={img} alt="image" />
-    </a>
+    </Link>
     </div>
     </>
   )

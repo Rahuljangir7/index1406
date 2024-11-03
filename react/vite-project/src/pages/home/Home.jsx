@@ -20,7 +20,7 @@ const Home = () => {
       </div>
       <div className="blog-container">
         <div className="box1">
-          <Post img={img1} />
+          <Post img={img1} linkName="/blog/thirdBlogDetail" />
         </div>
         <div className="box2">
           <Blog
@@ -28,6 +28,7 @@ const Home = () => {
             para={
               "Bring to the table win-win survival strategies to ensure proactive domination. At the end of the day, going forward, a new normal that has evolved from generation X is on the runway heading towards a streamlined cloud solution."
             }
+            linkName="/blog/thirdBlogDetail"
           />
         </div>
       </div>
@@ -41,13 +42,13 @@ const Home = () => {
         />
       </div>
       <div className="travel-container">
-        <Link to="/sandybeach">
+        <Link to="/category/sandybeach">
           <PostCon img={img2} name={"Sandy Beaches"} />
         </Link>
-        <Link to="/foresttrails">
+        <Link to="/category/foresttrails">
           <PostCon img={img3} name={"Forest Trails"} />
         </Link>
-        <Link to="/citystreets">
+        <Link to="/category/citystreets">
           <PostCon img={img4} name={"City Streets"} />
         </Link>
       </div>
@@ -58,10 +59,11 @@ const Home = () => {
             para={
               "Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition. Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment."
             }
+            linkName='/blog/secondBlogDetail'
           />
         </div>
         <div className="box2">
-          <Post img={img5} />
+          <Post img={img5} linkName="/blog/secondBlogDetail" />
         </div>
       </div>
       <div className="blog-section section-2">

@@ -9,6 +9,7 @@ import Navbar from "./component/navbar/Navbar";
 import CategoriesBlog from "./categories/CategoriesBlog";
 import ScrollToTop from "./ScrollToTop";
 import NotFount from "./pages/notfound/NotFount";
+import BlogPageDetail from "./blogpagedetail/BlogPageDetail";
 
 const App = () => {
   return (
@@ -20,7 +21,8 @@ const App = () => {
         <Route path="/about" element={<About />} />
         <Route path="/blogpage" element={<BlogPage />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/:category" element={<CategoriesBlog />} />
+        <Route path="/category/:category" element={<CategoriesBlog />} />
+        <Route path="/blog/:blogpagedetail" element={<BlogPageDetail />} />
         <Route path="/*" element={<NotFount />} /> {/* 404 Not Found route */}
       </Routes>
       <Footer />
@@ -29,3 +31,5 @@ const App = () => {
 };
 
 export default App;
+
+// https://novolio-impulse.netlify.app

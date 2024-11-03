@@ -2,15 +2,16 @@ import React, { useEffect } from "react";
 import Card from "../utility/Card";
 import About from "../pages/about/About";
 import { categoriesBlog } from "../data";
-import { useLocation } from "react-router-dom";
+import { useParams } from "react-router-dom";
+import NotFound from "../pages/notfound/NotFount";
 
 const CategoriesBlog = () => {
-  const location = useLocation();
+  const { category } = useParams();
 
   return (
     <>
       {categoriesBlog.map((item, idx) =>
-        item.link === location.pathname ? (
+        item.link === `/${category}` ? (
           <div key={idx} className="blogpage">
             <About title={item.name} des={item.para} />
 
@@ -24,7 +25,9 @@ const CategoriesBlog = () => {
             </div>
           </div>
         ) : (
-          ""
+          
+            idx === 2 ? <NotFound/> : false
+          
         )
       )}
     </>
