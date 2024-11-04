@@ -21,13 +21,12 @@ const CategoriesBlog = () => {
                 date={item.card.date}
                 heading={item.card.title}
                 para={item.card.des}
+                linkName={item.card.linkName}
               />
             </div>
           </div>
         ) : (
-          
-            idx === 2 ? <NotFound/> : false
-          
+          ""
         )
       )}
     </>

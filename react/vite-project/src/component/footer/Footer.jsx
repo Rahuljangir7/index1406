@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./footer.css";
 import { FaRegCopyright } from "react-icons/fa";
 
@@ -10,19 +11,19 @@ const Footer = () => {
             <div className="logo-name">IMPULSE</div>
               <div className="more-info">
                 <h5>MORE INFO</h5>
-                <a href="#">ABOUT</a>
+                <Link to="/about">ABOUT</Link>
                 <a href="#">INFO</a>
                 <a href="#">FAQ</a>
               </div>
               <div className="helpful-links">
                 <h5>HELPFUL LINKS</h5>
-                <a href="#">ABOUT</a>
+                <Link to="/about">ABOUT</Link>
                 <a href="#">INFO</a>
                 <a href="#">FAQ</a>
               </div>
               <div className="findoutmore">
                 <h5>FIND OUT MORE</h5>
-                <a href="#">ABOUT</a>
+                <Link to="/about">ABOUT</Link>
                 <a href="#">INFO</a>
                 <a href="#">FAQ</a>
               </div>

@@ -1,6 +1,6 @@
 import React from "react";
 import "./blogpage.css";
-import {cardJson} from "../../data";
+import { cardJson } from "../../data";
 import About from "../about/About";
 import Card from "../../utility/Card";
 
@@ -20,6 +20,8 @@ const BlogPage = () => {
             date={item.date}
             heading={item.title}
             para={item.des}
+            blogPageLink={item.linkName}
+            linkName={item.linkName}
           />
         ))}
       </div>

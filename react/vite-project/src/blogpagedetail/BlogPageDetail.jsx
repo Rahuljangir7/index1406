@@ -18,8 +18,6 @@ const BlogPageDetail = () => {
             heading={item.blogPage.title}
             para={item.para}
           />
-        ) : idx === 1 ? (
-          <NotFount />
         ) : (
           ""
         );
