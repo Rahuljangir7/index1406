@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { blogPageDeail } from "../data";
 import BlogDetail from "../pages/blogdetail/BlogDetail";
-import NotFount from "../pages/notfound/NotFount";
+import NotFount from "../pages/notfound/NotFound";
 
 const BlogPageDetail = () => {
   const { blogpagedetail } = useParams();

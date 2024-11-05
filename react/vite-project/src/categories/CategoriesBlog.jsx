@@ -3,7 +3,7 @@ import Card from "../utility/Card";
 import About from "../pages/about/About";
 import { categoriesBlog } from "../data";
 import { useParams } from "react-router-dom";
-import NotFound from "../pages/notfound/NotFount";
+import NotFound from "../pages/notfound/NotFound";
 
 const CategoriesBlog = () => {
   const { category } = useParams();

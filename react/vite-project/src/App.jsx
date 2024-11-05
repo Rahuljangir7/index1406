@@ -8,7 +8,7 @@ import "./App.css";
 import Navbar from "./component/navbar/Navbar";
 import CategoriesBlog from "./categories/CategoriesBlog";
 import ScrollToTop from "./ScrollToTop";
-import NotFount from "./pages/notfound/NotFount";
+import NotFount from "./pages/notfound/NotFound";
 import BlogPageDetail from "./blogpagedetail/BlogPageDetail";
 
 const App = () => {
