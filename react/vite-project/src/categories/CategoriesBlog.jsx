@@ -8,28 +8,28 @@ import NotFound from "../pages/notfound/NotFount";
 const CategoriesBlog = () => {
   const { category } = useParams();
 
-  return (
-    <>
-      {categoriesBlog.map((item, idx) =>
-        item.link === `/${category}` ? (
-          <div key={idx} className="blogpage">
-            <About title={item.name} des={item.para} />
+  const categoryData = categoriesBlog.find(
+    (item) => item.link == `/${category}`
+  );
 
-            <div className="blogpage-section">
-              <Card
-                img={item.card.image}
-                date={item.card.date}
-                heading={item.card.title}
-                para={item.card.des}
-                linkName={item.card.linkName}
-              />
-            </div>
-          </div>
-        ) : (
-          ""
-        )
-      )}
-    </>
+  if (!categoryData) {
+    return <NotFound />;
+  }
+
+  return (
+    <div className="blogpage">
+      <About title={categoryData.name} des={categoryData.para} />
+
+      <div className="blogpage-section">
+        <Card
+          img={categoryData.card.image}
+          date={categoryData.card.date}
+          heading={categoryData.card.title}
+          para={categoryData.card.des}
+          linkName={categoryData.card.linkName}
+        />
+      </div>
+    </div>
   );
 };
 

@@ -7,22 +7,20 @@ import NotFount from "../pages/notfound/NotFount";
 const BlogPageDetail = () => {
   const { blogpagedetail } = useParams();
 
+  const blogData = blogPageDeail.find((item) => item.link == blogpagedetail);
+
+  if (!blogData) {
+    return <NotFount />;
+  }
+
   return (
-    <>
-      {blogPageDeail.map((item, idx) => {
-        return item.link === blogpagedetail ? (
-          <BlogDetail
-            key={idx}
-            img={item.blogPage.image}
-            date={item.blogPage.date}
-            heading={item.blogPage.title}
-            para={item.para}
-          />
-        ) : (
-          ""
-        );
-      })}
-    </>
+    <BlogDetail
+      key={idx}
+      img={blogData.blogPage.image}
+      date={blogData.blogPage.date}
+      heading={blogData.blogPage.title}
+      para={blogData.para}
+    />
   );
 };
 

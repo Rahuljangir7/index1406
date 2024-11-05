@@ -4,7 +4,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 3rem;
+  padding: 1.2rem 3rem;
   position: absolute;
   top: 0;
   left: 0;
@@ -17,7 +17,8 @@
   letter-spacing: 0.2rem;
 }
 
-.navbar .mail, .navbar svg {
+.navbar .mail,
+.navbar svg {
   font-size: 30px;
   cursor: pointer;
   color: #fff;
@@ -73,12 +74,13 @@
   text-underline-offset: 10px;
 }
 
-@media (max-width:330px) {
-  .navbar-other-pages{
-    padding: 2rem 10px;
+@media (max-width: 330px) {
+  .navbar-other-pages,
+  .navbar {
+    padding: 1rem 10px;
   }
 
-  .navbar-other-pages h1{
+  .navbar-other-pages h1 {
     letter-spacing: 1px;
     font-size: medium;
   }
