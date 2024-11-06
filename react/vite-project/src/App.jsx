@@ -8,7 +8,7 @@ import "./App.css";
 import Navbar from "./component/navbar/Navbar";
 import CategoriesBlog from "./categories/CategoriesBlog";
 import ScrollToTop from "./ScrollToTop";
-import NotFount from "./pages/notfound/NotFound";
+import PageNotFound from "./pages/notfound/PageNotFound";
 import BlogPageDetail from "./blogpagedetail/BlogPageDetail";
 
 const App = () => {
@@ -23,7 +23,8 @@ const App = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/category/:category" element={<CategoriesBlog />} />
         <Route path="/blog/:blogpagedetail" element={<BlogPageDetail />} />
-        <Route path="/*" element={<NotFount />} /> {/* 404 Not Found route */}
+        <Route path="/*" element={<PageNotFound />} />
+        {/* 404 Not Found route */}
       </Routes>
       <Footer />
     </BrowserRouter>

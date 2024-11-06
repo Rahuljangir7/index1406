@@ -1,8 +1,7 @@
-import { useEffect } from "react";
-import "./notFound.css";
+import "./pageNotFound.css";
 import { Link } from "react-router-dom";
 
-const NotFound = () => {
+const PageNotFound = () => {
   return (
     <main className="notfound">
       <div className="notfound-box">
@@ -20,4 +19,4 @@ const NotFound = () => {
   );
 };
 
-export default NotFound;
+export default PageNotFound;
