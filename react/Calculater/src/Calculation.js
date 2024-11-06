@@ -28,8 +28,18 @@ export default function calculation(val, inpVal) {
 
   // Handle calculation on "="
   if (val === "=") {
+    
+    let changeDivide = "";
+    for (let char of inpVal) {
+      if (char === symbols[4]) {
+        changeDivide += "/";
+      } else {
+        changeDivide += char;
+      }
+    }
+
     try {
-      let result = eval(inpVal).toString();
+      let result = eval(changeDivide).toString();
       return result;
     } catch (err) {
       return inpVal;

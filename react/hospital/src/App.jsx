@@ -1,4 +1,4 @@
-import { Box, Button } from "@mui/material";
+import { Box, Button, Link } from "@mui/material";
 import { Cart, Cart1, Radio1, Icons } from "./component/Cart";
 import Navbar, { Nav2 } from "./component/Navbar";
 import { data, cart } from "./data.js";
@@ -8,6 +8,7 @@ import img from "./assets/hospital.png";
 import Footer from "./component/Footer.jsx";
 import { Element } from "react-scroll";
 import "./App.css";
+import CarouselComponent from "./utility/CarouselComponent.jsx";
 
 function App() {
   return (
@@ -196,7 +197,7 @@ function App() {
         </Box>
       </Element>
 
-      <Box
+      {/* <Box
         sx={{
           margin: "0 !important",
           display: "flex",
@@ -213,7 +214,9 @@ function App() {
           para={"Alex Montio"}
         />
         <Radio1 />
-      </Box>
+      </Box> */}
+
+      <CarouselComponent/>
 
       <Element name="section3">
         {/* Contact container */}
@@ -228,12 +231,22 @@ function App() {
           <div className="flex justify-center sm:gap-20 gap-10  contact">
             {cart[5].map((item) => {
               return (
-                <Cart1
+                <Link
                   key={item.id} // Use item.id if it's unique
-                  icon={item.icon}
-                  heading={item.heading}
-                  des={item.des}
-                />
+                  href={item.href}
+                  rel={item.id === 0 ? "noopener noreferrer" : undefined}
+                  target={item.id === 0 ? "_blank" : "_self"}
+                  sx={{
+                    color: "black",
+                    textDecoration: "none",
+                  }}
+                >
+                  <Cart1
+                    icon={item.icon}
+                    heading={item.heading}
+                    des={item.des}
+                  />
+                </Link>
               );
             })}
           </div>

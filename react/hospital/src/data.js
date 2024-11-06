@@ -123,18 +123,21 @@ export const cart = [
       icon: "FaMapMarkerAlt",
       heading: "OUR ADDRESS",
       des: "SK hospital sikar",
+      href: "https://www.google.com/maps/place/S.K.+Hospital,+Sikar/@27.6126354,75.147947,17z",
     },
     {
       id: 1,
       icon: "FaEnvelope",
       heading: "OUR MAIL",
       des: "rahul@gmail.com",
+      href: "mailto: rahuljangir99501@gmail.com",
     },
     {
       id: 2,
       icon: "FaPhone",
       heading: "OUR CALL",
-      des: "0123-456-789",
+      des: "+919950108143",
+      href: "tel:+919950108143",
     },
   ],
 ];

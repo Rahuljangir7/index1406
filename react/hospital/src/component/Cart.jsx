@@ -2,6 +2,7 @@ import { Box, Typography } from "@mui/material";
 import { cart } from "../data";
 import Radio from "@mui/material/Radio";
 import * as React from "react";
+import { useState, useEffect } from "react";
 import {
   FaAmbulance,
   FaHome,
@@ -169,53 +170,25 @@ export const Cart1 = ({ icon, heading, des, num, useCounter }) => {
   );
 };
 
-export const Radio1 = () => {
-  const [selectedValue, setSelectedValue] = React.useState("a");
-
-  const handleChange = (event) => {
-    setSelectedValue(event.target.value);
-  };
-
-  const controlProps = (item) => ({
-    checked: selectedValue === item,
-    onChange: handleChange,
-    value: item,
-    name: "radio-buttons",
-    inputProps: { "arial-label": item },
-  });
-
+export const Radio1 = ({ selectedValue, handleChange }) => {
   return (
-    <>
-      <div className="radio-btn flex justify-center">
+    <div className="radio-btn flex justify-center gap-4">
+      {/* Radio buttons for each slide */}
+      {[0, 1, 2].map((index) => (
         <Radio
-          {...controlProps("a")}
+          key={index}
+          checked={selectedValue === index}
+          onChange={handleChange}
+          value={index}
+          name="carousel"
+          inputProps={{ "aria-label": `Slide ${index + 1}` }}
           sx={{
             color: pink[50],
-            "&.Mui-checked": {
-              color: pink[50],
-            },
+            "&.Mui-checked": { color: pink[50] },
           }}
         />
-        <Radio
-          {...controlProps("b")}
-          sx={{
-            color: pink[50],
-            "&.Mui-checked": {
-              color: pink[50],
-            },
-          }}
-        />
-        <Radio
-          {...controlProps("c")}
-          sx={{
-            color: pink[50],
-            "&.Mui-checked": {
-              color: pink[50],
-            },
-          }}
-        />
-      </div>
-    </>
+      ))}
+    </div>
   );
 };
 
