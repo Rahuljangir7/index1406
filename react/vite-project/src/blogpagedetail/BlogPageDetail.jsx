@@ -15,7 +15,6 @@ const BlogPageDetail = () => {
 
   return (
     <BlogDetail
-      key={idx}
       img={blogData.blogPage.image}
       date={blogData.blogPage.date}
       heading={blogData.blogPage.title}
