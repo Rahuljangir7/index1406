@@ -70,8 +70,8 @@ const Form = () => {
               fontWeight: "1000",
               bgcolor: "green",
               textTransform: "lowercase",
-              fontSize: "calc(4px + 1vw)",
-              padding: "0.9% 2.5%",
+              fontSize: "calc(0.7rem + 1vw)",
+              padding: {lg:"0.9% 2.5%",xs:"10px"},
             }}
           >
             Send message

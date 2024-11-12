@@ -4,7 +4,7 @@ export default function calculation(val, inpVal) {
   if (val === "AC") return ""; // Clear all
   else if (val === String.fromCodePoint(8592)) {
     return inpVal.substring(0, inpVal.length - 1); // Backspace
-  } else if (val === "x" + String.fromCodePoint(178)) {
+  } else if (val === "x" + String.fromCodePoint(178))  {
     if (Number(inpVal)) return (Number(inpVal) ** 2).toString(); // Return square
     return "";
   }

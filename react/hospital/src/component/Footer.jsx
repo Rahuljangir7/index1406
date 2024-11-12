@@ -14,7 +14,7 @@ const Footer = () => {
         <Box
           className="bg-[#323232] text-white "
           sx={{
-            padding: "0 80px 50px",
+            padding: {lg:"0 80px 50px",xs:"0 20px 30px"},
             display: "flex",
             flexDirection: "column",
             alignItems: "center",
