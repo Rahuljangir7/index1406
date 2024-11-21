@@ -1,8 +1,0 @@
-@media (max-width: 992px) {
-  footer .footer-links {
-    flex-direction: column;
-    gap: 40px;
-    margin: auto;
-    text-align: center;
-  }
-}
