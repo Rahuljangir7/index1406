@@ -93,7 +93,7 @@ function reset() {
 }
 
 let span = document.querySelector(".highScore");
-const highArr = []
+const highArr = [];
 function hightScore(level) {
   highArr.push(level);
   let highNumber = Math.max(...highArr);
