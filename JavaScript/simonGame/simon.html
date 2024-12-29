@@ -7,8 +7,16 @@
     <link rel="stylesheet" href="simon.css" />
   </head>
   <body>
-    <h1>Simon Says Game</h1>
-    <h2>Press any key to the start game</h2>
+    <div class="text-container">
+      <div class="main">
+        <h1 class="first">Simon Says Game</h1>
+        <h1 class="second">Simon Says Game</h1>
+      </div>
+      <div class="main">
+        <h2 class="first">Press any key to the start game</h2>
+        <h2 class="second">Press any key to the start game</h2>
+      </div>
+    </div>
     <div class="btn-container">
       <div class="line-one">
         <div class="btn red" type="button" id="red">1</div>
@@ -20,8 +28,11 @@
       </div>
     </div>
 
-    <div class="bottom-content">
-      Hight Score is : <span class="highScore">0</span>
+    <div class="score-text">
+      <div class="bottom-content" data-text="High.Score.is.:">
+        High.Score.is.:
+      </div>
+      <div class="highScore"> 0 </div>
     </div>
 
     <div class="starfall">

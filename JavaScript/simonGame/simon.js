@@ -61,7 +61,7 @@ function checkAns(idx) {
     h2.innerHTML = `Game over ! Your score was <b>${level}</b> <br/> Press any key to start.`;
     document.querySelector("body").style.background = "red";
     setTimeout(
-      () => (document.querySelector("body").style.background = "white"),
+      () => (document.querySelector("body").style.background = ""),
       300
     );
     hightScore(level);
